@@ -32,7 +32,7 @@ Plug 'sheerun/vim-polyglot'
 " Asthetics
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'lifepillar/vim-solarized8'
 Plug 'arcticicestudio/nord-vim'
 
 " Git integration
@@ -63,13 +63,8 @@ let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_sign_column = 'bg0'
 
-" sonokai
-let g:sonokai_style = 'andromeda'
-let g:sonokai_enable_italics = 1
-let g:sonokai_sign_column_background = 'none'
-
-set background=dark
-colorscheme nord
+set background=light
+colorscheme solarized8_flat
 
 set completeopt=menuone,noinsert,noselect
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
@@ -96,7 +91,7 @@ let g:NERDToggleCheckAllLines = 1
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             ['gitbranch', 'filename', 'modified' ] ]
