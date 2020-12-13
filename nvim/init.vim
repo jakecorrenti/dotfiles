@@ -34,6 +34,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-solarized8'
 Plug 'arcticicestudio/nord-vim'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 " Git integration
 Plug 'tpope/vim-fugitive'
@@ -64,7 +65,7 @@ let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_sign_column = 'bg0'
 
 set background=light
-colorscheme solarized8_flat
+colorscheme challenger_deep
 
 set completeopt=menuone,noinsert,noselect
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
@@ -91,7 +92,7 @@ let g:NERDToggleCheckAllLines = 1
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'challenger_deep',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             ['gitbranch', 'filename', 'modified' ] ]
