@@ -32,9 +32,8 @@ Plug 'sheerun/vim-polyglot'
 " Asthetics
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
-Plug 'lifepillar/vim-solarized8'
-Plug 'arcticicestudio/nord-vim'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'embark-theme/vim', { 'as': 'embark' }
 
 " Git integration
 Plug 'tpope/vim-fugitive'
@@ -64,8 +63,12 @@ let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_sign_column = 'bg0'
 
+" embark 
+let g:embark_terminal_italics = 1
+let g:embark_termcolors = 256
+
 set background=light
-colorscheme challenger_deep
+colorscheme embark
 
 set completeopt=menuone,noinsert,noselect
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
@@ -92,7 +95,7 @@ let g:NERDToggleCheckAllLines = 1
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'challenger_deep',
+      \ 'colorscheme': 'embark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             ['gitbranch', 'filename', 'modified' ] ]
