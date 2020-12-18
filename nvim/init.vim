@@ -16,12 +16,10 @@ set cursorline
 set hidden 
 set guicursor=
 set noshowmode
-set termguicolors
 set smartindent
 set statusline+=%#warningmsg#
 set statusline+=%*
 set updatetime=50
-set autochdir
 set nohlsearch
 
 call plug#begin('~/.config/nvim/plugged') 
@@ -34,6 +32,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'embark-theme/vim', { 'as': 'embark' }
+Plug 'pineapplegiant/spaceduck'
 
 " Git integration
 Plug 'tpope/vim-fugitive'
@@ -54,6 +53,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdcommenter'
+Plug 'jdhao/better-escape.vim'
 
 call plug#end()
 
@@ -67,6 +67,12 @@ let g:gruvbox_sign_column = 'bg0'
 let g:embark_terminal_italics = 1
 let g:embark_termcolors = 256
 
+if exists('+termguicolors')
+      let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+      let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+      set termguicolors
+endif
+
 set background=light
 colorscheme embark
 
@@ -76,10 +82,7 @@ let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 lua require'lspconfig'.rust_analyzer.setup{ on_attach=require'completion'.on_attach }
 lua require'lspconfig'.ccls.setup{ on_attach=require'completion'.on_attach }
 lua require'lspconfig'.bashls.setup{ on_attach=require'completion'.on_attach }
-
-if (has("termguicolors"))
-  set termguicolors
-endif
+lua require'lspconfig'.sourcekit.setup{ on_attach=require'completion'.on_attach }
 
 " telescope
 let g:telescope_cache_results = 1
@@ -92,6 +95,9 @@ let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1 
 let g:NERDTrimTrailingWhitespace = 1 
 let g:NERDToggleCheckAllLines = 1 
+
+" nerd tree
+let g:NERDTreeWinPos = "right"
 
 " lightline
 let g:lightline = {
@@ -116,6 +122,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+nnoremap <leader>< :resize -5<CR>
+nnoremap <Leader>> :resize +5<CR>
+nnoremap <leader>+ :vertical resize +5<CR>
+nnoremap <leader>- :vertical resize -5<CR>
 
 nnoremap <leader>f :RustFmt<CR>
 
