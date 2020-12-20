@@ -151,14 +151,14 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 12.0
+  size: 13.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
-  #offset:
-  #  x: 0
-  #  y: 0
+  offset:
+    x: 1
+    y: 1
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
@@ -178,6 +178,32 @@ font:
 
 # Colors (Tomorrow Night)
 schemes:
+  spaceduck: &spaceduck
+    # Default colors
+    primary:
+      background: '#0f111b'
+      foreground: '#ecf0c1'
+    # Normal colors
+    normal:
+      black:   '#000000'
+      red:     '#e33400'
+      green:   '#5ccc96'
+      yellow:  '#b3a1e6'
+      blue:    '#00a3cc'
+      magenta: '#f2ce00'
+      cyan:    '#7a5ccc'
+      white:   '#686f9a'
+
+    # Bright colors
+    bright:
+      black:   '#686f9a'
+      red:     '#e33400'
+      green:   '#5ccc96'
+      yellow:  '#b3a1e6'
+      blue:    '#00a3cc'
+      magenta: '#f2ce00'
+      cyan:    '#7a5ccc'
+      white:   '#f0f1ce'
   embark: &embark
     primary:
       background: '0x1e1c31'
@@ -203,8 +229,35 @@ schemes:
       magenta: '0xa37acc'
       cyan: '0x63f2f1'
       white: '0x8a889d'
-
-colors: *embark
+  gruvbox: &gruvbox
+    bright:
+      black: '#7f7061'
+      blue: '#719586'
+      cyan: '#7db669'
+      green: '#aab01e'
+      magenta: '#c77089'
+      red: '#f73028'
+      white: '#e6d4a3'
+      yellow: '#f7b125'
+    cursor:
+      cursor: '#e6d4a3'
+      text: '#1e1e1e'
+    normal:
+      black: '#1e1e1e'
+      blue: '#377375'
+      cyan: '#578e57'
+      green: '#868715'
+      magenta: '#a04b73'
+      red: '#be0f17'
+      white: '#978771'
+      yellow: '#cc881a'
+    primary:
+      background: '#1e1e1e'
+      foreground: '#e6d4a3'
+    selection:
+      background: '#e6d4a3'
+      text: '#534a42'
+colors: *spaceduck
   # Default colors
   #primary:
   #  background: '#1d1f21'

@@ -30,7 +30,6 @@ Plug 'sheerun/vim-polyglot'
 " Asthetics
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'pineapplegiant/spaceduck'
 
@@ -73,8 +72,8 @@ if exists('+termguicolors')
       set termguicolors
 endif
 
-set background=light
-colorscheme embark
+set background=dark
+colorscheme spaceduck
 
 set completeopt=menuone,noinsert,noselect
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
@@ -83,6 +82,22 @@ lua require'lspconfig'.rust_analyzer.setup{ on_attach=require'completion'.on_att
 lua require'lspconfig'.ccls.setup{ on_attach=require'completion'.on_attach }
 lua require'lspconfig'.bashls.setup{ on_attach=require'completion'.on_attach }
 lua require'lspconfig'.sourcekit.setup{ on_attach=require'completion'.on_attach }
+
+" lightline
+let g:lightline = {
+      \ 'colorscheme': 'spaceduck',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             ['gitbranch', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'filename': 'LightlineFilename',
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+function! LightlineFilename()
+  return expand('%:t') !=# '' ? @% : '[No Name]'
+endfunction
 
 " telescope
 let g:telescope_cache_results = 1
@@ -98,22 +113,6 @@ let g:NERDToggleCheckAllLines = 1
 
 " nerd tree
 let g:NERDTreeWinPos = "right"
-
-" lightline
-let g:lightline = {
-      \ 'colorscheme': 'embark',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             ['gitbranch', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'filename': 'LightlineFilename',
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
-function! LightlineFilename()
-  return expand('%:t') !=# '' ? @% : '[No Name]'
-endfunction
 
 inoremap jk  <Esc> 
 
