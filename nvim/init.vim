@@ -12,8 +12,6 @@ set shiftwidth=4
 set relativenumber
 set ignorecase 
 set smartcase 
-set cursorline
-set hidden 
 set guicursor=
 set noshowmode
 set smartindent
@@ -30,8 +28,9 @@ Plug 'sheerun/vim-polyglot'
 " Asthetics
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
-Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'pineapplegiant/spaceduck'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'voldikss/vim-floaterm'
 
 " Git integration
 Plug 'tpope/vim-fugitive'
@@ -60,11 +59,8 @@ call plug#end()
 let g:gruvbox_bold = 0
 let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_light = 'hard'
 let g:gruvbox_sign_column = 'bg0'
-
-" embark 
-let g:embark_terminal_italics = 1
-let g:embark_termcolors = 256
 
 if exists('+termguicolors')
       let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -72,8 +68,31 @@ if exists('+termguicolors')
       set termguicolors
 endif
 
+" ayu
+let ayucolor="dark"
+
+" tokyo night
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+" sonokai
+let g:sonokai_style = 'andromeda'
+let g:sonokai_enable_italic = 1
+let g:sonokai_sign_column_background = 'none'
+let g:sonokai_transparent_background = 1
+
+" embark 
+let g:embark_terminal_italics = 1
+let g:embark_termcolors = 256
+
 set background=dark
-colorscheme spaceduck
+colorscheme challenger_deep
+
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
+hi! LineNr ctermbg=NONE guibg=NONE
+hi! SignColumn ctermbg=NONE guibg=NONE
+hi! CursorLineNr ctermbg=NONE guibg=NONE
 
 set completeopt=menuone,noinsert,noselect
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
@@ -85,7 +104,7 @@ lua require'lspconfig'.sourcekit.setup{ on_attach=require'completion'.on_attach 
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'spaceduck',
+      \ 'colorscheme': 'challenger_deep',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             ['gitbranch', 'filename', 'modified' ] ]
@@ -111,8 +130,16 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1 
 let g:NERDToggleCheckAllLines = 1 
 
+" floaterm
+if filereadable(expand("~/.config/nvim/plugged/vim-floaterm/plugin/floaterm.vim"))
+  nnoremap <leader>w :FloatermNew --wintype=floating --autoclose=1<CR>
+endif
+
 " nerd tree
 let g:NERDTreeWinPos = "right"
+
+" git gutter
+let g:gitgutter_set_sign_backgrounds = 1
 
 inoremap jk  <Esc> 
 
