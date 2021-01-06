@@ -25,11 +25,13 @@ call plug#begin('~/.config/nvim/plugged')
 " Syntax Highlighting
 Plug 'sheerun/vim-polyglot'
 
+" Themes
+Plug 'morhetz/gruvbox'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'sainnhe/edge'
+
 " Asthetics
 Plug 'itchyny/lightline.vim'
-Plug 'morhetz/gruvbox'
-Plug 'pineapplegiant/spaceduck'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'voldikss/vim-floaterm'
 
 " Git integration
@@ -62,37 +64,26 @@ let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_contrast_light = 'hard'
 let g:gruvbox_sign_column = 'bg0'
 
+" edge
+let g:edge_style = 'neon'
+let g:edge_enable_italic = 1
+let g:edge_sign_column_background = 'none'
+
 if exists('+termguicolors')
       let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
       let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
       set termguicolors
 endif
 
-" ayu
-let ayucolor="dark"
-
-" tokyo night
-let g:tokyonight_style = 'night' " available: night, storm
-let g:tokyonight_enable_italic = 1
-
-" sonokai
-let g:sonokai_style = 'andromeda'
-let g:sonokai_enable_italic = 1
-let g:sonokai_sign_column_background = 'none'
-let g:sonokai_transparent_background = 1
-
-" embark 
-let g:embark_terminal_italics = 1
-let g:embark_termcolors = 256
-
 set background=dark
 colorscheme challenger_deep
 
-hi! Normal ctermbg=NONE guibg=NONE
-hi! NonText ctermbg=NONE guibg=NONE
-hi! LineNr ctermbg=NONE guibg=NONE
-hi! SignColumn ctermbg=NONE guibg=NONE
-hi! CursorLineNr ctermbg=NONE guibg=NONE
+" hi! normal ctermbg=none guibg=none
+" hi! nontext ctermbg=none guibg=none
+" hi! linenr ctermbg=none guibg=none
+" hi! signcolumn ctermbg=none guibg=none
+" hi! CursorLineNr ctermbg=NONE guibg=NONE
+hi! linenr ctermbg=bg guibg=bg
 
 set completeopt=menuone,noinsert,noselect
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']

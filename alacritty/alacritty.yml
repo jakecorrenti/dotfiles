@@ -30,9 +30,9 @@ window:
   # Number of lines/columns (not pixels) in the trminal. The number of columns
   # must be at least `2`, while using a value of `0` for columns and lines will
   # fall back to the window manager's recommended size.
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  dimensions:
+    columns: 170
+    lines: 60
 
   # Window position (changes require restart)
   #
@@ -62,7 +62,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: none
+  decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -79,7 +79,7 @@ window:
   #title: Alacritty
 
   # Allow terminal applications to change Alacritty's window title.
-  #dynamic_title: true
+  dynamic_title: true
 
   # Window class (Linux/BSD only):
   #class:
@@ -476,6 +476,30 @@ schemes:
     selection:
       background: '#002831'
       text: '#819090'
+edge_dark_neon:  &edge_dark_neon
+    primary:
+      background: "0x2b2d3a"
+      foreground: "0xc5cdd9"
+  
+    normal:
+      black: "0x363a4e"
+      red: "0xec7279"
+      green: "0xa0c980"
+      yellow: "0xdeb974"
+      blue: "0x6cb6eb"
+      magenta: "0xd38aea"
+      cyan: "0x5dbbc1"
+      white: "0xc5cdd9"
+  
+    bright:
+      black: "0x363a4e"
+      red: "0xec7279"
+      green: "0xa0c980"
+      yellow: "0xdeb974"
+      blue: "0x6cb6eb"
+      magenta: "0xd38aea"
+      cyan: "0x5dbbc1"
+      white: "0xc5cdd9"
 
 colors: *challenger_deep
   # Default colors
@@ -630,7 +654,7 @@ colors: *challenger_deep
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.7
+background_opacity: 1.0
 
 #selection:
   # This string contains all characters that are used as separators for
