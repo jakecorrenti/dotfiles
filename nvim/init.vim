@@ -29,6 +29,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'sainnhe/edge'
+Plug 'ntk148v/vim-horizon'
 
 " Asthetics
 Plug 'itchyny/lightline.vim'
@@ -76,7 +77,7 @@ if exists('+termguicolors')
 endif
 
 set background=dark
-colorscheme challenger_deep
+colorscheme horizon
 
 " hi! normal ctermbg=none guibg=none
 " hi! nontext ctermbg=none guibg=none
@@ -84,6 +85,9 @@ colorscheme challenger_deep
 " hi! signcolumn ctermbg=none guibg=none
 " hi! CursorLineNr ctermbg=NONE guibg=NONE
 hi! linenr ctermbg=bg guibg=bg
+
+" for horizon
+highlight Pmenu cterm=NONE gui=NONE ctermbg=233 ctermfg=252 guifg=#ffffff guibg=#4f4f4f
 
 set completeopt=menuone,noinsert,noselect
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
@@ -95,7 +99,7 @@ lua require'lspconfig'.sourcekit.setup{ on_attach=require'completion'.on_attach 
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'challenger_deep',
+      \ 'colorscheme': 'horizon',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             ['gitbranch', 'filename', 'modified' ] ]
