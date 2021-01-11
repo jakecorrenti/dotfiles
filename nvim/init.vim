@@ -28,12 +28,13 @@ Plug 'sheerun/vim-polyglot'
 " Themes
 Plug 'morhetz/gruvbox'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-Plug 'sainnhe/edge'
 Plug 'ntk148v/vim-horizon'
+Plug 'arcticicestudio/nord-vim'
+Plug 'embark-theme/vim', { 'as': 'embark' }
+Plug 'lifepillar/vim-solarized8'
 
 " Asthetics
 Plug 'itchyny/lightline.vim'
-Plug 'voldikss/vim-floaterm'
 
 " Git integration
 Plug 'tpope/vim-fugitive'
@@ -41,13 +42,11 @@ Plug 'airblade/vim-gitgutter'
 
 " LSP
 Plug 'rust-lang/rust.vim'
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Fuzzy Finding
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-lua/telescope.nvim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Miscellaneous
 Plug 'scrooloose/nerdtree'
@@ -65,10 +64,17 @@ let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_contrast_light = 'hard'
 let g:gruvbox_sign_column = 'bg0'
 
-" edge
-let g:edge_style = 'neon'
-let g:edge_enable_italic = 1
-let g:edge_sign_column_background = 'none'
+" gruvbox material
+let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_enable_italic = 1
+let g:gruvbox_material_visual = 'reverse'
+let g:gruvbox_material_sign_column_background = 'none'
+
+" nord
+let g:nord_underline = 1
+
+" solarized
+let g:solarized_statusline = 'flat'
 
 if exists('+termguicolors')
       let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -76,35 +82,24 @@ if exists('+termguicolors')
       set termguicolors
 endif
 
-set background=dark
-colorscheme horizon
-
-" hi! normal ctermbg=none guibg=none
-" hi! nontext ctermbg=none guibg=none
-" hi! linenr ctermbg=none guibg=none
-" hi! signcolumn ctermbg=none guibg=none
-" hi! CursorLineNr ctermbg=NONE guibg=NONE
-hi! linenr ctermbg=bg guibg=bg
+set background=light
+colorscheme solarized8_flat
 
 " for horizon
-highlight Pmenu cterm=NONE gui=NONE ctermbg=233 ctermfg=252 guifg=#ffffff guibg=#4f4f4f
+" highlight Pmenu cterm=NONE gui=NONE ctermbg=233 ctermfg=252 guifg=#ffffff guibg=#16161C
 
-set completeopt=menuone,noinsert,noselect
-let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+hi! linenr ctermbg=none guibg=none
 
-lua require'lspconfig'.rust_analyzer.setup{ on_attach=require'completion'.on_attach }
-lua require'lspconfig'.ccls.setup{ on_attach=require'completion'.on_attach }
-lua require'lspconfig'.bashls.setup{ on_attach=require'completion'.on_attach }
-lua require'lspconfig'.sourcekit.setup{ on_attach=require'completion'.on_attach }
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'horizon',
+      \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             ['gitbranch', 'filename', 'modified' ] ]
+      \             ['gitbranch', 'cocstatus', 'filename', 'modified' ] ]
       \ },
       \ 'component_function': {
+      \   'cocstatus': 'coc#status',
       \   'filename': 'LightlineFilename',
       \   'gitbranch': 'FugitiveHead'
       \ },
@@ -112,10 +107,6 @@ let g:lightline = {
 function! LightlineFilename()
   return expand('%:t') !=# '' ? @% : '[No Name]'
 endfunction
-
-" telescope
-let g:telescope_cache_results = 1
-let g:telescope_prime_fuzzy_find  = 1
 
 " nerd commenter
 let g:NERDSpaceDelims = 1 
@@ -125,16 +116,57 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1 
 let g:NERDToggleCheckAllLines = 1 
 
-" floaterm
-if filereadable(expand("~/.config/nvim/plugged/vim-floaterm/plugin/floaterm.vim"))
-  nnoremap <leader>w :FloatermNew --wintype=floating --autoclose=1<CR>
-endif
-
 " nerd tree
 let g:NERDTreeWinPos = "right"
 
 " git gutter
 let g:gitgutter_set_sign_backgrounds = 1
+
+" coc
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+command! -nargs=0 Format :call CocAction('format')
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-space> coc#refresh()
+endif
+
+" fzf
+nnoremap <leader>p :Files<CR>
+nnoremap <leader>g :GFiles<CR>
 
 inoremap jk  <Esc> 
 
@@ -148,7 +180,7 @@ nnoremap <Leader>> :resize +10<CR>
 nnoremap <leader>+ :vertical resize +10<CR>
 nnoremap <leader>- :vertical resize -10<CR>
 
-nnoremap <leader>f :RustFmt<CR>
+" nnoremap <leader>f :RustFmt<CR>
 
 " window splitting 
 nnoremap <leader>v :vsp <CR>
@@ -168,12 +200,3 @@ tnoremap jk <C-\><C-n>
 
 map <C-n> :NERDTreeToggle <CR>
 map <C-f> :NERDTreeFind <CR>
-
-" nvim-lua completion 
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" telescope
-nnoremap <Leader>p <cmd>lua require'telescope.builtin'.find_files{}<CR>
-nnoremap <Leader>g <cmd>lua require'telescope.builtin'.git_files{}<CR>
-
