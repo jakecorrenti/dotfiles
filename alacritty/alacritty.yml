@@ -554,8 +554,76 @@ ayu: &ayu
     magenta: '0xFFEE99'
     cyan:    '0x95E6CB'
     white:   '0xFFFFFF'
+forest-night: &forest-night
+  primary:
+    background: '0x323d43'
+    foreground: '0xd8caac'
 
-colors: *solarized_light
+  normal:
+    black:   '0x505a60'
+    red:     '0xe68183'
+    green:   '0xa7c080'
+    yellow:  '0xd9bb80'
+    blue:    '0x83b6af'
+    magenta: '0xd39bb6'
+    cyan:    '0x87c095'
+    white:   '0xd8caac'
+
+  bright:
+    black:   '0x505a60'
+    red:     '0xe68183'
+    green:   '0xa7c080'
+    yellow:  '0xd9bb80'
+    blue:    '0x83b6af'
+    magenta: '0xd39bb6'
+    cyan:    '0x87c095'
+    white:   '0xd8caac'
+gruvbox_material_hard_dark: &gruvbox_material_hard_dark
+  primary:
+    background: '0x1d2021'
+    foreground: '0xd4be98'
+  normal:
+    black:   '0x32302f'
+    red:     '0xea6962'
+    green:   '0xa9b665'
+    yellow:  '0xd8a657'
+    blue:    '0x7daea3'
+    magenta: '0xd3869b'
+    cyan:    '0x89b482'
+    white:   '0xd4be98'
+  bright:
+    black:   '0x32302f'
+    red:     '0xea6962'
+    green:   '0xa9b665'
+    yellow:  '0xd8a657'
+    blue:    '0x7daea3'
+    magenta: '0xd3869b'
+    cyan:    '0x89b482'
+    white:   '0xd4be98'
+gruvbox_material_medium_dark: &gruvbox_material_medium_dark
+  primary:
+    background: '0x282828'
+    foreground: '0xd4be98'
+  normal:
+    black:   '0x3c3836'
+    red:     '0xea6962'
+    green:   '0xa9b665'
+    yellow:  '0xd8a657'
+    blue:    '0x7daea3'
+    magenta: '0xd3869b'
+    cyan:    '0x89b482'
+    white:   '0xd4be98'
+  bright:
+    black:   '0x3c3836'
+    red:     '0xea6962'
+    green:   '0xa9b665'
+    yellow:  '0xd8a657'
+    blue:    '0x7daea3'
+    magenta: '0xd3869b'
+    cyan:    '0x89b482'
+    white:   '0xd4be98'
+
+colors: *solarized_dark
   # Default colors
   #primary:
   #  background: '#1d1f21'

@@ -27,14 +27,12 @@ Plug 'sheerun/vim-polyglot'
 
 " Themes
 Plug 'morhetz/gruvbox'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-Plug 'ntk148v/vim-horizon'
-Plug 'arcticicestudio/nord-vim'
-Plug 'embark-theme/vim', { 'as': 'embark' }
-Plug 'lifepillar/vim-solarized8'
+Plug 'sainnhe/gruvbox-material'
+Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 
 " Asthetics
 Plug 'itchyny/lightline.vim'
+Plug 'edkolev/tmuxline.vim'
 
 " Git integration
 Plug 'tpope/vim-fugitive'
@@ -60,21 +58,14 @@ call plug#end()
 " gruvbox
 let g:gruvbox_bold = 0
 let g:gruvbox_italic = 1
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_contrast_light = 'hard'
-let g:gruvbox_sign_column = 'bg0'
+let g:gruvbox_contrast_dark = 'medium' "or hard contrast
+let g:gruvbox_sign_column = 'bg1' "bg0 for hard contrast
 
 " gruvbox material
-let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_background = 'medium'
 let g:gruvbox_material_enable_italic = 1
 let g:gruvbox_material_visual = 'reverse'
 let g:gruvbox_material_sign_column_background = 'none'
-
-" nord
-let g:nord_underline = 1
-
-" solarized
-let g:solarized_statusline = 'flat'
 
 if exists('+termguicolors')
       let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -82,18 +73,30 @@ if exists('+termguicolors')
       set termguicolors
 endif
 
-set background=light
-colorscheme solarized8_flat
+set background=dark
+colorscheme gruvbox-material
 
-" for horizon
-" highlight Pmenu cterm=NONE gui=NONE ctermbg=233 ctermfg=252 guifg=#ffffff guibg=#16161C
-
-hi! linenr ctermbg=none guibg=none
-
+" tmuxline
+let g:tmuxline_preset = {
+        \'a'    : '#S',
+        \'b'    : '%R',
+        \'c'    : [ '#{sysstat_mem} #[fg=blue]\ufa51#{upload_speed}' ],
+        \'win'  : [ '#I', '#W' ],
+        \'cwin' : [ '#I', '#W', '#F' ],
+        \'x'    : [ "#[fg=blue]#{download_speed} \uf6d9 #{sysstat_cpu}" ],
+        \'y'    : [ '%a' ],
+        \'z'    : '#H #{prefix_highlight}'
+        \}
+let g:tmuxline_separators = {
+        \ 'left' : "\ue0bc",
+        \ 'left_alt': "\ue0bd",
+        \ 'right' : "\ue0ba",
+        \ 'right_alt' : "\ue0bd",
+        \ 'space' : ' '}
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'gruvbox_material',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             ['gitbranch', 'cocstatus', 'filename', 'modified' ] ]
@@ -119,15 +122,13 @@ let g:NERDToggleCheckAllLines = 1
 " nerd tree
 let g:NERDTreeWinPos = "right"
 
-" git gutter
-let g:gitgutter_set_sign_backgrounds = 1
-
 " coc
-" inoremap <silent><expr> <TAB>
-"       \ pumvisible() ? "\<C-n>" :
-"       \ <SID>check_back_space() ? "\<TAB>" :
-"       \ coc#refresh()
-" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -156,13 +157,6 @@ nmap <leader>f  <Plug>(coc-format-selected)
 
 command! -nargs=0 Format :call CocAction('format')
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-space> coc#refresh()
-endif
 
 " fzf
 nnoremap <leader>p :Files<CR>
