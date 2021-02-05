@@ -115,7 +115,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Fira Code
+    family: JetBrains Mono
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -126,7 +126,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Fira Code
+    family: JetBrains Mono
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -137,7 +137,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Fira Code
+    family: JetBrains Mono
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -148,7 +148,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Fira Code
+    family: JetBrains Mono
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
@@ -340,7 +340,8 @@ schemes:
       # Default colors
     primary:
       # hard contrast: background = '#1d2021'
-      background: '#282828'
+      # background: '#282828'
+      background: '#1d2021'
       # soft contrast: background = '#32302f'
       foreground: '#ebdbb2'
 
@@ -397,60 +398,33 @@ schemes:
       cyan:    '0x0db9d7'
       white:   '0xacb0d0'
 
-  tokyo-night-storm: &tokyo-night-storm
+  # tokyo-night-storm: &tokyo-night-storm
 
   sonokai-andromeda: &sonokai-andromeda
-    # Default colors
+    colors:
     primary:
-      background: '0x24283b'
-      foreground: '0xa9b1d6'
+      background: "0x2b2d3a"
+      foreground: "0xe1e3e4"
 
-    # Normal colors
     normal:
-      black:   '0x32344a'
-      red:     '0xf7768e'
-      green:   '0x9ece6a'
-      yellow:  '0xe0af68'
-      blue:    '0x7aa2f7'
-      magenta: '0xad8ee6'
-      cyan:    '0x449dab'
-      white:   '0x9699a8'
+      black: "0x181a1c"
+      red: "0xfb617e"
+      green: "0x9ed06c"
+      yellow: "0xedc763"
+      blue: "0x6dcae8"
+      magenta: "0xbb97ee"
+      cyan: "0xf89860"
+      white: "0xe1e3e4"
 
-    # Bright colors
     bright:
-      black:   '0x444b6a'
-      red:     '0xff7a93'
-      green:   '0xb9f27c'
-      yellow:  '0xff9e64'
-      blue:    '0x7da6ff'
-      magenta: '0xbb9af7'
-      cyan:    '0x0db9d7'
-      white:   '0xacb0d0'
-
-      colors:
-  primary:
-    background: "0x2b2d3a"
-    foreground: "0xe1e3e4"
-
-  normal:
-    black: "0x181a1c"
-    red: "0xfb617e"
-    green: "0x9ed06c"
-    yellow: "0xedc763"
-    blue: "0x6dcae8"
-    magenta: "0xbb97ee"
-    cyan: "0xf89860"
-    white: "0xe1e3e4"
-
-  bright:
-    black: "0x181a1c"
-    red: "0xfb617e"
-    green: "0x9ed06c"
-    yellow: "0xedc763"
-    blue: "0x6dcae8"
-    magenta: "0xbb97ee"
-    cyan: "0xf89860"
-    white: "0xe1e3e4"
+      black: "0x181a1c"
+      red: "0xfb617e"
+      green: "0x9ed06c"
+      yellow: "0xedc763"
+      blue: "0x6dcae8"
+      magenta: "0xbb97ee"
+      cyan: "0xf89860"
+      white: "0xe1e3e4"
 
   solarized_dark: &solarized_dark
     bright:
@@ -681,7 +655,7 @@ dracula: &dracula
     cyan:    '0x59dffc'
     white:   '0xe6e6d1'
 
-colors: *dracula
+colors: *horizon
   # Default colors
   #primary:
   #  background: '#1d1f21'
