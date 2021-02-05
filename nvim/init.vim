@@ -19,6 +19,7 @@ set statusline+=%#warningmsg#
 set statusline+=%*
 set updatetime=50
 set nohlsearch
+set colorcolumn=80
 
 call plug#begin('~/.config/nvim/plugged') 
 
@@ -27,11 +28,8 @@ Plug 'sheerun/vim-polyglot'
 
 " Themes
 Plug 'morhetz/gruvbox'
-Plug 'sainnhe/gruvbox-material'
-Plug 'ntk148v/vim-horizon'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'lifepillar/vim-solarized8'
-Plug 'embark-theme/vim', { 'as': 'embark' }
+Plug 'ntk148v/vim-horizon'
 
 " Asthetics
 Plug 'itchyny/lightline.vim'
@@ -43,7 +41,6 @@ Plug 'airblade/vim-gitgutter'
 " LSP
 Plug 'rust-lang/rust.vim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
 
 " Fuzzy Finding
 Plug 'nvim-lua/popup.nvim'
@@ -65,13 +62,8 @@ let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_sign_column = 'bg0' 
 
-" gruvbox material
-let g:gruvbox_material_background = 'medium'
-let g:gruvbox_material_enable_italic = 1
-let g:gruvbox_material_visual = 'reverse'
-let g:gruvbox_material_sign_column_background = 'none'
-let g:gruvbox_material_transparent_background = 1
-
+" nerd tree
+let NERDTreeShowHidden=1
 
 if exists('+termguicolors')
       let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -80,18 +72,19 @@ if exists('+termguicolors')
 endif
 
 set background=dark
-colorscheme gruvbox
+colorscheme horizon
 
+" nvim LSP
 set completeopt=menuone,noinsert,noselect
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
-lua require'lspconfig'.rust_analyzer.setup{ on_attach=require'completion'.on_attach }
-lua require'lspconfig'.ccls.setup{ on_attach=require'completion'.on_attach }
-lua require'lspconfig'.bashls.setup{ on_attach=require'completion'.on_attach }
-lua require'lspconfig'.sourcekit.setup{ on_attach=require'completion'.on_attach }
+lua require'lspconfig'.rust_analyzer.setup{}
+lua require'lspconfig'.ccls.setup{}
+lua require'lspconfig'.bashls.setup{}
+lua require'lspconfig'.sourcekit.setup{}
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'horizon',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             ['gitbranch',  'filename', 'modified' ] ]
@@ -125,6 +118,7 @@ inoremap jk  <Esc>
 " rust
 nnoremap <leader>, :Cargo run <CR>
 nnoremap <leader>. :Cargo build <CR>
+nnoremap <leader>f :RustFmt <CR>
 
 " window navigation
 nnoremap <C-j> <C-w>j
@@ -136,8 +130,6 @@ nnoremap <Leader>> :resize +10 <CR>
 nnoremap <leader>+ :vertical resize +10 <CR>
 nnoremap <leader>- :vertical resize -10 <CR>
 
-nnoremap <leader>f :RustFmt <CR>
-
 " window splitting 
 nnoremap <leader>v :vsp <CR>
 nnoremap <leader>s :sp <CR>
@@ -145,6 +137,7 @@ nnoremap <leader>s :sp <CR>
 nnoremap <leader>t :tabnew <CR>
 nnoremap <leader>q :tabclose <CR>
 
+" tag bar
 nnoremap tb :TagbarToggle <CR>
 
 " terminal navigation 
@@ -154,13 +147,11 @@ tnoremap <C-k> <C-\><C-N><C-w>k
 tnoremap <C-l> <C-\><C-N><C-w>l
 tnoremap jk <C-\><C-n>
 
+" nerd tree
 map <C-n> :NERDTreeToggle <CR>
 map <C-f> :NERDTreeFind <CR>
-
-" nvim-lua completion 
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " telescope
 nnoremap <Leader>p <cmd>lua require'telescope.builtin'.find_files{}<CR>
 nnoremap <Leader>g <cmd>lua require'telescope.builtin'.git_files{}<CR>
+nnoremap <Leader>l <cmd>lua require'telescope.builtin'.live_grep{}<CR>
