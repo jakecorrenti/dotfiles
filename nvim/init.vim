@@ -13,8 +13,6 @@ set ignorecase
 set smartcase 
 set guicursor=
 set smartindent
-set statusline+=%#warningmsg#
-set statusline+=%*
 set updatetime=50
 set nohlsearch
 set colorcolumn=80
@@ -25,12 +23,8 @@ call plug#begin('~/.config/nvim/plugged')
 " Syntax Highlighting
 Plug 'sheerun/vim-polyglot'
 
-" Themes
-Plug 'jnurmine/Zenburn'
-
 " Git integration
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
 
 " LSP
 Plug 'rust-lang/rust.vim'
@@ -55,7 +49,18 @@ if exists('+termguicolors')
       set termguicolors
 endif
 
-colorscheme zenburn
+" gruvbox
+let g:gruvbox_bold = 0
+let g:gruvbox_italic = 1
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_light = 'hard'
+let g:gruvbox_sign_column = 'bg0'
+
+colorscheme default
+
+hi! ColorColumn guibg=#161616
+hi! Pmenu guibg=#161616
+hi! SignColumn guibg=NONE
 
 " nerd commenter
 let g:NERDSpaceDelims = 1 
@@ -101,7 +106,6 @@ nmap <leader>rn <Plug>(coc-rename)
 nnoremap <leader>f :Format <CR>
 
 command! -nargs=0 Format :call CocAction('format')
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " fzf
 nnoremap <leader>p :Files<CR>
