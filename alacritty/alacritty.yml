@@ -115,7 +115,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Fira Code
+    family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -126,7 +126,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Fira Code
+    family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -137,7 +137,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Fira Code
+    family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -148,7 +148,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Fira Code
+    family: FiraCode Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
@@ -181,34 +181,68 @@ font:
 
 # Colors (Tomorrow Night)
 schemes:
+  zenburn: &zenburn
+      bright:
+        black: '#709080'
+        blue: '#94bff3'
+        cyan: '#93e0e3'
+        green: '#c3bf9f'
+        magenta: '#ec93d3'
+        red: '#dca3a3'
+        white: '#ffffff'
+        yellow: '#e0cf9f'
+
+      cursor:
+        cursor: '#73635a'
+        text: '#000000'
+
+      normal:
+        black: '#4d4d4d'
+        blue: '#506070'
+        cyan: '#8cd0d3'
+        green: '#60b48a'
+        magenta: '#dc8cc3'
+        red: '#705050'
+        white: '#dcdccc'
+        yellow: '#f0dfaf'
+
+      primary:
+        background: '#3f3f3f'
+        foreground: '#dcdccc'
+
+      selection:
+        background: '#21322f'
+        text: '#c2d87a'
+
   gruvbox: &gruvbox
-    bright:
-      black: '#7f7061'
-      blue: '#719586'
-      cyan: '#7db669'
-      green: '#aab01e'
-      magenta: '#c77089'
-      red: '#f73028'
-      white: '#e6d4a3'
-      yellow: '#f7b125'
-    cursor:
-      cursor: '#e6d4a3'
-      text: '#1e1e1e'
-    normal:
-      black: '#1e1e1e'
-      blue: '#377375'
-      cyan: '#578e57'
-      green: '#868715'
-      magenta: '#a04b73'
-      red: '#be0f17'
-      white: '#978771'
-      yellow: '#cc881a'
+    # Default colors
     primary:
-      background: '#1e1e1e'
-      foreground: '#e6d4a3'
-    selection:
-      background: '#e6d4a3'
-      text: '#534a42'
+      # hard contrast: background = '0x1d2021'
+      background: '0x1d2021'
+      # soft contrast: background = '0x32302f'
+      foreground: '0xebdbb2'
+
+    # Normal colors
+    normal:
+      black:   '0x282828'
+      red:     '0xcc241d'
+      green:   '0x98971a'
+      yellow:  '0xd79921'
+      blue:    '0x458588'
+      magenta: '0xb16286'
+      cyan:    '0x689d6a'
+      white:   '0xa89984'
+
+    # Bright colors
+    bright:
+      black:   '0x928374'
+      red:     '0xfb4934'
+      green:   '0xb8bb26'
+      yellow:  '0xfabd2f'
+      blue:    '0x83a598'
+      magenta: '0xd3869b'
+      cyan:    '0x8ec07c'
+      white:   '0xebdbb2'
 
   paper-color-dark: &paper-color-dark
    primary:
@@ -241,8 +275,7 @@ schemes:
      cyan:    '0x005faf'
      white:   '0x005f87'
 
-
-colors: *gruvbox
+colors: *zenburn
   # Default colors
   #primary:
   #  background: '#1d1f21'
@@ -395,7 +428,7 @@ colors: *gruvbox
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
+# background_opacity: 0.7
 
 #selection:
   # This string contains all characters that are used as separators for
