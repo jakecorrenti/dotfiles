@@ -23,7 +23,8 @@ set signcolumn=yes
 call plug#begin('~/.config/nvim/plugged') 
 
 " Theme
-Plug 'lifepillar/vim-solarized8'
+Plug 'tjdevries/colorbuddy.vim'
+Plug 'tjdevries/gruvbuddy.nvim'
 
 " Syntax Highlighting
 Plug 'nvim-treesitter/nvim-treesitter'
@@ -45,7 +46,7 @@ Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
-colorscheme solarized8_flat
+lua require('colorbuddy').colorscheme('gruvbuddy')
 
 set completeopt=menuone,noinsert,noselect
 
