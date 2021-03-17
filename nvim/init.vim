@@ -10,12 +10,10 @@ set tabstop=4
 set shiftwidth=4
 set relativenumber
 set ignorecase
-set laststatus=2
 set smartcase
 set smartindent
 set updatetime=50
 set nohlsearch
-set background=light
 set termguicolors
 set signcolumn=yes
 set list listchars=tab:\ \ ,trail:·,eol:↲
@@ -36,6 +34,9 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'nvim-lua/lsp_extensions.nvim'
 
+" Git
+Plug 'lewis6991/gitsigns.nvim'
+
 " Fuzzy Finding
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -48,6 +49,7 @@ Plug 'preservim/nerdcommenter'
 call plug#end()
 
 lua require('colorbuddy').colorscheme('gruvbuddy')
+lua require('gitsigns').setup()
 
 " compe
 let g:compe = {}

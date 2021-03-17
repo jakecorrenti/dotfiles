@@ -244,6 +244,10 @@ schemes:
       cyan:    '0x8ec07c'
       white:   '0xebdbb2'
 
+  gruvbuddy: &gruvbuddy
+    primary: 
+      background: '0x282c34'
+
   paper-color-dark: &paper-color-dark
    primary:
      background: '0x1c1c1c'
@@ -324,7 +328,7 @@ nord: &nord
     cyan: '#6d96a5'
     white: '#aeb3bb'
 
-colors: *zenburn
+colors: *gruvbuddy
   # Default colors
   #primary:
   #  background: '#1d1f21'
