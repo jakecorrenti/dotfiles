@@ -36,7 +36,7 @@ key_mapper('n', '<leader>l', ':lua require"telescope.builtin".live_grep()<CR>')
 key_mapper('n', '<leader>h', ':lua require"telescope.builtin".help_tags()<CR>')
 key_mapper('n', '<leader>b', ':lua require"telescope.builtin".buffers()<CR>')
 
--- lsp 
+-- lsp
 key_mapper('n', 'gD', ':lua vim.lsp.buf.declaration() <CR>')
 key_mapper('n', 'gd', ':lua vim.lsp.buf.definition() <CR>')
 key_mapper('n', 'K', ':lua vim.lsp.buf.hover() <CR>')
@@ -48,8 +48,10 @@ key_mapper('n', 'gr', ':lua vim.lsp.buf.references() <CR>')
 key_mapper('n', '<space>e', ':lua vim.lsp.diagnostic.show_line_diagnostics() <CR>')
 key_mapper('n', '<space>f', ':lua vim.lsp.buf.formatting() <CR>')
 
--- Compe 
-key_mapper('i', '<expr> <CR>', 'compe#confirm("<CR>")')
-key_mapper('i', '<expr> <C-e>', 'compe#close("<C-e>")')
-key_mapper('i', '<expr> <C-d>', 'compe#scroll({"delta": +4})')
-key_mapper('i', '<expr> <C-f>', 'compe#scroll({"delta": -4})')
+-- Compe
+
+vim.cmd[[inoremap <silent><expr> <C-Space> compe#complete()]]
+vim.cmd[[inoremap <silent><expr> <CR>      compe#confirm('<CR>')]]
+vim.cmd[[inoremap <silent><expr> <C-e>     compe#close('<C-e>')]]
+vim.cmd[[inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })]]
+vim.cmd[[inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })]]

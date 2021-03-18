@@ -12,14 +12,13 @@ return require('packer').startup(function()
   use 'tjdevries/gruvbuddy.nvim'
 
   -- Syntax Highlighting
-  -- use 'sheerun/vim-polyglot'
   use 'nvim-treesitter/nvim-treesitter'
 
   -- LSP
   use 'rust-lang/rust.vim'
   use 'neovim/nvim-lspconfig'
+  use 'nvim-lua/completion-nvim'
   use 'hrsh7th/nvim-compe'
-  use 'nvim-lua/lsp_extensions.nvim'
 
   -- Git
   use 'lewis6991/gitsigns.nvim'
