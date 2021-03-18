@@ -4,15 +4,6 @@ local wo = vim.wo
 
 vim.g.mapleader = ' '
 
-local key_mapper = function(mode, key, result)
-  vim.api.nvim_set_keymap(
-    mode,
-    key,
-    result,
-    {noremap = true, silent = true}
-  )
-end
-
 o.syntax = 'true'
 o.showcmd = true
 o.incsearch = true
@@ -31,32 +22,15 @@ o.expandtab = true
 wo.number = true
 wo.relativenumber = true
 wo.signcolumn = 'yes'
-wo.wrap = false
+wo.wrap = true
 wo.list = true
 wo.listchars = 'tab:» ,trail:·,eol:↲'
 
-require'colorbuddy'.colorscheme('gruvbuddy')
+require'colorbuddy'.colorscheme'gruvbuddy'
 require'gitsigns'.setup()
 
 require'plugins'
 require'keymaps'
 require'compe_config'
 require'lsp'
-
-
-vim.cmd(
-  [[
-  autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
-\ lua require'lsp_extensions'.inlay_hints{ prefix = ' » ', aligned = true, highlight =
-\ "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
-  ]]
-  )
-
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-    underline = true,
-    virtual_text = false,
-    signs = true,
-    update_in_insert = true,
-  }
-)
+require'treesitter'

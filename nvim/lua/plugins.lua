@@ -12,7 +12,8 @@ return require('packer').startup(function()
   use 'tjdevries/gruvbuddy.nvim'
 
   -- Syntax Highlighting
-  use 'sheerun/vim-polyglot'
+  -- use 'sheerun/vim-polyglot'
+  use 'nvim-treesitter/nvim-treesitter'
 
   -- LSP
   use 'rust-lang/rust.vim'

@@ -9,12 +9,6 @@ end
 
 local vim = vim
 
--- type inlay hints for rust analyzer
---[[
-   [vim.cmd[[autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
-   [\ lua require'lsp_extensions'.inlay_hints{ prefix = ' » ', aligned = true, highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }]]
-  -- ]]
-
 key_mapper('i', 'jk', '<ESC>')
 
 -- Rust
