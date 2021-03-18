@@ -23,8 +23,6 @@ wo.number         = true
 wo.relativenumber = true
 wo.signcolumn     = 'yes'
 wo.wrap           = true
-wo.list           = true
-wo.listchars      = 'tab:» ,trail:·,eol:↲'
 
 vim.g.NERDSpaceDelims            = 1
 vim.g.NERDCompactSexyComs        = 1

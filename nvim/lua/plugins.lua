@@ -31,4 +31,5 @@ return require('packer').startup(function()
 
   -- Miscellaneous
   use 'preservim/nerdcommenter'
+  use 'tjdevries/cyclist.vim'
 end)
