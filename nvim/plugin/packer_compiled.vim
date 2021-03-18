@@ -52,6 +52,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim"
   },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
   nerdcommenter = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/nerdcommenter"

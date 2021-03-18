@@ -32,4 +32,5 @@ return require('packer').startup(function()
   -- Miscellaneous
   use 'preservim/nerdcommenter'
   use 'tjdevries/cyclist.vim'
+  use 'glepnir/lspsaga.nvim'
 end)

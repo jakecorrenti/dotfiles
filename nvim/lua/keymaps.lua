@@ -39,19 +39,20 @@ key_mapper('n', '<leader>b', ':lua require"telescope.builtin".buffers()<CR>')
 -- lsp
 key_mapper('n', 'gD', ':lua vim.lsp.buf.declaration() <CR>')
 key_mapper('n', 'gd', ':lua vim.lsp.buf.definition() <CR>')
-key_mapper('n', 'K', ':lua vim.lsp.buf.hover() <CR>')
 key_mapper('n', 'gi', ':lua vim.lsp.buf.implementation() <CR>')
 key_mapper('n', '<C-s>', ':lua vim.lsp.buf.signature_help() <CR>')
 key_mapper('n', '<space>D', ':lua vim.lsp.buf.type_definition() <CR>')
-key_mapper('n', '<space>rn', ':lua vim.lsp.buf.rename() <CR>')
 key_mapper('n', 'gr', ':lua vim.lsp.buf.references() <CR>')
 key_mapper('n', '<space>e', ':lua vim.lsp.diagnostic.show_line_diagnostics() <CR>')
 key_mapper('n', '<space>f', ':lua vim.lsp.buf.formatting() <CR>')
 
 -- Compe
-
 vim.cmd[[inoremap <silent><expr> <C-Space> compe#complete()]]
 vim.cmd[[inoremap <silent><expr> <CR>      compe#confirm('<CR>')]]
 vim.cmd[[inoremap <silent><expr> <C-e>     compe#close('<C-e>')]]
 vim.cmd[[inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })]]
 vim.cmd[[inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })]]
+
+-- Saga
+key_mapper('n', '<space>rn', ':lua require"lspsaga.rename".rename()<CR>')
+key_mapper('n', 'K', ':lua require"lspsaga.hover".render_hover_doc()<CR>')
