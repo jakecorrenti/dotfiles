@@ -3,7 +3,7 @@
 -- Only required if you have packer in your `opt` pack
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function()
+return require('packer').startup(function(use)
   -- Packer can manage itself as an optional plugin
   use {'wbthomason/packer.nvim', opt = true}
 
@@ -19,6 +19,7 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'nvim-lua/completion-nvim'
   use 'hrsh7th/nvim-compe'
+  use 'anott03/nvim-lspinstall'
 
   -- Git
   use 'lewis6991/gitsigns.nvim'
