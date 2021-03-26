@@ -1,5 +1,4 @@
-import: 
-  - ~/dracula.yml
+# import:
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 # Import additional configuration files
@@ -100,7 +99,7 @@ scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
   # history: 10000
-  history: 0
+  history: 10000
 
   # Scrolling distance multiplier.
   multiplier: 3

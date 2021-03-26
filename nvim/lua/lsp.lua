@@ -12,6 +12,14 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 lspconfig.ccls.setup{}
 lspconfig.rust_analyzer.setup{}
 lspconfig.bashls.setup{}
+lspconfig.pyls.setup {
+  plugins = {
+    pyls_mypy = {
+      enabled = true,
+      live_mode = false
+    }
+  },
+}
 
 local system_name
 if vim.fn.has("mac") == 1 then
@@ -52,3 +60,11 @@ require'lspconfig'.sumneko_lua.setup {
     },
   },
 }
+
+
+vim.cmd[[
+
+autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
+\ lua require'lsp_extensions'.inlay_hints{ prefix = ' » ', aligned = true, highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
+
+]]
