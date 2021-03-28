@@ -29,6 +29,6 @@ require'gitsigns'.setup()
 
 require'plugins'
 require'keymaps'
-require'compe_config'
+--require'compe_config'
 require'lsp'
 require'treesitter'

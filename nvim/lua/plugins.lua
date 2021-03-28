@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
   -- LSP
   use 'rust-lang/rust.vim'
   use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/nvim-compe'
+  --use 'hrsh7th/nvim-compe'
 
   -- Git
   use 'lewis6991/gitsigns.nvim'
