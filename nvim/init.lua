@@ -21,14 +21,9 @@ o.laststatus    = 0
 
 wo.number         = true
 wo.relativenumber = true
---wo.signcolumn     = 'yes'
 wo.wrap           = true
-
---require'colorbuddy'.colorscheme'gruvbuddy'
---require'gitsigns'.setup()
 
 require'plugins'
 require'keymaps'
---require'compe_config'
 require'lsp'
 require'treesitter'
