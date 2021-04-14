@@ -4,8 +4,8 @@ return require('packer').startup(function(use)
   use {'wbthomason/packer.nvim', opt = true}
 
   -- Theme
-  use 'tjdevries/colorbuddy.vim'
-  use 'tjdevries/gruvbuddy.nvim'
+  --use 'tjdevries/colorbuddy.vim'
+  --use 'tjdevries/gruvbuddy.nvim'
 
   -- Syntax Highlighting
   use 'nvim-treesitter/nvim-treesitter'
@@ -13,10 +13,11 @@ return require('packer').startup(function(use)
   -- LSP
   use 'rust-lang/rust.vim'
   use 'neovim/nvim-lspconfig'
-  --use 'hrsh7th/nvim-compe'
+  use 'hrsh7th/nvim-compe'
 
   -- Git
-  use 'lewis6991/gitsigns.nvim'
+  --use 'lewis6991/gitsigns.nvim'
+  --use 'tpope/vim-fugitive'
 
   -- Fuzzy Finding
   use 'nvim-lua/popup.nvim'
@@ -24,7 +25,7 @@ return require('packer').startup(function(use)
   use 'nvim-lua/telescope.nvim'
 
   -- Miscellaneous
-  use 'tjdevries/cyclist.vim'
+  --use 'tjdevries/cyclist.vim'
   use 'glepnir/lspsaga.nvim'
-  use 'kyazdani42/nvim-web-devicons'
+  --use 'kyazdani42/nvim-web-devicons'
 end)

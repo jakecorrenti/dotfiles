@@ -11,6 +11,10 @@ local vim = vim
 
 key_mapper('i', 'jk', '<ESC>')
 
+-- Tabs
+key_mapper('n', '<leader>t', ':tabnew <CR>')
+key_mapper('n', '<leader>q', ':tabclose <CR>')
+
 -- Rust
 key_mapper('n', '<leader>,', ':Cargo run <CR>')
 key_mapper('n', '<leader>.', ':Cargo build <CR>')
@@ -56,7 +60,3 @@ vim.cmd[[inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })]]
 -- Saga
 key_mapper('n', '<space>rn', ':lua require"lspsaga.rename".rename()<CR>')
 key_mapper('n', 'K', ':lua require"lspsaga.hover".render_hover_doc()<CR>')
-
--- NerdTree
-vim.cmd[[map <C-n> :NERDTreeToggle <CR>]]
-vim.cmd[[map <C-f> :NERDTreeFind <CR>]]

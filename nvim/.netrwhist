@@ -1,7 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/Users/jakecorrenti/.config/nvim'
+let g:netrw_dirhist_8='/Users/jakecorrenti/course-work/Comp2Lab/HANGMAN'
+let g:netrw_dirhist_7='/Users/jakecorrenti/course-work/Comp2Lab'
+let g:netrw_dirhist_6='/Users/jakecorrenti/course-work/Comp2Lab/HANGMAN'
 let g:netrw_dirhist_5='/Users/jakecorrenti/.config/nvim'
-let g:netrw_dirhist_4='/Users/jakecorrenti/ostep-homework/cpu-api'
+let g:netrw_dirhist_4='/Users/jakecorrenti/.config/kitty'
 let g:netrw_dirhist_3='/Users/jakecorrenti/.tmux'
 let g:netrw_dirhist_2='/Users/jakecorrenti/.config/kitty'
-let g:netrw_dirhist_1='/Users/jakecorrenti/minigrep/minigrep/src'
+let g:netrw_dirhist_1='/Users/jakecorrenti/course-work/Comp1020/daily9'
+let g:netrw_dirhist_0='/Users/jakecorrenti/course-work/Comp1020/sorting-practice-code'

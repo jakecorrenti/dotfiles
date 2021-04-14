@@ -3,8 +3,8 @@ local lspconfig = require'lspconfig'
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     underline        = true,
-    virtual_text     = false,
-    signs            = true,
+    virtual_text     = true,
+    signs            = false,
     update_in_insert = true,
   }
 )
@@ -60,11 +60,3 @@ require'lspconfig'.sumneko_lua.setup {
     },
   },
 }
-
-
-vim.cmd[[
-
-autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
-\ lua require'lsp_extensions'.inlay_hints{ prefix = ' » ', aligned = true, highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
-
-]]

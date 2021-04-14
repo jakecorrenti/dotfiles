@@ -4,7 +4,6 @@ local wo  = vim.wo
 
 vim.g.mapleader = ' '
 
-o.syntax        = 'true'
 o.showcmd       = true
 o.incsearch     = true
 o.expandtab     = true
@@ -18,14 +17,15 @@ o.hlsearch      = false
 o.termguicolors = true
 o.softtabstop   = 4
 o.expandtab     = true
+o.laststatus    = 0
 
 wo.number         = true
 wo.relativenumber = true
-wo.signcolumn     = 'yes'
+--wo.signcolumn     = 'yes'
 wo.wrap           = true
 
-require'colorbuddy'.colorscheme'gruvbuddy'
-require'gitsigns'.setup()
+--require'colorbuddy'.colorscheme'gruvbuddy'
+--require'gitsigns'.setup()
 
 require'plugins'
 require'keymaps'

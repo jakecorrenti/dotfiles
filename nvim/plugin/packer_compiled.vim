@@ -32,25 +32,13 @@ local function try_loadstring(s, component, name)
 end
 
 _G.packer_plugins = {
-  ["colorbuddy.vim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
-  },
-  ["cyclist.vim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/cyclist.vim"
-  },
-  ["gitsigns.nvim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
-  },
-  ["gruvbuddy.nvim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim"
-  },
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
+  ["nvim-compe"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -59,10 +47,6 @@ _G.packer_plugins = {
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
-  },
-  ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = false,
