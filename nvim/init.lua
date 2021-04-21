@@ -4,6 +4,8 @@ local wo = vim.wo
 local g = vim.g
 
 g.mapleader = ' '
+g.tokyonight_style = "storm" -- or could be "night"
+g.tokyonight_italic_functions = true
 
 vim.cmd [[
 set shortmess+=c
@@ -31,7 +33,8 @@ wo.relativenumber = true
 wo.signcolumn = 'yes'
 wo.wrap = true
 
-require'colorbuddy'.colorscheme 'gruvbuddy'
+--require'colorbuddy'.colorscheme 'gruvbuddy'
+vim.cmd[[colorscheme tokyonight]]
 require'gitsigns'.setup()
 
 require 'compe_config'

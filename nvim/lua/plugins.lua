@@ -6,6 +6,7 @@ return require('packer').startup(function(use)
   -- Theme
   use 'tjdevries/colorbuddy.vim'
   use 'tjdevries/gruvbuddy.nvim'
+  use 'folke/tokyonight.nvim'
 
   -- Syntax Highlighting
   use 'nvim-treesitter/nvim-treesitter'
