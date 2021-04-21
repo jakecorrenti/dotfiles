@@ -1,34 +1,42 @@
 local vim = vim
-local o   = vim.o
-local wo  = vim.wo
+local o = vim.o
+local wo = vim.wo
+local g = vim.g
 
-vim.g.mapleader = ' '
+g.mapleader = ' '
 
-o.showcmd       = true
-o.incsearch     = true
-o.expandtab     = true
-o.tabstop       = 4
-o.shiftwidth    = 4
-o.smartcase     = true
-o.ignorecase    = true
-o.smartindent   = true
-o.updatetime    = 50
-o.hlsearch      = false
+vim.cmd [[
+set shortmess+=c
+set noshowmode
+let g:startify_bookmarks = [{'N': '~/.config/nvim/init.lua'}, {'C': '~/course-work'}, {'T': '~/.tmux.conf'}, {'K': '~/.config/kitty/kitty.conf'}]
+]]
+
+o.showcmd = true
+o.incsearch = true
+o.expandtab = true
+o.tabstop = 2
+o.shiftwidth = 2
+o.softtabstop = 2
+o.smartcase = true
+o.ignorecase = true
+o.smartindent = true
+o.updatetime = 50
+o.hlsearch = false
 o.termguicolors = true
-o.softtabstop   = 4
-o.expandtab     = true
-o.laststatus    = 0
+o.expandtab = true
+o.completeopt = "menuone,noselect"
 
-wo.number         = true
+wo.number = true
 wo.relativenumber = true
---wo.signcolumn     = 'yes'
-wo.wrap           = true
+wo.signcolumn = 'yes'
+wo.wrap = true
 
---require'colorbuddy'.colorscheme'gruvbuddy'
---require'gitsigns'.setup()
+require'colorbuddy'.colorscheme 'gruvbuddy'
+require'gitsigns'.setup()
 
-require'plugins'
-require'keymaps'
---require'compe_config'
-require'lsp'
-require'treesitter'
+require 'compe_config'
+require 'plugins'
+require 'keymaps'
+require 'treesitter'
+require 'lsp'
+require 'statusline'
