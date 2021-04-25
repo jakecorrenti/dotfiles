@@ -15,6 +15,16 @@ key_mapper('i', 'jk', '<ESC>')
 key_mapper('n', '<leader>t', ':tabnew <CR>')
 key_mapper('n', '<leader>q', ':tabclose <CR>')
 
+
+-- terminal navigation
+vim.cmd[[
+tnoremap <C-h> <C-\><C-N><C-w>h
+tnoremap <C-j> <C-\><C-N><C-w>j
+tnoremap <C-k> <C-\><C-N><C-w>k
+tnoremap <C-l> <C-\><C-N><C-w>l
+tnoremap jk <C-\><C-n>
+]]
+
 -- Rust
 key_mapper('n', '<leader>,', ':Cargo run <CR>')
 key_mapper('n', '<leader>.', ':Cargo build <CR>')
