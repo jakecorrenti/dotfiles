@@ -1,0 +1,58 @@
+#SKHD STUFF
+
+# if you're having troubles finding key codes for a key just type skhd --observe in a terminal and type a key. Pretty cool! Or just check the wiki.
+
+## Quickly restart the yabai launch agent
+ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+
+## Close active application
+alt - backspace : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
+
+## swap wkndow
+alt + shift - h : yabai -m window --swap west
+alt + shift - j : yabai -m window --swap south
+alt + shift - k : yabai -m window --swap north
+alt + shift - l : yabai -m window --swap east
+
+## focus display
+alt - 1 : yabai -m window --display 1 yabai -m display --focus 1
+alt - 2 : yabai -m window --display 2 yabai -m display --focus 2
+
+## increase window size
+# alt - a : yabai -m window --resize left:-20:0
+# alt - s : yabai -m window --resize bottom:0:20
+# alt - w : yabai -m window --resize top:0:-20
+# alt - d : yabai -m window --resize right:20:0
+
+## decrease window size
+alt - a : yabai -m window --resize left:20:0
+alt - s : yabai -m window --resize bottom:0:-20
+alt - w : yabai -m window --resize top:0:20
+alt - d : yabai -m window --resize right:-20:0
+
+## rotate tree 90
+alt - r : yabai -m space --rotate 90
+
+## flip the tree vertically
+alt - 4 : yabai -m space --mirror y-axis
+
+## toggle window fullscreen zoom
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+## toggle window split type
+alt - e : yabai -m window --toggle split
+
+## destroy desktop
+cmd + alt - w : yabai -m space --destroy
+
+## Swap window
+shift + cmd - h : yabai -m window --warp west
+shift + cmd - j : yabai -m window --warp south
+shift + cmd - k : yabai -m window --warp north
+shift + cmd - l : yabai -m window --warp east
+
+## focus window 
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east

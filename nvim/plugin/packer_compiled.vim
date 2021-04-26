@@ -87,6 +87,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/express_line.nvim"
   },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/formatter.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
