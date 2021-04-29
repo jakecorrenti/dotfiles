@@ -6,8 +6,8 @@ return require("packer").startup(function(use)
   -- Themes
   use("tjdevries/colorbuddy.vim")
   use("tjdevries/gruvbuddy.nvim")
-
   use("folke/tokyonight.nvim")
+  use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
 
   -- Syntax Highlighting
   use("nvim-treesitter/nvim-treesitter")
@@ -21,6 +21,8 @@ return require("packer").startup(function(use)
   use("glepnir/lspsaga.nvim")
   use("nvim-lua/lsp_extensions.nvim")
   use("mhartington/formatter.nvim")
+  -- use 'folke/lsp-colors.nvim' -- use for when the colorscheme being used doesn't support 0.5 lsp colors
+  use("folke/lsp-trouble.nvim")
 
   -- Git
   use("lewis6991/gitsigns.nvim")

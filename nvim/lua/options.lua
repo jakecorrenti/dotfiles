@@ -6,7 +6,7 @@ local g = vim.g
 g.mapleader = ' '
 
 -- tokyonight.nvim config
-g.tokyonight_style = "night" -- or could be storm or day (which is the light theme)
+g.tokyonight_style = "storm" -- or could be storm or day (which is the light theme)
 g.tokyonight_italic_functions = true
 g.tokyonight_italic_keywords = true
 

@@ -11,5 +11,5 @@ let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 
 -- vim startify bookmarks
 vim.cmd [[
-let g:startify_bookmarks = [{'N': '~/.config/nvim/init.lua'}, {'C': '~/course-work'}, {'T': '~/.tmux.conf'}, {'K': '~/.config/kitty/kitty.conf'}]
+let g:startify_bookmarks = [{'N': '~/.config/nvim/init.lua'}, {'C': '~/course-work'}, {'T': '~/.tmux.conf'}, {'K': '~/.config/kitty/kitty.conf'}, {'Y': '~/.config/yabai/yabairc'}, {'S': '~/.config/skhd/skhdrc'}]
 ]]
