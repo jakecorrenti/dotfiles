@@ -117,6 +117,9 @@ limelight &>/dev/null &
 yabai -m signal --add event=window_destroyed action="bash /Users/jesseskelton/CustomScripts/SwitchSpaces/window-focus-on-destroy.sh"
 # yabai -m signal --add event=space_changed action="export CUR_ACTIVE_APP=\"iTerm2\""
 
+## for when using the spacebar at the top of the screen
+# yabai -m config external_bar all:26:0
+
 echo "yabai configuration loaded.."
 
 #END

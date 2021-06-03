@@ -71,17 +71,13 @@ end
 time("try_loadstring definition", false)
 time("Defining packer_plugins", true)
 _G.packer_plugins = {
-  ["BetterLua.vim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/BetterLua.vim"
-  },
   ["colorbuddy.vim"] = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
   },
-  ["cyclist.vim"] = {
+  edge = {
     loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/cyclist.vim"
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/edge"
   },
   ["express_line.nvim"] = {
     loaded = true,
@@ -103,6 +99,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim"
   },
+  ["jellybeans-nvim"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/jellybeans-nvim"
+  },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim"
+  },
   ["lsp-trouble.nvim"] = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/lsp-trouble.nvim"
@@ -123,9 +127,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/nerdcommenter"
   },
-  ["nlua.nvim"] = {
+  ["nord.nvim"] = {
     loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/nlua.nvim"
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/nord.nvim"
   },
   ["nvim-compe"] = {
     loaded = true,
@@ -164,6 +168,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0" },
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/todo-comments.nvim"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
@@ -175,6 +184,10 @@ _G.packer_plugins = {
 }
 
 time("Defining packer_plugins", false)
+-- Config for: todo-comments.nvim
+time("Config for todo-comments.nvim", true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
+time("Config for todo-comments.nvim", false)
 if should_profile then save_profiles() end
 
 END

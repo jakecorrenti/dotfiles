@@ -8,12 +8,13 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
       update_in_insert = true
     })
 
-lspconfig.ccls.setup({})
-lspconfig.rust_analyzer.setup({})
-lspconfig.bashls.setup({})
-lspconfig.pyls.setup({
+lspconfig.ccls.setup {}
+lspconfig.gopls.setup {}
+lspconfig.rust_analyzer.setup {}
+lspconfig.bashls.setup {}
+lspconfig.pyls.setup {
   plugins = {pyls_mypy = {enabled = true, live_mode = false}}
-})
+}
 
 USER = vim.fn.expand("$USER")
 

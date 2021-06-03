@@ -63,7 +63,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: full
+  decorations: buttonless
 
   # Startup Mode (changes require restart)
   #
@@ -80,7 +80,7 @@ window:
   #title: Alacritty
 
   # Allow terminal applications to change Alacritty's window title.
-  dynamic_title: true
+  dynamic_title: false
 
   # Window class (Linux/BSD only):
   #class:
@@ -125,7 +125,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrains Mono
+    family: SauceCodePro Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -136,7 +136,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrains Mono
+    family: SauceCodePro Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -147,20 +147,20 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: JetBrains Mono
+    family: SauceCodePro Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
   # Point size
-  size: 12.0
+  size: 11.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
   # spacing.
   offset:
     x: 1
-    y: 1
+    y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
@@ -180,43 +180,163 @@ font:
 
 # Colors (Tomorrow Night)
 schemes:
-  
-  gruvbuddy: &gruvbuddy
-    primary: 
-      background: '0x282c34'
 
-  black-out: &black_out
-    primary: 
-      background: '0x000000'
-
-  solarized-light: &solarized_light
+  gruvbox: &gruvbox
+      # Default colors
     primary:
-      background: '0xfdf6e3'
-      foreground: '0x586e75'
-   
+      # hard contrast: background = '0x1d2021' or medium contrast: '0x282828'
+      background: '0x1d2021'
+      # soft contrast: background = '0x32302f'
+      foreground: '0xebdbb2'
+
     # Normal colors
     normal:
-      black:   '0x073642'
-      red:     '0xdc322f'
-      green:   '0x859900'
-      yellow:  '0xb58900'
-      blue:    '0x268bd2'
-      magenta: '0xd33682'
-      cyan:    '0x2aa198'
-      white:   '0xeee8d5'
-   
+      black:   '0x282828'
+      red:     '0xcc241d'
+      green:   '0x98971a'
+      yellow:  '0xd79921'
+      blue:    '0x458588'
+      magenta: '0xb16286'
+      cyan:    '0x689d6a'
+      white:   '0xa89984'
+
     # Bright colors
     bright:
-      black:   '0x002b36'
-      red:     '0xcb4b16'
-      green:   '0x586e75'
-      yellow:  '0x657b83'
-      blue:    '0x839496'
-      magenta: '0x6c71c4'
-      cyan:    '0x93a1a1'
-      white:   '0xfdf6e3'
+      black:   '0x928374'
+      red:     '0xfb4934'
+      green:   '0xb8bb26'
+      yellow:  '0xfabd2f'
+      blue:    '0x83a598'
+      magenta: '0xd3869b'
+      cyan:    '0x8ec07c'
+      white:   '0xebdbb2'
 
-colors: *gruvbuddy
+  gruvbuddy: &gruvbuddy
+      # Default colors
+    primary:
+      # hard contrast: background = '0x1d2021' or medium contrast: '0x282828'
+      background: '0x282c34'
+      # soft contrast: background = '0x32302f'
+      foreground: '0xebdbb2'
+
+    # Normal colors
+    normal:
+      black:   '0x282828'
+      red:     '0xcc241d'
+      green:   '0x98971a'
+      yellow:  '0xd79921'
+      blue:    '0x458588'
+      magenta: '0xb16286'
+      cyan:    '0x689d6a'
+      white:   '0xa89984'
+
+    # Bright colors
+    bright:
+      black:   '0x928374'
+      red:     '0xfb4934'
+      green:   '0xb8bb26'
+      yellow:  '0xfabd2f'
+      blue:    '0x83a598'
+      magenta: '0xd3869b'
+      cyan:    '0x8ec07c'
+      white:   '0xebdbb2'
+
+  tokyo-night-storm: &tokyo-night-storm
+    # Default colors
+    primary:
+      background: '0x24283b'
+      foreground: '0xc0caf5'
+
+    # Normal colors
+    normal:
+      black:   '0x1D202F'
+      red:     '0xf7768e'
+      green:   '0x9ece6a'
+      yellow:  '0xe0af68'
+      blue:    '0x7aa2f7'
+      magenta: '0xbb9af7'
+      cyan:    '0x7dcfff'
+      white:   '0xa9b1d6'
+
+    # Bright colors
+    bright:
+      black:   '0x414868'
+      red:     '0xf7768e'
+      green:   '0x9ece6a'
+      yellow:  '0xe0af68'
+      blue:    '0x7aa2f7'
+      magenta: '0xbb9af7'
+      cyan:    '0x7dcfff'
+      white:   '0xc0caf5'
+
+    indexed_colors:
+      - { index: 16, color: '0xff9e64' }
+      - { index: 17, color: '0xdb4b4b' }
+
+  ### Edge (Dark Default variant)
+  edge_dark_def:  &edge_dark_default
+    primary:
+      background: "0x2c2e34"
+      foreground: "0xc5cdd9"
+  
+    normal:
+      black: "0x3e4249"
+      red: "0xec7279"
+      green: "0xa0c980"
+      yellow: "0xdeb974"
+      blue: "0x6cb6eb"
+      magenta: "0xd38aea"
+      cyan: "0x5dbbc1"
+      white: "0xc5cdd9"
+  
+    bright:
+      black: "0x3e4249"
+      red: "0xec7279"
+      green: "0xa0c980"
+      yellow: "0xdeb974"
+      blue: "0x6cb6eb"
+      magenta: "0xd38aea"
+      cyan: "0x5dbbc1"
+      white: "0xc5cdd9"
+
+  jellybeans: &jellybeans
+    primary:
+      background: '#161616'
+      foreground: '#e4e4e4'
+
+    # Cursor volors
+    cursor:
+      text: '#feffff'
+      cursor: '#ffb472'
+
+    # Normal colors
+    normal:
+      black:   '#a3a3a3'
+      red:     '#e98885'
+      green:   '#a3c38b'
+      yellow:  '#ffc68d'
+      blue:    '#a6cae2'
+      magenta: '#e7cdfb'
+      cyan:    '#00a69f'
+      white:   '#e4e4e4'
+
+    # Bright colors
+    bright:
+      black:   '#c8c8c8'
+      red:     '#ffb2b0'
+      green:   '#c8e2b9'
+      yellow:  '#ffe1af'
+      blue:    '#bddff7'
+      magenta: '#fce2ff'
+      cyan:    '#0bbdb6'
+      white:   '#feffff'
+
+    # Selection colors
+    selection:
+      text: '#5963a2'
+      background: '#f6f6f6'
+
+colors: *jellybeans
   # Default colors
   #primary:
   #  background: '#1d1f21'

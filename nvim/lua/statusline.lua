@@ -10,11 +10,6 @@ local helper = require("el.helper")
 local has_lsp_extensions, ws_diagnostics =
     pcall(require, "lsp_extensions.workspace.diagnostic")
 
--- TODO: Spinning planet extension. Integrated w/ telescope.
--- ◐ ◓ ◑ ◒
--- 🌛︎🌝︎🌜︎🌚︎
--- Show telescope icon / emoji when you open it as well
-
 local git_icon = subscribe.buf_autocmd("el_file_icon", "BufRead",
                                        function(_, bufnr)
   local icon = extensions.file_icon(_, bufnr)

@@ -1,7 +1,7 @@
 local vim = vim
 
 -- set colorscheme
-vim.cmd [[colorscheme tokyonight]]
+vim.cmd("colorscheme jellybeans-nvim")
 
 -- enables italics in neovim with tmux. need to see getpocket.com pin to create required files
 vim.cmd [[
@@ -11,5 +11,5 @@ let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 
 -- vim startify bookmarks
 vim.cmd [[
-let g:startify_bookmarks = [{'N': '~/.config/nvim/init.lua'}, {'C': '~/course-work'}, {'T': '~/.tmux.conf'}, {'K': '~/.config/kitty/kitty.conf'}, {'Y': '~/.config/yabai/yabairc'}, {'S': '~/.config/skhd/skhdrc'}]
+let g:startify_bookmarks = [{'n': '~/.config/nvim/init.lua'}, {'t': '~/.tmux.conf'}, {'k': '~/.config/kitty/kitty.conf'}, {'z': '~/.zshrc'}, {'a': '~/.config/alacritty/alacritty.yml'}, {'y': '~/.config/yabai/yabairc'}, {'s': '~/.config/skhd/skhdrc'}, {'S': '~/.config/spacebar/spacebarrc'}]
 ]]

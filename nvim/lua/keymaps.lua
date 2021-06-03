@@ -11,13 +11,11 @@ key_mapper("n", "<leader>t", ":tabnew <CR>")
 key_mapper("n", "<leader>q", ":tabclose <CR>")
 
 -- terminal navigation
-vim.cmd([[
-tnoremap <C-h> <C-\><C-N><C-w>h
-tnoremap <C-j> <C-\><C-N><C-w>j
-tnoremap <C-k> <C-\><C-N><C-w>k
-tnoremap <C-l> <C-\><C-N><C-w>l
-tnoremap jk <C-\><C-n>
-]])
+key_mapper("t", "<C-h>", "<C-\\><C-N><C-w>h")
+key_mapper("t", "<C-j>", "<C-\\><C-N><C-w>j")
+key_mapper("t", "<C-k>", "<C-\\><C-N><C-w>k")
+key_mapper("t", "<C-l>", "<C-\\><C-N><C-w>l")
+key_mapper("t", "jk", "<C-\\><C-n>")
 
 -- Rust
 key_mapper("n", "<leader>,", ":Cargo run <CR>")
@@ -38,11 +36,14 @@ key_mapper("n", "<leader>v", ":vsp <CR>")
 key_mapper("n", "<leader>s", ":sp <CR>")
 
 -- telescope
-key_mapper("n", "<leader>p", ':lua require"telescope.builtin".find_files()<CR>')
-key_mapper("n", "<leader>g", ':lua require"telescope.builtin".git_files()<CR>')
-key_mapper("n", "<leader>l", ':lua require"telescope.builtin".live_grep()<CR>')
-key_mapper("n", "<leader>h", ':lua require"telescope.builtin".help_tags()<CR>')
-key_mapper("n", "<leader>b", ':lua require"telescope.builtin".buffers()<CR>')
+key_mapper("n", "<leader>ff", ':lua require"telescope.builtin".find_files()<CR>')
+key_mapper("n", "<leader>fg", ':lua require"telescope.builtin".git_files()<CR>')
+key_mapper("n", "<leader>fl", ':lua require"telescope.builtin".live_grep()<CR>')
+key_mapper("n", "<leader>fh", ':lua require"telescope.builtin".help_tags()<CR>')
+key_mapper("n", "<leader>fb", ':lua require"telescope.builtin".buffers()<CR>')
+key_mapper("n", "<leader>fc",
+           ':lua require"telescope.builtin".git_commits()<CR>')
+key_mapper("n", "<leader>fs", ':lua require"telescope.builtin".git_status()<CR>')
 
 -- lsp
 key_mapper("n", "gD", ":lua vim.lsp.buf.declaration() <CR>")
@@ -53,7 +54,7 @@ key_mapper("n", "<space>D", ":lua vim.lsp.buf.type_definition() <CR>")
 key_mapper("n", "gr", ":lua vim.lsp.buf.references() <CR>")
 key_mapper("n", "<space>e",
            ":lua vim.lsp.diagnostic.show_line_diagnostics() <CR>")
-key_mapper("n", "<space>f", ":lua vim.lsp.buf.formatting() <CR>")
+-- key_mapper("n", "<space>F", ":lua vim.lsp.buf.formatting() <CR>")
 
 -- Compe
 vim.cmd([[inoremap <silent><expr> <C-Space> compe#complete()]])
@@ -68,3 +69,8 @@ key_mapper("n", "K", ':lua require"lspsaga.hover".render_hover_doc()<CR>')
 
 -- lsp-trouble
 key_mapper("n", "<leader>xx", "<cmd>LspTroubleToggle<CR>")
+
+-- todo-comments.nvim
+key_mapper("n", "<leader>tt", "<cmd>TodoTelescope<CR>")
+key_mapper("n", "<leader>tq", "<cmd>TodoQuickFix<CR>")
+key_mapper("n", "<leader>tr", "<cmd>TodoTrouble<CR>")
