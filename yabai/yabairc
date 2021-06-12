@@ -83,11 +83,11 @@ yabai -m config mouse_action1 move
 
 ## Change how yabai looks
 yabai -m config layout bsp
-yabai -m config top_padding 8
-yabai -m config bottom_padding 8
-yabai -m config left_padding 8
-yabai -m config right_padding 8
-yabai -m config window_gap 8
+yabai -m config top_padding 12
+yabai -m config bottom_padding 12
+yabai -m config left_padding 12
+yabai -m config right_padding 12
+yabai -m config window_gap 12
 
 #Limelight addon (Kill it and start it each time Yabai starts)
 killall limelight &>/dev/null
@@ -117,8 +117,8 @@ limelight &>/dev/null &
 yabai -m signal --add event=window_destroyed action="bash /Users/jesseskelton/CustomScripts/SwitchSpaces/window-focus-on-destroy.sh"
 # yabai -m signal --add event=space_changed action="export CUR_ACTIVE_APP=\"iTerm2\""
 
-## for when using the spacebar at the top of the screen
-# yabai -m config external_bar all:26:0
+## for when using the pecan at the top of the screen
+yabai -m config external_bar all:38:0
 
 echo "yabai configuration loaded.."
 

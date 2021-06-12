@@ -6,7 +6,7 @@ local vim = vim
 
 key_mapper("i", "jk", "<ESC>")
 
--- Tabs
+-- tabs
 key_mapper("n", "<leader>t", ":tabnew <CR>")
 key_mapper("n", "<leader>q", ":tabclose <CR>")
 
@@ -35,7 +35,7 @@ key_mapper("n", "<leader><", ":vertical resize -10 <CR>")
 key_mapper("n", "<leader>v", ":vsp <CR>")
 key_mapper("n", "<leader>s", ":sp <CR>")
 
--- telescope
+-- Telescope
 key_mapper("n", "<leader>ff", ':lua require"telescope.builtin".find_files()<CR>')
 key_mapper("n", "<leader>fg", ':lua require"telescope.builtin".git_files()<CR>')
 key_mapper("n", "<leader>fl", ':lua require"telescope.builtin".live_grep()<CR>')
@@ -45,7 +45,7 @@ key_mapper("n", "<leader>fc",
            ':lua require"telescope.builtin".git_commits()<CR>')
 key_mapper("n", "<leader>fs", ':lua require"telescope.builtin".git_status()<CR>')
 
--- lsp
+-- LSP
 key_mapper("n", "gD", ":lua vim.lsp.buf.declaration() <CR>")
 key_mapper("n", "gd", ":lua vim.lsp.buf.definition() <CR>")
 key_mapper("n", "gi", ":lua vim.lsp.buf.implementation() <CR>")
@@ -54,7 +54,6 @@ key_mapper("n", "<space>D", ":lua vim.lsp.buf.type_definition() <CR>")
 key_mapper("n", "gr", ":lua vim.lsp.buf.references() <CR>")
 key_mapper("n", "<space>e",
            ":lua vim.lsp.diagnostic.show_line_diagnostics() <CR>")
--- key_mapper("n", "<space>F", ":lua vim.lsp.buf.formatting() <CR>")
 
 -- Compe
 vim.cmd([[inoremap <silent><expr> <C-Space> compe#complete()]])
@@ -66,11 +65,3 @@ vim.cmd([[inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })]])
 -- Saga
 key_mapper("n", "<space>rn", ':lua require"lspsaga.rename".rename()<CR>')
 key_mapper("n", "K", ':lua require"lspsaga.hover".render_hover_doc()<CR>')
-
--- lsp-trouble
-key_mapper("n", "<leader>xx", "<cmd>LspTroubleToggle<CR>")
-
--- todo-comments.nvim
-key_mapper("n", "<leader>tt", "<cmd>TodoTelescope<CR>")
-key_mapper("n", "<leader>tq", "<cmd>TodoQuickFix<CR>")
-key_mapper("n", "<leader>tr", "<cmd>TodoTrouble<CR>")

@@ -1,0 +1,19 @@
+:root {
+    --background-date: #f8f0dc;
+    --foreground-date: #323d43;
+
+    --background-workspace: #f8f0dc;
+    --foreground-workspace: #323d43;
+
+    --background-load: #f8f0dc;
+    --foreground-load: #323d43;
+
+    --background-battery: #f8f0dc;
+    --foreground-battery: #323d43;
+
+    --background-clock: #f8f0dc;
+    --foreground-clock: #323d43;
+
+    --background-network: #f8f0dc;
+    --foreground-network: #323d43;
+}

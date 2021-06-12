@@ -1,7 +1,7 @@
 local vim = vim
 
 -- set colorscheme
-vim.cmd("colorscheme jellybeans-nvim")
+vim.cmd("colorscheme everforest")
 
 -- enables italics in neovim with tmux. need to see getpocket.com pin to create required files
 vim.cmd [[

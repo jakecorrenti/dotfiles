@@ -5,24 +5,8 @@ local g = vim.g
 
 g.mapleader = ' '
 
-vim.cmd [[set laststatus=0]]
-
--- tokyonight.nvim config
-g.tokyonight_style = "storm" -- or could be storm or day (which is the light theme)
-g.tokyonight_italic_functions = true
-g.tokyonight_italic_keywords = true
-g.tokyonight_transparent = true
-
--- gruvbox config
-g.gruvbox_invert_selection = 1
-g.gruvbox_contrast_dark = 'hard'
-g.gruvbox_bold = 0
-g.gruvbox_italic = 1
-g.gruvbox_sign_column = 'bg0'
-
--- edge config
-g.edge_sign_column_background = 'none'
-g.edge_diagnostic_virtual_text = 'colored'
+vim.cmd('set laststatus=0')
+vim.cmd('set background=light')
 
 -- nerd commenter
 g.NERDSpaceDelims = 1
@@ -31,6 +15,13 @@ g.NERDDefaultAlign = 'left'
 g.NERDCommentEmptyLines = 1
 g.NERDTrimTrailingWhitespace = 1
 g.NERDToggleCheckAllLines = 1
+
+-- sainnhe/everforest
+g.everforest_background = 'soft'
+g.everforest_enable_italic = 1
+g.everforest_sign_column_background = 'none'
+g.everforest_show_eob = 0
+g.everforest_diagnostic_virtual_text = 'colored'
 
 o.showcmd = true
 o.incsearch = true
@@ -51,6 +42,5 @@ o.showmode = false
 
 wo.number = true
 wo.relativenumber = true
-wo.signcolumn = 'no'
+wo.signcolumn = 'yes'
 wo.wrap = true
-
