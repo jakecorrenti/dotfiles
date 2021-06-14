@@ -3,25 +3,8 @@ local o = vim.o
 local wo = vim.wo
 local g = vim.g
 
+-- defaults
 g.mapleader = ' '
-
-vim.cmd('set laststatus=0')
-vim.cmd('set background=light')
-
--- nerd commenter
-g.NERDSpaceDelims = 1
-g.NERDCompactSexyComs = 1
-g.NERDDefaultAlign = 'left'
-g.NERDCommentEmptyLines = 1
-g.NERDTrimTrailingWhitespace = 1
-g.NERDToggleCheckAllLines = 1
-
--- sainnhe/everforest
-g.everforest_background = 'soft'
-g.everforest_enable_italic = 1
-g.everforest_sign_column_background = 'none'
-g.everforest_show_eob = 0
-g.everforest_diagnostic_virtual_text = 'colored'
 
 o.showcmd = true
 o.incsearch = true
@@ -44,3 +27,18 @@ wo.number = true
 wo.relativenumber = true
 wo.signcolumn = 'yes'
 wo.wrap = true
+
+-- nerd commenter
+g.NERDSpaceDelims = 1
+g.NERDCompactSexyComs = 1
+g.NERDDefaultAlign = 'left'
+g.NERDCommentEmptyLines = 1
+g.NERDTrimTrailingWhitespace = 1
+g.NERDToggleCheckAllLines = 1
+
+-- gruvbox config
+g.gruvbox_invert_selection = 1
+g.gruvbox_contrast_dark = 'medium'
+g.gruvbox_bold = 0
+g.gruvbox_italic = 1
+g.gruvbox_sign_column = 'bg0'

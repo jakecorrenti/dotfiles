@@ -7,5 +7,6 @@ require "treesitter"
 require "lsp"
 require "telescope_setup"
 require "execs"
+require 'statusline'
 
 require"gitsigns".setup()

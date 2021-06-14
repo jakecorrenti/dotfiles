@@ -4,7 +4,7 @@ return require("packer").startup(function(use)
   use({"wbthomason/packer.nvim", opt = true})
 
   -- Themes
-  use("sainnhe/everforest")
+  use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
 
   -- Syntax Highlighting
   use("nvim-treesitter/nvim-treesitter")
@@ -16,7 +16,6 @@ return require("packer").startup(function(use)
   use("hrsh7th/nvim-compe")
   use("glepnir/lspsaga.nvim")
   use("nvim-lua/lsp_extensions.nvim")
-  -- use("mhartington/formatter.nvim")
 
   -- Fuzzy Finding
   use("nvim-lua/popup.nvim")
@@ -28,4 +27,5 @@ return require("packer").startup(function(use)
   use("mhinz/vim-startify")
   use("preservim/nerdcommenter")
   use("lewis6991/gitsigns.nvim")
+  use('tjdevries/express_line.nvim')
 end)
