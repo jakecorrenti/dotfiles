@@ -1,6 +1,6 @@
 require "options"
 require "commands"
--- require "compe_config"
+require "compe_config"
 require "plugins"
 require "keymaps"
 require "treesitter"
@@ -10,3 +10,4 @@ require "execs"
 require 'statusline'
 
 require"gitsigns".setup()
+require"trouble".setup {use_lsp_diagnostic_signs = true}

@@ -8,7 +8,6 @@ return require("packer").startup(function(use)
 
   -- Syntax Highlighting
   use("nvim-treesitter/nvim-treesitter")
-  use("folke/lsp-colors.nvim")
 
   -- LSP
   use("rust-lang/rust.vim")
@@ -28,4 +27,11 @@ return require("packer").startup(function(use)
   use("preservim/nerdcommenter")
   use("lewis6991/gitsigns.nvim")
   use('tjdevries/express_line.nvim')
+  use('folke/trouble.nvim')
+  use {
+    "folke/todo-comments.nvim",
+    config = function()
+      require("todo-comments").setup {}
+    end
+  }
 end)
