@@ -6,6 +6,8 @@ local g = vim.g
 -- defaults
 g.mapleader = ' '
 
+vim.cmd [[set laststatus=0]]
+
 o.showcmd = true
 o.incsearch = true
 o.expandtab = true
@@ -21,7 +23,7 @@ o.termguicolors = true
 o.expandtab = true
 o.completeopt = "menuone,noselect"
 o.shortmess = o.shortmess .. 'c'
-o.showmode = false
+o.showmode = true
 
 wo.number = true
 wo.relativenumber = true
@@ -42,3 +44,9 @@ g.gruvbox_contrast_dark = 'medium'
 g.gruvbox_bold = 0
 g.gruvbox_italic = 1
 g.gruvbox_sign_column = 'bg0'
+
+-- NeoSolarized
+g.neosolarized_vertSplitBgTrans = 1
+g.neosolarized_contrast = 'normal'
+g.neosolarized_italic = 1
+g.neosolarized_termtrans = 1

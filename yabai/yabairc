@@ -118,7 +118,7 @@ yabai -m signal --add event=window_destroyed action="bash /Users/jesseskelton/Cu
 # yabai -m signal --add event=space_changed action="export CUR_ACTIVE_APP=\"iTerm2\""
 
 ## for when using the pecan at the top of the screen
-yabai -m config external_bar all:38:0
+##yabai -m config external_bar all:24:0
 
 echo "yabai configuration loaded.."
 

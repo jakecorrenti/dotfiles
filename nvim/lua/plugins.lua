@@ -5,6 +5,7 @@ return require("packer").startup(function(use)
 
   -- Themes
   use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+  use("folke/lsp-colors.nvim")
 
   -- Syntax Highlighting
   use("nvim-treesitter/nvim-treesitter")
@@ -26,7 +27,6 @@ return require("packer").startup(function(use)
   use("mhinz/vim-startify")
   use("preservim/nerdcommenter")
   use("lewis6991/gitsigns.nvim")
-  use('tjdevries/express_line.nvim')
   use('folke/trouble.nvim')
   use {
     "folke/todo-comments.nvim",
