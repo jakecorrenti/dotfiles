@@ -1,6 +1,3 @@
--- vim.api.nvim_exec([[
--- autocmd BufWritePre *.lua lua vim.lsp.buf.formatting_sync(nil, 100)
--- ]], false)
 vim.api.nvim_exec([[
 autocmd BufWritePre * silent! lua vim.lsp.buf.formatting_sync(nil, 100)
 ]], false)

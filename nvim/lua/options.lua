@@ -7,6 +7,7 @@ local g = vim.g
 g.mapleader = ' '
 
 vim.cmd [[set laststatus=0]]
+vim.cmd [[set pumblend=15]]
 
 o.showcmd = true
 o.incsearch = true
@@ -38,15 +39,38 @@ g.NERDCommentEmptyLines = 1
 g.NERDTrimTrailingWhitespace = 1
 g.NERDToggleCheckAllLines = 1
 
+-- tokyonight
+g.tokyonight_style = "night"
+
 -- gruvbox config
 g.gruvbox_invert_selection = 1
 g.gruvbox_contrast_dark = 'medium'
 g.gruvbox_bold = 0
 g.gruvbox_italic = 1
 g.gruvbox_sign_column = 'bg0'
+g.gruvbox_transparent_bg = 1
 
--- NeoSolarized
+-- NeoSolarized config
 g.neosolarized_vertSplitBgTrans = 1
 g.neosolarized_contrast = 'normal'
 g.neosolarized_italic = 1
-g.neosolarized_termtrans = 1
+-- g.neosolarized_termtrans = 1
+
+-- indent-blankline
+g.indent_blankline_buftype_exclude = {"terminal", "nofile"}
+g.indent_blankline_filetype_exclude = {
+  "help", "startify", "dashboard", "packer", "neogitstatus", "NvimTree",
+  "Trouble"
+}
+g.indent_blankline_char = "│"
+g.indent_blankline_use_treesitter = true
+g.indent_blankline_show_trailing_blankline_indent = false
+g.indent_blankline_show_current_context = true
+g.indent_blankline_context_patterns = {
+  "class", "return", "function", "method", "^if", "^while", "jsx_element",
+  "^for", "^object", "^table", "block", "arguments", "if_statement",
+  "else_clause", "jsx_element", "jsx_self_closing_element", "try_statement",
+  "catch_clause", "import_statement", "operation_type"
+}
+-- HACK: work-around for https://github.com/lukas-reineke/indent-blankline.nvim/issues/59
+wo.colorcolumn = "99999"

@@ -4,8 +4,11 @@ return require("packer").startup(function(use)
   use({"wbthomason/packer.nvim", opt = true})
 
   -- Themes
-  use {"npxbr/gruvbox.nvim", requires = {"rktjmp/lush.nvim"}}
+  use('rktjmp/lush.nvim')
+  use("npxbr/gruvbox.nvim")
+  use('elianiva/icy.nvim')
   use("folke/lsp-colors.nvim")
+  use('folke/tokyonight.nvim')
 
   -- Syntax Highlighting
   use("nvim-treesitter/nvim-treesitter")
@@ -26,12 +29,5 @@ return require("packer").startup(function(use)
   use("kyazdani42/nvim-web-devicons")
   use("mhinz/vim-startify")
   use("preservim/nerdcommenter")
-  use("lewis6991/gitsigns.nvim")
-  use('folke/trouble.nvim')
-  use {
-    "folke/todo-comments.nvim",
-    config = function()
-      require("todo-comments").setup {}
-    end
-  }
+  use('onsails/lspkind-nvim')
 end)
