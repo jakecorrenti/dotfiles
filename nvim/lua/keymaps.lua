@@ -65,3 +65,8 @@ vim.cmd([[inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })]])
 -- Saga
 key_mapper("n", "<space>rn", ':lua require"lspsaga.rename".rename()<CR>')
 key_mapper("n", "K", ':lua require"lspsaga.hover".render_hover_doc()<CR>')
+
+
+-- Trouble.nvim
+key_mapper("n", "<leader>xx", "<cmd>TroubleToggle<CR>")
+key_mapper("n", "<leader>xd", "<cmd>TroubleToggle lsp_document_diagnostics<CR>")

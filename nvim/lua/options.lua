@@ -28,7 +28,7 @@ o.showmode = true
 
 wo.number = true
 wo.relativenumber = true
-wo.signcolumn = 'yes'
+wo.signcolumn = 'no'
 wo.wrap = true
 
 -- nerd commenter
@@ -38,9 +38,6 @@ g.NERDDefaultAlign = 'left'
 g.NERDCommentEmptyLines = 1
 g.NERDTrimTrailingWhitespace = 1
 g.NERDToggleCheckAllLines = 1
-
--- tokyonight
-g.tokyonight_style = "night"
 
 -- gruvbox config
 g.gruvbox_invert_selection = 1
@@ -72,5 +69,4 @@ g.indent_blankline_context_patterns = {
   "else_clause", "jsx_element", "jsx_self_closing_element", "try_statement",
   "catch_clause", "import_statement", "operation_type"
 }
--- HACK: work-around for https://github.com/lukas-reineke/indent-blankline.nvim/issues/59
 wo.colorcolumn = "99999"
