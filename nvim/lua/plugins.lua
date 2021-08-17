@@ -8,15 +8,14 @@ return require("packer").startup(function(use)
   use('rktjmp/lush.nvim')
   use("npxbr/gruvbox.nvim")
   use("elianiva/icy.nvim")
-  use('ayu-theme/ayu-vim')
+  use('christianchiarulli/nvcode-color-schemes.vim')
+  use('folke/lsp-colors.nvim')
 
   -- Syntax Highlighting
   use("nvim-treesitter/nvim-treesitter")
 
-  -- Treesitter
-  use 'nvim-treesitter/nvim-treesitter'
-  use 'nvim-treesitter/playground'
-
+  -- Git
+  use ('lewis6991/gitsigns.nvim')
 
   -- LSP
   use("rust-lang/rust.vim")
@@ -33,9 +32,10 @@ return require("packer").startup(function(use)
   use("nvim-lua/telescope.nvim")
 
   -- Miscellaneous
+  use('tjdevries/express_line.nvim')
   use("kyazdani42/nvim-web-devicons")
   use("mhinz/vim-startify")
   use("preservim/nerdcommenter")
   use('onsails/lspkind-nvim')
-  use('tjdevries/cyclist.vim')
+  use('hoob3rt/lualine.nvim')
 end)
