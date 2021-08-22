@@ -4,18 +4,13 @@ return require("packer").startup(function(use)
   use({"wbthomason/packer.nvim", opt = true})
 
   -- colorschemes
-  use {'tjdevries/gruvbuddy.nvim', requires = {'tjdevries/colorbuddy.vim'}}
-  use('rktjmp/lush.nvim')
-  use("npxbr/gruvbox.nvim")
-  use("elianiva/icy.nvim")
-  use('christianchiarulli/nvcode-color-schemes.vim')
-  use('folke/lsp-colors.nvim')
+  use('dracula/vim')
 
   -- Syntax Highlighting
   use("nvim-treesitter/nvim-treesitter")
 
   -- Git
-  use ('lewis6991/gitsigns.nvim')
+  use('lewis6991/gitsigns.nvim')
 
   -- LSP
   use("rust-lang/rust.vim")
@@ -24,7 +19,6 @@ return require("packer").startup(function(use)
   use("hrsh7th/nvim-compe")
   use("glepnir/lspsaga.nvim")
   use("nvim-lua/lsp_extensions.nvim")
-  use("folke/trouble.nvim")
 
   -- Fuzzy Finding
   use("nvim-lua/popup.nvim")
@@ -37,5 +31,4 @@ return require("packer").startup(function(use)
   use("mhinz/vim-startify")
   use("preservim/nerdcommenter")
   use('onsails/lspkind-nvim')
-  use('hoob3rt/lualine.nvim')
 end)

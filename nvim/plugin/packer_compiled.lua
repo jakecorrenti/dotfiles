@@ -69,10 +69,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["colorbuddy.vim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
-  },
   ["express_line.nvim"] = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/express_line.nvim"
@@ -80,22 +76,6 @@ _G.packer_plugins = {
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
-  },
-  ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/gruvbox.nvim"
-  },
-  ["gruvbuddy.nvim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim"
-  },
-  ["icy.nvim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/icy.nvim"
-  },
-  ["lsp-colors.nvim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim"
   },
   ["lsp_extensions.nvim"] = {
     loaded = true,
@@ -109,21 +89,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
   },
-  ["lualine.nvim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/lualine.nvim"
-  },
-  ["lush.nvim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/lush.nvim"
-  },
   nerdcommenter = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/nerdcommenter"
-  },
-  ["nvcode-color-schemes.vim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"
   },
   ["nvim-compe"] = {
     loaded = true,
@@ -166,9 +134,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
-  ["trouble.nvim"] = {
+  vim = {
     loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/trouble.nvim"
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/vim"
   },
   ["vim-startify"] = {
     loaded = true,

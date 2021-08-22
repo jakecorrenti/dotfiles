@@ -1,7 +1,10 @@
 local vim = vim
 
 -- set colorscheme
-vim.cmd [[colorscheme NeoSolarized]]
+vim.cmd [[colorscheme dracula]]
+
+-- auto recompile packer
+vim.cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])
 
 -- enables italics in neovim with tmux. need to see getpocket.com pin to create required files
 vim.cmd [[
@@ -13,6 +16,3 @@ let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 vim.cmd [[
 let g:startify_bookmarks = [{'n': '~/.config/nvim/init.lua'}, {'t': '~/.tmux.conf'}, {'k': '~/.config/kitty/kitty.conf'}, {'z': '~/.zshrc'}, {'a': '~/.config/alacritty/alacritty.yml'}, {'y': '~/.config/yabai/yabairc'}, {'s': '~/.config/skhd/skhdrc'}, {'S': '~/.config/spacebar/spacebarrc'}]
 ]]
-
--- highlighting
-vim.cmd[[highlight NonText guibg=NONE ctermbg=NONE]]
