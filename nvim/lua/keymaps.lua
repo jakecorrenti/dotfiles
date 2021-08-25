@@ -54,7 +54,6 @@ key_mapper("n", "<space>D", ":lua vim.lsp.buf.type_definition() <CR>")
 key_mapper("n", "gr", ":lua vim.lsp.buf.references() <CR>")
 key_mapper("n", "<space>e",
            ":lua vim.lsp.diagnostic.show_line_diagnostics() <CR>")
-key_mapper("n", "<leader>fo", ":lua vim.lsp.buf.formatting_sync(nil, 100)<CR>")
 
 -- Compe
 vim.cmd([[inoremap <silent><expr> <C-Space> compe#complete()]])
