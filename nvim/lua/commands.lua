@@ -1,7 +1,7 @@
 local vim = vim
 
 -- set colorscheme
-vim.cmd [[colorscheme dracula]]
+vim.cmd [[colorscheme aquarium]]
 
 -- auto recompile packer
 vim.cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])
@@ -14,5 +14,5 @@ let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 
 -- vim startify bookmarks
 vim.cmd [[
-let g:startify_bookmarks = [{'n': '~/.config/nvim/init.lua'}, {'t': '~/.tmux.conf'}, {'k': '~/.config/kitty/kitty.conf'}, {'z': '~/.zshrc'}, {'a': '~/.config/alacritty/alacritty.yml'}, {'y': '~/.config/yabai/yabairc'}, {'s': '~/.config/skhd/skhdrc'}, {'S': '~/.config/spacebar/spacebarrc'}]
+let g:startify_bookmarks = [{'n': '~/.config/nvim/init.lua'}, {'t': '~/.tmux.conf'}, {'k': '~/.config/kitty/kitty.conf'}, {'z': '~/.zshrc'}, {'y': '~/.config/yabai/yabairc'}, {'s': '~/.config/skhd/skhdrc'}]
 ]]

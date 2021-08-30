@@ -4,13 +4,13 @@ return require("packer").startup(function(use)
   use({"wbthomason/packer.nvim", opt = true})
 
   -- colorschemes
-  use('dracula/vim')
+  use {
+    'frenzyexists/aquarium-vim',
+    branch = 'vimscript_version'
+  }
 
   -- Syntax Highlighting
   use("nvim-treesitter/nvim-treesitter")
-
-  -- Git
-  use('lewis6991/gitsigns.nvim')
 
   -- LSP
   use("rust-lang/rust.vim")
@@ -26,11 +26,9 @@ return require("packer").startup(function(use)
   use("nvim-lua/telescope.nvim")
 
   -- Miscellaneous
-  use('tjdevries/express_line.nvim')
   use("kyazdani42/nvim-web-devicons")
   use("mhinz/vim-startify")
   use("preservim/nerdcommenter")
   use('onsails/lspkind-nvim')
-  use('tjdevries/cyclist.vim')
-  use('hoob3rt/lualine.nvim')
+  use{'glepnir/galaxyline.nvim', branch = 'main'}
 end)

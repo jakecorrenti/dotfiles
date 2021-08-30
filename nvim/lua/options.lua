@@ -12,9 +12,9 @@ vim.cmd[[set pumblend=15]]
 o.showcmd = true
 o.incsearch = true
 o.expandtab = true
--- o.tabstop = 2
--- o.shiftwidth = 2
--- o.softtabstop = 2
+o.tabstop = 2
+o.shiftwidth = 2
+o.softtabstop = 2
 o.smartcase = true
 o.ignorecase = true
 o.smartindent = true
@@ -38,3 +38,11 @@ g.NERDDefaultAlign = 'left'
 g.NERDCommentEmptyLines = 1
 g.NERDTrimTrailingWhitespace = 1
 g.NERDToggleCheckAllLines = 1
+
+-- gruvbox config
+g.gruvbox_invert_selection = 1
+g.gruvbox_contrast_dark = 'hard'
+g.gruvbox_bold = 0
+g.gruvbox_italic = 1
+g.gruvbox_sign_column = 'bg0'
+g.gruvbox_transparent_bg = 1
