@@ -18,7 +18,6 @@ local colors = {
     magenta = "#bf83b5"
 }
 
-
 local buffer_not_empty = function()
   if vim.fn.empty(vim.fn.expand('%:t')) ~= 1 then
     return true

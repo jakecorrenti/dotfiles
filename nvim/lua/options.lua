@@ -6,7 +6,6 @@ local g = vim.g
 -- defaults
 g.mapleader = ' '
 
-vim.cmd [[set laststatus=2]]
 vim.cmd[[set pumblend=15]]
 
 o.showcmd = true
@@ -28,7 +27,7 @@ o.showmode = false
 
 wo.number = true
 wo.relativenumber = true
-wo.signcolumn = 'no'
+wo.signcolumn = 'yes'
 wo.wrap = true
 
 -- nerd commenter
@@ -38,11 +37,3 @@ g.NERDDefaultAlign = 'left'
 g.NERDCommentEmptyLines = 1
 g.NERDTrimTrailingWhitespace = 1
 g.NERDToggleCheckAllLines = 1
-
--- gruvbox config
-g.gruvbox_invert_selection = 1
-g.gruvbox_contrast_dark = 'hard'
-g.gruvbox_bold = 0
-g.gruvbox_italic = 1
-g.gruvbox_sign_column = 'bg0'
-g.gruvbox_transparent_bg = 1

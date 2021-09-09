@@ -65,3 +65,6 @@ key_mapper("n", "K", ':lua require"lspsaga.hover".render_hover_doc()<CR>')
 -- Trouble.nvim
 key_mapper("n", "<leader>xx", "<cmd>TroubleToggle<CR>")
 key_mapper("n", "<leader>xd", "<cmd>TroubleToggle lsp_document_diagnostics<CR>")
+
+-- Colorscheme chnages
+key_mapper("n", "ctr", "<cmd>lua require('rose-pine.functions').toggle_variant()<CR>")

@@ -1,7 +1,7 @@
 local vim = vim
 
--- set colorscheme
-vim.cmd [[colorscheme aquarium]]
+-- colorscheme
+vim.cmd[[colorscheme dracula]]
 
 -- auto recompile packer
 vim.cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])

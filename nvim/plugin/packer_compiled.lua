@@ -69,13 +69,17 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["aquarium-vim"] = {
+  ["colorbuddy.nvim"] = {
     loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/aquarium-vim"
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim"
   },
-  ["galaxyline.nvim"] = {
+  ["gitsigns.nvim"] = {
     loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+  },
+  ["gruvbuddy.nvim"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim"
   },
   ["lsp_extensions.nvim"] = {
     loaded = true,
@@ -88,6 +92,10 @@ _G.packer_plugins = {
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
   nerdcommenter = {
     loaded = true,
@@ -133,6 +141,10 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  vim = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/vim"
   },
   ["vim-startify"] = {
     loaded = true,

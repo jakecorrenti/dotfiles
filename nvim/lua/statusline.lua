@@ -5,7 +5,6 @@ local extensions = require("el.extensions")
 local sections = require("el.sections")
 local subscribe = require("el.subscribe")
 local lsp_statusline = require("el.plugins.lsp_status")
-local helper = require("el.helper")
 
 local has_lsp_extensions, ws_diagnostics =
     pcall(require, "lsp_extensions.workspace.diagnostic")

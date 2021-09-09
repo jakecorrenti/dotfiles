@@ -3,11 +3,9 @@ vim.cmd('packadd packer.nvim')
 return require("packer").startup(function(use)
   use({"wbthomason/packer.nvim", opt = true})
 
-  -- colorschemes
-  use {
-    'frenzyexists/aquarium-vim',
-    branch = 'vimscript_version'
-  }
+  -- colorscheme
+  use{"tjdevries/gruvbuddy.nvim", requires = "tjdevries/colorbuddy.nvim"}
+  use("dracula/vim")
 
   -- Syntax Highlighting
   use("nvim-treesitter/nvim-treesitter")
@@ -30,5 +28,9 @@ return require("packer").startup(function(use)
   use("mhinz/vim-startify")
   use("preservim/nerdcommenter")
   use('onsails/lspkind-nvim')
-  use{'glepnir/galaxyline.nvim', branch = 'main'}
+  use('lewis6991/gitsigns.nvim')
+
+  -- status line
+  -- use{'glepnir/galaxyline.nvim', branch = 'main'}
+  use('hoob3rt/lualine.nvim')
 end)
