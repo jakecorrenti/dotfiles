@@ -73,6 +73,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim"
   },
+  ["cyclist.vim"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/cyclist.vim"
+  },
+  ["express_line.nvim"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/express_line.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
@@ -80,6 +88,10 @@ _G.packer_plugins = {
   ["gruvbuddy.nvim"] = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim"
+  },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim"
   },
   ["lsp_extensions.nvim"] = {
     loaded = true,
@@ -141,10 +153,6 @@ _G.packer_plugins = {
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/telescope.nvim"
-  },
-  vim = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/vim"
   },
   ["vim-startify"] = {
     loaded = true,

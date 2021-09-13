@@ -8,13 +8,8 @@ require "lsp"
 require "telescope_setup"
 require "execs"
 require "lspkind_config"
-
+require'colorbuddy_config'
+require'statusline'
 require "gitsigns".setup {
   numhl = true
-}
-
-require "lualine".setup {
-  options = {
-    theme = "dracula"
-  }
 }

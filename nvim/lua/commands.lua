@@ -1,8 +1,5 @@
 local vim = vim
 
--- colorscheme
-vim.cmd[[colorscheme dracula]]
-
 -- auto recompile packer
 vim.cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])
 

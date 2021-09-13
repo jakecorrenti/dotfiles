@@ -37,3 +37,12 @@ g.NERDDefaultAlign = 'left'
 g.NERDCommentEmptyLines = 1
 g.NERDTrimTrailingWhitespace = 1
 g.NERDToggleCheckAllLines = 1
+
+-- NeoSolarized theme
+g.neosolarized_contrast = "normal" -- or "normal"
+g.neosolarized_visibility = "normal"
+g.neosolarized_vertSplitBgTrans = 1
+g.neosolarized_bold = 1
+g.neosolarized_underline = 0
+g.neosolarized_italic = 1
+g.neosolarized_termtrans = 1

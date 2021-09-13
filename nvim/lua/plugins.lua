@@ -4,8 +4,7 @@ return require("packer").startup(function(use)
   use({"wbthomason/packer.nvim", opt = true})
 
   -- colorscheme
-  use{"tjdevries/gruvbuddy.nvim", requires = "tjdevries/colorbuddy.nvim"}
-  use("dracula/vim")
+  use { 'tjdevries/gruvbuddy.nvim', requires = {'tjdevries/colorbuddy.nvim'}}
 
   -- Syntax Highlighting
   use("nvim-treesitter/nvim-treesitter")
@@ -29,8 +28,10 @@ return require("packer").startup(function(use)
   use("preservim/nerdcommenter")
   use('onsails/lspkind-nvim')
   use('lewis6991/gitsigns.nvim')
+  use('folke/lsp-colors.nvim')
+  use('tjdevries/cyclist.vim')
 
   -- status line
-  -- use{'glepnir/galaxyline.nvim', branch = 'main'}
   use('hoob3rt/lualine.nvim')
+  use('tjdevries/express_line.nvim')
 end)
