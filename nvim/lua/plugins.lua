@@ -4,7 +4,13 @@ return require("packer").startup(function(use)
   use({"wbthomason/packer.nvim", opt = true})
 
   -- colorscheme
-  use { 'tjdevries/gruvbuddy.nvim', requires = {'tjdevries/colorbuddy.nvim'}}
+  use 'AlessandroYorba/Alduin'
+  use "ellisonleao/gruvbox.nvim"
+  use 'sainnhe/everforest'
+  use 'sainnhe/gruvbox-material'
+  use "mcchrish/zenbones.nvim"
+  use "rktjmp/lush.nvim"
+  use "EdenEast/nightfox.nvim"
 
   -- Syntax Highlighting
   use("nvim-treesitter/nvim-treesitter")
@@ -15,7 +21,8 @@ return require("packer").startup(function(use)
   use("kabouzeid/nvim-lspinstall")
   use("hrsh7th/nvim-compe")
   use("glepnir/lspsaga.nvim")
-  use("nvim-lua/lsp_extensions.nvim")
+  use("folke/trouble.nvim")
+  use("folke/lsp-colors.nvim")
 
   -- Fuzzy Finding
   use("nvim-lua/popup.nvim")
@@ -28,10 +35,9 @@ return require("packer").startup(function(use)
   use("preservim/nerdcommenter")
   use('onsails/lspkind-nvim')
   use('lewis6991/gitsigns.nvim')
-  use('folke/lsp-colors.nvim')
-  use('tjdevries/cyclist.vim')
+  -- use('f-person/git-blame.nvim')
 
   -- status line
   use('hoob3rt/lualine.nvim')
-  use('tjdevries/express_line.nvim')
+  use('tjdevries/expressline.nvim')
 end)
