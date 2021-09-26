@@ -18,7 +18,7 @@ require "trouble".setup {
   use_lsp_diagnostic_signs = true
 }
 require 'gitsigns'.setup {
-  numhl = true
+  numhl = false
 }
 
 local nightfox = require'nightfox'
