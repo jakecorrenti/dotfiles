@@ -10,7 +10,7 @@ require "execs"
 require "lspkind_config"
 require 'lualine'.setup {
   options = {
-    theme = "nightfox",
+    theme = "solarized",
   }
 }
 
@@ -41,4 +41,4 @@ nightfox.setup({
   },
 })
 
-nightfox.load()
+-- nightfox.load()

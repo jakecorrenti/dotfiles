@@ -44,4 +44,4 @@ g.neosolarized_vertSplitBgTrans = 1
 g.neosolarized_bold = 1
 g.neosolarized_underline = 0
 g.neosolarized_italic = 1
-g.neosolarized_termtrans = 1
+g.neosolarized_termtrans = 0

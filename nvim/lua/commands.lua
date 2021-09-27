@@ -1,5 +1,9 @@
 local vim = vim
 
+-- colorscheme 
+vim.cmd[[colorscheme NeoSolarized]]
+vim.cmd[[set background=light]]
+
 -- auto recompile packer
 vim.cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])
 
@@ -11,5 +15,5 @@ let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 
 -- vim startify bookmarks
 vim.cmd [[
-let g:startify_bookmarks = [{'n': '~/.config/nvim/init.lua'}, {'t': '~/.tmux.conf'}, {'k': '~/.config/kitty/kitty.conf'}, {'z': '~/.zshrc'}, {'a': '~/.config/alacritty/alacritty.yml'}, {'y': '~/.config/yabai/yabairc'}, {'s': '~/.config/skhd/skhdrc'}]
+let g:startify_bookmarks = [{'n': '~/.config/nvim/init.lua'}, {'t': '~/.tmux.conf'}, {'k': '~/.config/kitty/kitty.conf'}, {'z': '~/.zshrc'}, {'a': '~/.config/alacritty/alacritty.yml'}, {'y': '~/.config/yabai/yabairc'}, {'s': '~/.config/yabai/skhdrc'}, {'b': '~/.config/spacebar/spacebarrc'}]
 ]]
