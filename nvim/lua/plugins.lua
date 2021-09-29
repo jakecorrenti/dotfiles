@@ -1,34 +1,40 @@
-vim.cmd('packadd packer.nvim')
+vim.cmd "packadd packer.nvim"
 
 return require("packer").startup(function(use)
-  use({"wbthomason/packer.nvim", opt = true})
+  use { "wbthomason/packer.nvim", opt = true }
 
   -- colorscheme
   use "EdenEast/nightfox.nvim"
+  use "ntk148v/vim-horizon"
+  use "rktjmp/lush.nvim"
+  use "ellisonleao/gruvbox.nvim"
+  use "mcchrish/zenbones.nvim"
 
   -- Syntax Highlighting
-  use("nvim-treesitter/nvim-treesitter")
+  use "nvim-treesitter/nvim-treesitter"
 
   -- LSP
-  use("rust-lang/rust.vim")
-  use("neovim/nvim-lspconfig")
-  use("kabouzeid/nvim-lspinstall")
-  use("hrsh7th/nvim-compe")
-  use("glepnir/lspsaga.nvim")
-  use("folke/trouble.nvim")
+  use "rust-lang/rust.vim"
+  use "neovim/nvim-lspconfig"
+  use "kabouzeid/nvim-lspinstall"
+  use "hrsh7th/nvim-compe"
+  use "glepnir/lspsaga.nvim"
+  use "folke/trouble.nvim"
 
   -- Fuzzy Finding
-  use("nvim-lua/popup.nvim")
-  use("nvim-lua/plenary.nvim")
-  use("nvim-lua/telescope.nvim")
+  use "nvim-lua/popup.nvim"
+  use "nvim-lua/plenary.nvim"
+  use "nvim-lua/telescope.nvim"
 
   -- Miscellaneous
-  use("kyazdani42/nvim-web-devicons")
-  use("mhinz/vim-startify")
-  use("preservim/nerdcommenter")
-  use('onsails/lspkind-nvim')
-  use('lewis6991/gitsigns.nvim')
+  use "kyazdani42/nvim-web-devicons"
+  use "mhinz/vim-startify"
+  use "preservim/nerdcommenter"
+  use "onsails/lspkind-nvim"
+  use "lewis6991/gitsigns.nvim"
+  use "mhartington/formatter.nvim"
 
   -- status line
-  use('hoob3rt/lualine.nvim')
+  use "hoob3rt/lualine.nvim"
+  use "tjdevries/express_line.nvim"
 end)

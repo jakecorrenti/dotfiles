@@ -1,9 +1,10 @@
--- vim.api.nvim_exec([[
--- autocmd BufWritePre * silent! lua vim.lsp.buf.formatting_sync(nil, 100)
--- ]], false)
+
 vim.api.nvim_exec([[
-autocmd BufWritePre * silent! lua vim.lsp.buf.formatting()
-]], false)
+augroup FormatAutogroup
+  autocmd!
+  autocmd BufWritePost *.lua FormatWrite
+augroup END
+]], true)
 
 -- autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost * lua require'lsp_extensions'.inlay_hints{ prefix = ' » ', aligned = true, highlight = "Comment", enabled = {"TypeHint", "ChainingHint", "ParameterHint"} }
 -- ]], false)

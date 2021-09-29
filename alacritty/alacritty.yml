@@ -10,7 +10,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/solarized_light.yml
+  - ~/.config/alacritty/zenflesh.yml
 #   - ~/.config/alacritty/alacritty.yml
 
 # Any items in the `env` entry below will be added as

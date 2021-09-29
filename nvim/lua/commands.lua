@@ -1,8 +1,10 @@
 local vim = vim
 
--- colorscheme 
-vim.cmd[[colorscheme NeoSolarized]]
-vim.cmd[[set background=light]]
+-- colorscheme
+vim.cmd('colorscheme zenflesh-lush')
+
+-- highlights for horizon colorscheme
+-- vim.cmd('highlight Pmenu guibg=gray guifg=black')
 
 -- auto recompile packer
 vim.cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])

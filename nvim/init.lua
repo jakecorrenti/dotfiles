@@ -8,37 +8,35 @@ require "lsp"
 require "telescope_setup"
 require "execs"
 require "lspkind_config"
-require 'lualine'.setup {
-  options = {
-    theme = "solarized",
-  }
-}
+require "statusline"
 
-require "trouble".setup {
-  use_lsp_diagnostic_signs = true
-}
-require 'gitsigns'.setup {
-  numhl = false
-}
-
-local nightfox = require'nightfox'
-
-nightfox.setup({
-  fox = "nordfox",
-  transparent = false,
-  terminal_colors = true,
-  styles = {
-    comments = "italic",
-    functions = "italic",
-    keywords = "italic",
-    strings = "italic",
-    variables = "NONE",
+require("gitsigns").setup {
+  numhl = true,
+  current_line_blame = true,
+  current_line_blame_opts = {
+    virt_text = true,
+    virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
+    delay = 1000,
   },
-  inverse = {
-    match_paren = false,
-    visual = true,
-    search = false,
-  },
-})
+}
 
--- nightfox.load()
+require("trouble").setup {
+  use_lsp_diagnostic_signs = true,
+}
+
+require("formatter").setup {
+  filetype = {
+    lua = {
+      function()
+        return {
+          exe = "stylua",
+          args = {
+            "--config-path " .. "~/.config/nvim/stylua.toml",
+            "-",
+          },
+          stdin = true,
+        }
+      end,
+    },
+  },
+}

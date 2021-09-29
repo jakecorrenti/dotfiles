@@ -45,3 +45,15 @@ g.neosolarized_bold = 1
 g.neosolarized_underline = 0
 g.neosolarized_italic = 1
 g.neosolarized_termtrans = 0
+
+-- zenbones config
+g.zenbones_lightness = 'dim'
+g.zenbones_solid_vert_split = true
+g.zenbones_dim_noncurrent_window = true
+g.zenbones_italic_comments = true
+
+-- zenflesh config
+-- g.zenflesh_darkness = 'warm'
+g.zenflesh_solid_vert_split = true
+g.zenflesh_lighten_noncurrent_window = true
+g.zenflesh_italic_comment = true
