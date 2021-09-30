@@ -4,10 +4,8 @@ return require("packer").startup(function(use)
   use { "wbthomason/packer.nvim", opt = true }
 
   -- colorscheme
-  use {
-    "frenzyexists/aquarium-vim",
-    branch = "vimscript_version",
-  }
+  use "ellisonleao/gruvbox.nvim"
+  use "rktjmp/lush.nvim"
 
   -- Syntax Highlighting
   use "nvim-treesitter/nvim-treesitter"
@@ -35,5 +33,4 @@ return require("packer").startup(function(use)
 
   -- status line
   use "hoob3rt/lualine.nvim"
-  use { "glepnir/galaxyline.nvim", branch = "main" }
 end)

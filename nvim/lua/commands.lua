@@ -1,7 +1,7 @@
 local vim = vim
 
 -- colorscheme
-vim.cmd "colorscheme aquarium"
+vim.cmd "colorscheme gruvbox"
 
 -- highlights for horizon colorscheme
 -- vim.cmd('highlight Pmenu guibg=gray guifg=black')

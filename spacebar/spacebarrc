@@ -14,13 +14,22 @@ spacebar -m config text_font            "JetBrainsMono Nerd Font:Bold:11.0"
 spacebar -m config icon_font            "Font Awesome 6 Free:Solid:12.0"
 
 # zenflesh theme colors
-spacebar -m config background_color     0xff20202a
-spacebar -m config foreground_color     0xffcddbf9
-spacebar -m config space_icon_color     0xffebb9b9
-spacebar -m config power_icon_color     0xffe6dfb8
-spacebar -m config battery_icon_color   0xfff6bb37
-spacebar -m config dnd_icon_color       0xffb8dceb
-spacebar -m config clock_icon_color     0xffcddbf9
+# spacebar -m config background_color     0xff1C1918
+# spacebar -m config foreground_color     0xffB4BDC3
+# spacebar -m config space_icon_color     0xff819B69
+# spacebar -m config power_icon_color     0xffB77E64
+# spacebar -m config battery_icon_color   0xffDE6E7C
+# spacebar -m config dnd_icon_color       0xff6099C0
+# spacebar -m config clock_icon_color     0xff66A5AD
+
+# gruvbox medium colors
+spacebar -m config background_color     0xff282828
+spacebar -m config foreground_color     0xffebdbb2
+spacebar -m config space_icon_color     0xff8ec07c
+spacebar -m config power_icon_color     0xfffabd2f
+spacebar -m config battery_icon_color   0xfffb4934
+spacebar -m config dnd_icon_color       0xff458588
+spacebar -m config clock_icon_color     0xfffe8019
 
 spacebar -m config power_icon_strip      
 spacebar -m config space_icon_strip     I II III IV V VI VII VIII IX X

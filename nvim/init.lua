@@ -9,10 +9,20 @@ require "telescope_setup"
 require "execs"
 require "lspkind_config"
 
-require "galaxyconf"
+require("lualine").setup {
+  options = {
+    theme = "gruvbox",
+  },
+}
 
 require("gitsigns").setup {
   numhl = true,
+  current_line_blame = true,
+  current_line_blame_opts = {
+    virt_text = true,
+    virt_text_pos = "eol", -- 'eol' | 'overlay' | 'right_align'
+    delay = 1000,
+  },
 }
 
 require("trouble").setup {
