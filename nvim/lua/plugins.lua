@@ -4,11 +4,10 @@ return require("packer").startup(function(use)
   use { "wbthomason/packer.nvim", opt = true }
 
   -- colorscheme
-  use "EdenEast/nightfox.nvim"
-  use "ntk148v/vim-horizon"
-  use "rktjmp/lush.nvim"
-  use "ellisonleao/gruvbox.nvim"
-  use "mcchrish/zenbones.nvim"
+  use {
+    "frenzyexists/aquarium-vim",
+    branch = "vimscript_version",
+  }
 
   -- Syntax Highlighting
   use "nvim-treesitter/nvim-treesitter"
@@ -36,5 +35,5 @@ return require("packer").startup(function(use)
 
   -- status line
   use "hoob3rt/lualine.nvim"
-  use "tjdevries/express_line.nvim"
+  use { "glepnir/galaxyline.nvim", branch = "main" }
 end)

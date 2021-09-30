@@ -1,0 +1,33 @@
+colors:
+    primary:
+      background:        '#20202a'
+      foreground:        '#c8cedc'
+      bright_foreground: '#a0a8b6'
+      dim_foreground:    '#4c5664'
+    
+    cursor:
+      cursor: '#ebe3b9'
+      text: '#20202a'
+
+    vi_mode_cursor:
+      cursor: '#ebe3b9'
+
+    bright:
+      black:   '#3b3b4d'
+      red:     '#cc9b9d'
+      green:   '#a3ccad'
+      yellow:  '#d1ba97'
+      blue:    '#B8C9EA'
+      magenta: '#c497b3'
+      cyan:    '#95C2D1'
+      white:   '#63718b'
+
+    normal:
+      black:   '#3b3b4d'
+      red:     '#ebb9b9'
+      green:   '#caf6bb'
+      yellow:  '#ebe3b9'
+      blue:    '#cddbf9'
+      magenta: '#f6bbe7'
+      cyan:    '#b8dceb'
+      white:   '#c8cedc' 

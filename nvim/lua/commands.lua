@@ -1,13 +1,13 @@
 local vim = vim
 
 -- colorscheme
-vim.cmd('colorscheme zenflesh-lush')
+vim.cmd "colorscheme aquarium"
 
 -- highlights for horizon colorscheme
 -- vim.cmd('highlight Pmenu guibg=gray guifg=black')
 
 -- auto recompile packer
-vim.cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])
+vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
 
 -- enables italics in neovim with tmux. need to see getpocket.com pin to create required files
 vim.cmd [[
