@@ -9,12 +9,6 @@ require "telescope_setup"
 require "execs"
 require "lspkind_config"
 
-require("lualine").setup {
-  options = {
-    theme = "gruvbox",
-  },
-}
-
 require("gitsigns").setup {
   numhl = true,
   current_line_blame = true,
@@ -45,3 +39,13 @@ require("formatter").setup {
     },
   },
 }
+
+local onedark = require "onedark"
+onedark.setup {
+  theme = "onedark",
+  styles = {
+    keywords = "italic",
+  },
+}
+
+onedark.load()

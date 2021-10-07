@@ -1,34 +1,31 @@
 local vim = vim
-local o = vim.o
-local wo = vim.wo
 local g = vim.g
+local opt = vim.opt
 
 -- defaults
 g.mapleader = " "
-
-vim.cmd [[set pumblend=15]]
-
-o.showcmd = true
-o.incsearch = true
-o.expandtab = true
-o.tabstop = 2
-o.shiftwidth = 2
-o.softtabstop = 2
-o.smartcase = true
-o.ignorecase = true
-o.smartindent = true
-o.updatetime = 50
-o.hlsearch = true
-o.termguicolors = true
-o.expandtab = true
-o.completeopt = "menuone,noselect"
-o.shortmess = o.shortmess .. "c"
-o.showmode = false
-
-wo.number = true
-wo.relativenumber = true
-wo.signcolumn = "yes"
-wo.wrap = true
+opt.laststatus = 2
+opt.pumblend = 15
+opt.showcmd = true
+opt.incsearch = true
+opt.expandtab = true
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.softtabstop = 2
+opt.smartcase = true
+opt.ignorecase = true
+opt.smartindent = true
+opt.updatetime = 50
+opt.hlsearch = true
+opt.termguicolors = true
+opt.expandtab = true
+opt.completeopt = "menuone,noselect"
+vim.o.shortmess = vim.o.shortmess .. "c"
+opt.showmode = true
+opt.number = true
+opt.relativenumber = true
+opt.signcolumn = "yes"
+opt.wrap = true
 
 -- nerd commenter
 g.NERDSpaceDelims = 1
@@ -38,19 +35,20 @@ g.NERDCommentEmptyLines = 1
 g.NERDTrimTrailingWhitespace = 1
 g.NERDToggleCheckAllLines = 1
 
--- NeoSolarized theme
-g.neosolarized_contrast = "normal" -- or "normal"
-g.neosolarized_visibility = "normal"
-g.neosolarized_vertSplitBgTrans = 1
-g.neosolarized_bold = 1
-g.neosolarized_underline = 0
-g.neosolarized_italic = 1
-g.neosolarized_termtrans = 0
+-- startify bookmarks
+g.startify_bookmarks = {
+  { a = "~/.config/alacritty/alacritty.yml" },
+  { b = "~/.config/spacebar/spacebarrc" },
+  { k = "~/.config/kitty/kitty.conf" },
+  { n = "~/.config/nvim/init.lua" },
+  { s = "~/.config/yabai/skhdrc" },
+  { t = "~/.tmux.conf" },
+  { y = "~/.config/yabai/yabairc" },
+  { z = "~/.zshrc" },
+}
 
--- gruvbox config
-g.gruvbox_invert_selection = 1
-g.gruvbox_contrast_dark = "medium"
-g.gruvbox_bold = 0
-g.gruvbox_italic = 1
-g.gruvbox_sign_column = "bg0"
-g.gruvbox_transparent_bg = 1
+-- zenflesh config
+g.zenflesh_darkness = "warm"
+g.zenflesh_solid_vert_split = true
+g.zenflesh_lighten_noncurrent_window = true
+g.zenflesh_italic_comment = true

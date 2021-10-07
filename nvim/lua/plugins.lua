@@ -4,8 +4,9 @@ return require("packer").startup(function(use)
   use { "wbthomason/packer.nvim", opt = true }
 
   -- colorscheme
-  use "ellisonleao/gruvbox.nvim"
+  use "mcchrish/zenbones.nvim"
   use "rktjmp/lush.nvim"
+  use "olimorris/onedark.nvim"
 
   -- Syntax Highlighting
   use "nvim-treesitter/nvim-treesitter"
@@ -30,7 +31,4 @@ return require("packer").startup(function(use)
   use "onsails/lspkind-nvim"
   use "lewis6991/gitsigns.nvim"
   use "mhartington/formatter.nvim"
-
-  -- status line
-  use "hoob3rt/lualine.nvim"
 end)

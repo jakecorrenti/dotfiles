@@ -1,14 +1,15 @@
-local nightfox = require'nightfox'
+local nightfox = require "nightfox"
+local colors = require "nightfox.colors"
 
-nightfox.setup({
+nightfox.setup {
   fox = "nordfox",
   transparent = false,
   terminal_colors = true,
   styles = {
-    comments = "italic",
-    functions = "italic",
+    comments = "NONE",
+    functions = "NONE",
     keywords = "italic",
-    strings = "italic",
+    strings = "NONE",
     variables = "NONE",
   },
   inverse = {
@@ -16,6 +17,11 @@ nightfox.setup({
     visual = true,
     search = false,
   },
-})
+  hlgroups = {
+    GitSignsAdd = { fg = colors.green }, -- diff mode: Added line |diff.txt|
+    GitSignsChange = { fg = colors.yellow }, -- diff mode: Changed line |diff.txt|
+    GitSignsDelete = { fg = colors.red }, -- diff mode: Deleted line |diff.txt|
+  },
+}
 
 nightfox.load()

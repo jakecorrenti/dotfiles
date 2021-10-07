@@ -10,8 +10,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/aquarium.yml
-#   - ~/.config/alacritty/alacritty.yml
+  - ~/.config/alacritty/onedark.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -53,7 +52,7 @@ font:
   # Normal (roman) font face
   normal:
     # Font family
-    family: JetBrainsMono Nerd Font
+    family: FiraCode Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -61,7 +60,7 @@ font:
   # Bold font face
   bold:
     # Font family
-    family: JetBrainsMono Nerd Font
+    family: FiraCode Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -69,7 +68,7 @@ font:
   # Italic font face
   italic:
     # Font family
-    family: JetBrainsMono Nerd Font
+    family: Fira Code iCursive S12
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -77,7 +76,7 @@ font:
   # Bold italic font face
   bold_italic:
     # Font family
-    family: JetBrainsMono Nerd Font
+    family: Fira Code iCursive S12
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
