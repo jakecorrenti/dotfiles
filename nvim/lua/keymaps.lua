@@ -45,9 +45,6 @@ key_mapper("n", "<space>e", ":lua vim.lsp.diagnostic.show_line_diagnostics() <CR
 key_mapper("n", "K", ":lua vim.lsp.buf.hover()<CR>")
 key_mapper("n", "<space>rn", ":lua vim.lsp.buf.rename()<CR>")
 
--- Saga
--- key_mapper("n", "<space>rn", ':lua require"lspsaga.rename".rename()<CR>')
-
 -- Trouble.nvim
 key_mapper("n", "<leader>xx", "<cmd>TroubleToggle<CR>")
 key_mapper("n", "<leader>xd", "<cmd>TroubleToggle lsp_document_diagnostics<CR>")
