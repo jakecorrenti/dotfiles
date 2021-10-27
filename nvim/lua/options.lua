@@ -19,13 +19,14 @@ opt.updatetime = 50
 opt.hlsearch = true
 opt.termguicolors = true
 opt.expandtab = true
-opt.completeopt = "menuone,noselect"
+opt.completeopt = "menu,menuone,noselect"
 vim.o.shortmess = vim.o.shortmess .. "c"
 opt.showmode = true
 opt.number = true
 opt.relativenumber = true
-opt.signcolumn = "yes"
+opt.signcolumn = "no"
 opt.wrap = true
+opt.undofile = true
 
 -- nerd commenter
 g.NERDSpaceDelims = 1
@@ -40,6 +41,7 @@ g.startify_bookmarks = {
   { a = "~/.config/alacritty/alacritty.yml" },
   { b = "~/.config/spacebar/spacebarrc" },
   { k = "~/.config/kitty/kitty.conf" },
+  { m = "~/qmk_firmware/keyboards/lily58/keymaps/jakecorrenti/keymap.c" },
   { n = "~/.config/nvim/init.lua" },
   { s = "~/.config/yabai/skhdrc" },
   { t = "~/.tmux.conf" },
@@ -47,8 +49,42 @@ g.startify_bookmarks = {
   { z = "~/.zshrc" },
 }
 
+-- NeoSolarized theme
+g.neosolarized_contrast = "normal" -- or "normal"
+g.neosolarized_visibility = "normal"
+g.neosolarized_vertSplitBgTrans = 1
+g.neosolarized_bold = 1
+g.neosolarized_underline = 0
+g.neosolarized_italic = 1
+g.neosolarized_termtrans = 0
+
+-- tokyo night config
+g.tokyonight_style = "night"
+g.tokyonight_italic_comments = true
+g.tokyonight_italic_keywords = true
+g.tokyonight_colors = { fg_gutter = "#565f89", gitSigns = { add = "#9ece6a", change = "#e0af68", delete = "#f7768e" } }
+
+-- gruvbox config
+g.gruvbox_invert_selection = 1
+g.gruvbox_contrast_dark = "hard"
+g.gruvbox_bold = 0
+g.gruvbox_italic = 1
+g.gruvbox_sign_column = "bg0"
+g.gruvbox_transparent_bg = 0
+
+-- monokai pro config
+g.monokaipro_filter = "ristretto"
+g.monokaipro_flat_float = true
+g.monokaipro_flat_term = true
+
+-- zenbones config
+g.zenbones_lightness = "dim"
+g.zenbones_dim_noncurrent_window = true
+g.zenbones_solid_vert_split = true
+g.zenbones_italic_comments = true
+
 -- zenflesh config
 g.zenflesh_darkness = "warm"
 g.zenflesh_solid_vert_split = true
 g.zenflesh_lighten_noncurrent_window = true
-g.zenflesh_italic_comment = true
+g.zenflesh_italic_comments = true

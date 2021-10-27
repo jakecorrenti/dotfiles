@@ -6,10 +6,10 @@ nightfox.setup {
   transparent = false,
   terminal_colors = true,
   styles = {
-    comments = "NONE",
+    comments = "italic",
     functions = "NONE",
     keywords = "italic",
-    strings = "NONE",
+    strings = "italic",
     variables = "NONE",
   },
   inverse = {

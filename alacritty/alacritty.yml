@@ -10,7 +10,9 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/onedark.yml
+  - ~/.config/alacritty/gruvbox_dark.yml
+
+# window.transparent: 0.8
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -52,7 +54,7 @@ font:
   # Normal (roman) font face
   normal:
     # Font family
-    family: FiraCode Nerd Font Mono
+    family: SauceCodePro Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -60,7 +62,7 @@ font:
   # Bold font face
   bold:
     # Font family
-    family: FiraCode Nerd Font Mono
+    family: SauceCodePro Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -68,7 +70,7 @@ font:
   # Italic font face
   italic:
     # Font family
-    family: Fira Code iCursive S12
+    family: SauceCodePro Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -76,7 +78,7 @@ font:
   # Bold italic font face
   bold_italic:
     # Font family
-    family: Fira Code iCursive S12
+    family: SauceCodePro Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic

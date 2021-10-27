@@ -8,11 +8,11 @@ declare -A gaps
 declare -A color
 
 # gaps were originally 4
-gaps["top"]="8"
-gaps["bottom"]="24"
-gaps["left"]="8"
-gaps["right"]="8"
-gaps["inner"]="8"
+gaps["top"]="12"
+gaps["bottom"]="12"
+gaps["left"]="12"
+gaps["right"]="12"
+gaps["inner"]="12"
 
 color["focused"]="0xE0808080"
 color["normal"]="0x00010101"

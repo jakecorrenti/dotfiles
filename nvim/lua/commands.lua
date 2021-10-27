@@ -1,7 +1,8 @@
 local vim = vim
 
--- colorscheme
--- vim.cmd [[colorscheme onedark]]
+vim.cmd [[
+colorscheme gruvbox
+]]
 
 -- auto recompile packer
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]

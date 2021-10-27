@@ -4,9 +4,8 @@ return require("packer").startup(function(use)
   use { "wbthomason/packer.nvim", opt = true }
 
   -- colorscheme
-  use "mcchrish/zenbones.nvim"
+  use "ellisonleao/gruvbox.nvim"
   use "rktjmp/lush.nvim"
-  use "olimorris/onedark.nvim"
 
   -- Syntax Highlighting
   use "nvim-treesitter/nvim-treesitter"
@@ -14,10 +13,6 @@ return require("packer").startup(function(use)
   -- LSP
   use "rust-lang/rust.vim"
   use "neovim/nvim-lspconfig"
-  use "kabouzeid/nvim-lspinstall"
-  use "hrsh7th/nvim-compe"
-  use "glepnir/lspsaga.nvim"
-  use "folke/trouble.nvim"
 
   -- Fuzzy Finding
   use "nvim-lua/popup.nvim"
@@ -29,6 +24,16 @@ return require("packer").startup(function(use)
   use "mhinz/vim-startify"
   use "preservim/nerdcommenter"
   use "onsails/lspkind-nvim"
-  use "lewis6991/gitsigns.nvim"
   use "mhartington/formatter.nvim"
+
+  -- Git
+  use "sindrets/diffview.nvim"
+
+  -- cmp
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/nvim-cmp"
+  use "L3MON4D3/LuaSnip"
+  use "saadparwaiz1/cmp_luasnip"
+  use "hrsh7th/cmp-path"
 end)

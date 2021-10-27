@@ -4,18 +4,12 @@ end
 
 local vim = vim
 
-key_mapper("i", "jk", "<ESC>")
-
 -- terminal navigation
 key_mapper("t", "<C-h>", "<C-\\><C-N><C-w>h")
 key_mapper("t", "<C-j>", "<C-\\><C-N><C-w>j")
 key_mapper("t", "<C-k>", "<C-\\><C-N><C-w>k")
 key_mapper("t", "<C-l>", "<C-\\><C-N><C-w>l")
 key_mapper("t", "jk", "<C-\\><C-n>")
-
--- Rust
-key_mapper("n", "<leader>,", ":Cargo run <CR>")
-key_mapper("n", "<leader>.", ":Cargo build <CR>")
 
 -- window navigation
 key_mapper("n", "<C-j>", "<C-w>j")
@@ -49,17 +43,19 @@ key_mapper("n", "<space>D", ":lua vim.lsp.buf.type_definition() <CR>")
 key_mapper("n", "gr", ":lua vim.lsp.buf.references() <CR>")
 key_mapper("n", "<space>e", ":lua vim.lsp.diagnostic.show_line_diagnostics() <CR>")
 key_mapper("n", "K", ":lua vim.lsp.buf.hover()<CR>")
-
--- Compe
-vim.cmd [[inoremap <silent><expr> <C-Space> compe#complete()]]
-vim.cmd [[inoremap <silent><expr> <CR>      compe#confirm('<CR>')]]
-vim.cmd [[inoremap <silent><expr> <C-e>     compe#close('<C-e>')]]
-vim.cmd [[inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })]]
-vim.cmd [[inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })]]
+key_mapper("n", "<space>rn", ":lua vim.lsp.buf.rename()<CR>")
 
 -- Saga
-key_mapper("n", "<space>rn", ':lua require"lspsaga.rename".rename()<CR>')
+-- key_mapper("n", "<space>rn", ':lua require"lspsaga.rename".rename()<CR>')
 
 -- Trouble.nvim
 key_mapper("n", "<leader>xx", "<cmd>TroubleToggle<CR>")
 key_mapper("n", "<leader>xd", "<cmd>TroubleToggle lsp_document_diagnostics<CR>")
+
+-- nvim-cmp
+
+-- this fixes the issue where the pmenu would stay open when hitting ctrl-c to
+-- exit normal mode in the middle of a word
+key_mapper("i", "<C-c>", "<Esc>")
+
+key_mapper("n", "<leader>fo", ":lua vim.lsp.buf.formatting()<CR>")
