@@ -24,5 +24,4 @@ require("formatter").setup {
   },
 }
 
--- require "cmp_conf"
 require "diffview_conf"
