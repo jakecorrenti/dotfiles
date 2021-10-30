@@ -6,7 +6,6 @@ require "treesitter"
 require "lsp"
 require "telescope_setup"
 require "execs"
-require "lspkind_config"
 
 require("formatter").setup {
   filetype = {
@@ -25,5 +24,5 @@ require("formatter").setup {
   },
 }
 
-require "cmp_conf"
+-- require "cmp_conf"
 require "diffview_conf"

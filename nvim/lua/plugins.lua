@@ -3,18 +3,15 @@ vim.cmd "packadd packer.nvim"
 return require("packer").startup(function(use)
   use { "wbthomason/packer.nvim", opt = true }
 
-  -- colorscheme
-  use "ellisonleao/gruvbox.nvim"
-  use "rktjmp/lush.nvim"
-
   -- Syntax Highlighting
   use "nvim-treesitter/nvim-treesitter"
 
   -- LSP
   use "rust-lang/rust.vim"
   use "neovim/nvim-lspconfig"
+  use "kabouzeid/nvim-lspinstall"
 
-  -- Fuzzy Finding
+  -- Telescope
   use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
   use "nvim-lua/telescope.nvim"
@@ -23,7 +20,6 @@ return require("packer").startup(function(use)
   use "kyazdani42/nvim-web-devicons"
   use "mhinz/vim-startify"
   use "preservim/nerdcommenter"
-  use "onsails/lspkind-nvim"
   use "mhartington/formatter.nvim"
 
   -- Git

@@ -1,7 +1,8 @@
 local vim = vim
 
 vim.cmd [[
-colorscheme gruvbox
+colorscheme murphy
+highlight Pmenu guibg=black
 ]]
 
 -- auto recompile packer

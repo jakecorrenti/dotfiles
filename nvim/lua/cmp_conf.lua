@@ -1,5 +1,4 @@
 -- Setup nvim-cmp.
-local lspkind = require "lspkind"
 --
 -- cmp.setup {
 --   formatting = {
@@ -28,9 +27,6 @@ local lspkind = require "lspkind"
 local cmp = require "cmp"
 
 cmp.setup {
-  formatting = {
-    format = lspkind.cmp_format(),
-  },
   snippet = {
     expand = function(args)
       -- For `luasnip` user.

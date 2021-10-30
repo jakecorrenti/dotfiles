@@ -97,18 +97,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/formatter.nvim"
   },
-  ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/gruvbox.nvim"
-  },
-  ["lspkind-nvim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
-  },
-  ["lush.nvim"] = {
-    loaded = true,
-    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/lush.nvim"
-  },
   nerdcommenter = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/nerdcommenter"
@@ -120,6 +108,10 @@ _G.packer_plugins = {
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+  },
+  ["nvim-lspinstall"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
   ["nvim-treesitter"] = {
     loaded = true,
