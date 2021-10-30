@@ -1,5 +1,5 @@
 # dotfiles
 
 ### Daily drivers: 
-Editor: Neovim
-Terminal: Alacritty
+- Editor: Neovim
+- Terminal: Alacritty
