@@ -69,6 +69,30 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/LuaSnip"
+  },
+  ["apprentice.nvim"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/apprentice.nvim"
+  },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/cmp-buffer"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/cmp-path"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/cmp_luasnip"
+  },
   ["diffview.nvim"] = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/diffview.nvim"
@@ -77,9 +101,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/formatter.nvim"
   },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/gruvbox.nvim"
+  },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/lush.nvim"
+  },
   nerdcommenter = {
     loaded = true,
     path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/nerdcommenter"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/Users/jakecorrenti/.local/share/nvim/site/pack/packer/start/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

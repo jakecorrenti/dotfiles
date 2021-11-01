@@ -1,12 +1,9 @@
 local vim = vim
 
-vim.cmd [[
-colorscheme murphy
-highlight Pmenu guibg=black
-]]
-
 -- auto recompile packer
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
+
+vim.cmd [[colorscheme gruvbox]]
 
 -- enables italics in neovim with tmux. need to see getpocket.com pin to create required files
 vim.cmd [[

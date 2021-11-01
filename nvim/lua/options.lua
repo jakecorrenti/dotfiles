@@ -57,17 +57,34 @@ g.neosolarized_underline = 0
 g.neosolarized_italic = 1
 g.neosolarized_termtrans = 0
 
--- tokyo night config
-g.tokyonight_style = "storm"
-g.tokyonight_italic_comments = true
-g.tokyonight_italic_keywords = true
-g.tokyonight_colors = { fg_gutter = "#565f89", gitSigns = { add = "#9ece6a", change = "#e0af68", delete = "#f7768e" } }
+vim.o.background = "dark" -- or "light" for light mode
 
--- gruvbox config
-g.gruvbox_invert_selection = 1
-g.gruvbox_contrast_dark = "hard"
-g.gruvbox_contrast_light = "soft"
-g.gruvbox_bold = 0
-g.gruvbox_italic = 1
-g.gruvbox_sign_column = "bg0"
-g.gruvbox_transparent_bg = 0
+-- Load and setup function to choose plugin and language highlights
+-- require "lush"(require("apprentice").setup {
+--   plugins = {
+--     "cmp", -- nvim-cmp
+--     "lsp",
+--     "lspsaga",
+--     "startify",
+--     "telescope",
+--     "treesitter",
+--   },
+--   langs = {
+--     "c",
+--     "clojure",
+--     "css",
+--     "golang",
+--     "html",
+--     "java",
+--     "js",
+--     "json",
+--     "jsx",
+--     "lua",
+--     "markdown",
+--     "python",
+--     "rust",
+--     "typescript",
+--     "viml",
+--     "xml",
+--   },
+-- })
