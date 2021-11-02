@@ -33,19 +33,3 @@ key_mapper("n", "<leader>fh", ':lua require"telescope.builtin".help_tags()<CR>')
 key_mapper("n", "<leader>fb", ':lua require"telescope.builtin".buffers()<CR>')
 key_mapper("n", "<leader>fc", ':lua require"telescope.builtin".git_commits()<CR>')
 key_mapper("n", "<leader>fs", ':lua require"telescope.builtin".git_status()<CR>')
-
--- LSP
--- key_mapper("n", "gD", ":lua vim.lsp.buf.declaration() <CR>")
--- key_mapper("n", "gd", ":lua vim.lsp.buf.definition() <CR>")
--- key_mapper("n", "gi", ":lua vim.lsp.buf.implementation() <CR>")
--- key_mapper("n", "<C-s>", ":lua vim.lsp.buf.signature_help() <CR>")
--- key_mapper("n", "<space>D", ":lua vim.lsp.buf.type_definition() <CR>")
--- key_mapper("n", "gr", ":lua vim.lsp.buf.references() <CR>")
--- key_mapper("n", "<space>e", ":lua vim.lsp.diagnostic.show_line_diagnostics() <CR>")
--- key_mapper("n", "K", ":lua vim.lsp.buf.hover()<CR>")
--- key_mapper("n", "<space>rn", ":lua vim.lsp.buf.rename()<CR>")
--- key_mapper("n", "<leader>fo", ":lua vim.lsp.buf.formatting()<CR>")
-
--- this fixes the issue where the pmenu would stay open when hitting ctrl-c to
--- exit normal mode in the middle of a word with nvim-cmp
--- key_mapper("i", "<C-c>", "<Esc>")
