@@ -58,33 +58,3 @@ g.neosolarized_italic = 1
 g.neosolarized_termtrans = 0
 
 vim.o.background = "dark" -- or "light" for light mode
-
--- Load and setup function to choose plugin and language highlights
--- require "lush"(require("apprentice").setup {
---   plugins = {
---     "cmp", -- nvim-cmp
---     "lsp",
---     "lspsaga",
---     "startify",
---     "telescope",
---     "treesitter",
---   },
---   langs = {
---     "c",
---     "clojure",
---     "css",
---     "golang",
---     "html",
---     "java",
---     "js",
---     "json",
---     "jsx",
---     "lua",
---     "markdown",
---     "python",
---     "rust",
---     "typescript",
---     "viml",
---     "xml",
---   },
--- })

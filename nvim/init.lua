@@ -3,7 +3,6 @@ require "commands"
 require "plugins"
 require "keymaps"
 require "treesitter"
-require "lsp"
 require "telescope_setup"
 require "execs"
 
@@ -23,6 +22,3 @@ require("formatter").setup {
     },
   },
 }
-
-require "diffview_conf"
-require "cmp_conf"
