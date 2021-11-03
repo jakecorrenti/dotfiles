@@ -1,7 +1,6 @@
 local vim = vim
 
--- colorscheme
-vim.cmd [[colorscheme seoul256]]
+vim.cmd [[colorscheme murphy]]
 
 -- auto recompile packer
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]

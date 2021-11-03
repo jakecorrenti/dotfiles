@@ -26,6 +26,7 @@ opt.number = true
 opt.relativenumber = true
 opt.signcolumn = "no"
 opt.wrap = true
+opt.autochdir = true
 
 -- nerd commenter
 g.NERDSpaceDelims = 1
@@ -34,27 +35,5 @@ g.NERDDefaultAlign = "left"
 g.NERDCommentEmptyLines = 1
 g.NERDTrimTrailingWhitespace = 1
 g.NERDToggleCheckAllLines = 1
-
--- startify bookmarks
-g.startify_bookmarks = {
-  { a = "~/.config/alacritty/alacritty.yml" },
-  { b = "~/.config/spacebar/spacebarrc" },
-  { k = "~/.config/kitty/kitty.conf" },
-  { m = "~/qmk_firmware/keyboards/lily58/keymaps/jakecorrenti/keymap.c" },
-  { n = "~/.config/nvim/init.lua" },
-  { s = "~/.config/yabai/skhdrc" },
-  { t = "~/.tmux.conf" },
-  { y = "~/.config/yabai/yabairc" },
-  { z = "~/.zshrc" },
-}
-
--- NeoSolarized theme
-g.neosolarized_contrast = "normal" -- or "normal"
-g.neosolarized_visibility = "normal"
-g.neosolarized_vertSplitBgTrans = 1
-g.neosolarized_bold = 1
-g.neosolarized_underline = 0
-g.neosolarized_italic = 1
-g.neosolarized_termtrans = 0
 
 vim.o.background = "dark" -- or "light" for light mode
