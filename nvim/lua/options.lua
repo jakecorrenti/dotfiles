@@ -27,6 +27,7 @@ opt.relativenumber = true
 opt.signcolumn = "no"
 opt.wrap = true
 opt.autochdir = true
+opt.background = "light"
 
 -- nerd commenter
 g.NERDSpaceDelims = 1
@@ -35,5 +36,3 @@ g.NERDDefaultAlign = "left"
 g.NERDCommentEmptyLines = 1
 g.NERDTrimTrailingWhitespace = 1
 g.NERDToggleCheckAllLines = 1
-
-vim.o.background = "dark" -- or "light" for light mode

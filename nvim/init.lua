@@ -1,7 +1,4 @@
 require "options"
 require "commands"
-require "plugins"
 require "keymaps"
-require "treesitter"
-require "telescope_setup"
 require "execs"
