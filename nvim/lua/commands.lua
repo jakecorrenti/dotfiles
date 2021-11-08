@@ -1,7 +1,7 @@
 local vim = vim
 
 -- colorscheme
-vim.cmd[[colorscheme alduin]]
+vim.cmd[[colorscheme menguless]]
 
 -- auto recompile packer
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]

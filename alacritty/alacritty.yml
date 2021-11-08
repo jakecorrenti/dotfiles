@@ -10,7 +10,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/solarized_dark.yml
+  - ~/.config/alacritty/menguless.yml
 
 # window.transparent: 0.8
 
@@ -35,7 +35,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: buttonless
+  #decorations: buttonless
 
   # Allow terminal applications to change Alacritty's window title.
   dynamic_title: false
@@ -54,7 +54,7 @@ font:
   # Normal (roman) font face
   normal:
     # Font family
-    family: SauceCodePro Nerd Font
+    family: FiraCode NF
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -62,7 +62,7 @@ font:
   # Bold font face
   bold:
     # Font family
-    family: SauceCodePro Nerd Font
+    family: FiraCode NF
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -70,7 +70,7 @@ font:
   # Italic font face
   italic:
     # Font family
-    family: SauceCodePro Nerd Font
+    family: FiraCode NF
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -78,13 +78,13 @@ font:
   # Bold italic font face
   bold_italic:
     # Font family
-    family: SauceCodePro Nerd Font
+    family: FiraCode NF
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
   # Point size
-  size: 11.0
+  size: 9.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter

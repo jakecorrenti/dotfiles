@@ -26,13 +26,5 @@ opt.number = true
 opt.relativenumber = true
 opt.signcolumn = "no"
 opt.wrap = true
-opt.autochdir = true
-opt.background = "light"
-
--- nerd commenter
-g.NERDSpaceDelims = 1
-g.NERDCompactSexyComs = 1
-g.NERDDefaultAlign = "left"
-g.NERDCommentEmptyLines = 1
-g.NERDTrimTrailingWhitespace = 1
-g.NERDToggleCheckAllLines = 1
+opt.colorcolumn = "80"
+opt.background = "dark"
