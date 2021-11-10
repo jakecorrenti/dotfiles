@@ -1,11 +1,10 @@
 local vim = vim
-local g = vim.g
 local opt = vim.opt
 
--- defaults
-g.mapleader = " "
+vim.g.mapleader = " "
+vim.o.shortmess = vim.o.shortmess .. "c"
+
 opt.laststatus = 2
-opt.pumblend = 15
 opt.showcmd = true
 opt.incsearch = true
 opt.expandtab = true
@@ -19,8 +18,6 @@ opt.updatetime = 50
 opt.hlsearch = true
 opt.termguicolors = true
 opt.expandtab = true
-opt.completeopt = "menu,menuone,noselect"
-vim.o.shortmess = vim.o.shortmess .. "c"
 opt.showmode = true
 opt.number = true
 opt.relativenumber = true
