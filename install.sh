@@ -2,10 +2,10 @@
 
 # things to install
 log_file=~/install_progress_log.txt
-sudo dnf -y update
+sudo apt -y update
 
 # git
-sudo dnf -y install git
+sudo apt -y install git
 if type -p git &> /dev/null; then
   echo "git installed" >> $log_file
 else
@@ -13,7 +13,7 @@ else
 fi
 
 # curl
-sudo dnf -y install curl
+sudo apt -y install curl
 if type -p curl &> /dev/null; then
   echo "curl installed" >> $log_file
 else
@@ -21,7 +21,7 @@ else
 fi
 
 # python
-sudo dnf -y install python3
+sudo apt -y install python3
 if type -p python3 &> /dev/null; then
   echo "python3 installed" >> $log_file
 else
@@ -37,7 +37,7 @@ else
 fi
 
 # clangd
-sudo dnf -y install clang
+sudo apt -y install clang
 if type -p clang &> /dev/null; then
   echo "clang installed" >> $log_file
 else
@@ -45,7 +45,7 @@ else
 fi
 
 # neovim
-sudo dnf -y install neovim python3-neovim
+sudo apt -y install neovim 
 if type -p nvim &> /dev/null; then
   echo "neovim installed" >> $log_file
 else
@@ -53,7 +53,7 @@ else
 fi
 
 # tmux
-sudo dnf -y install tmux
+sudo apt -y install tmux
 if type -p tmux &> /dev/null; then
   echo "tmux installed" >> $log_file
 else 
@@ -61,7 +61,7 @@ else
 fi
 
 # i3
-sudo dnf -y install i3 i3status dmenu 
+sudo apt -y install i3 i3status dmenu 
 if type -p i3 &> /dev/null; then
   echo "i3 installed" >> $log_file
 else
@@ -81,7 +81,7 @@ else
 fi
 
 # zsh
-sudo dnf -y install zsh
+sudo apt -y install zsh
 if type -p zsh &> /dev/null; then
   echo "zsh installed" >> $log_file
 else
@@ -94,7 +94,7 @@ chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # bat (cargo)
-sudo dnf -y install bat
+sudo apt -y install bat
 if type -p bat &> /dev/null; then
   echo "bat installed" >> $log_file
 else
@@ -102,7 +102,7 @@ else
 fi
 
 # exa (cargo)
-sudo dnf -y install exa
+sudo apt -y install exa
 if type -p bat &> /dev/null; then
   echo "exa installed" >> $log_file
 else
@@ -110,7 +110,7 @@ else
 fi
 
 # delta (cargo)
-sudo dnf -y install delta-git
+sudo apt -y install delta-git
 if type -p delta &> /dev/null; then
   echo "delta-git installed" >> $log_file
 else
@@ -118,7 +118,7 @@ else
 fi
 
 # ripgrep (cargo)
-sudo dnf -y install ripgrep
+sudo apt -y install ripgrep
 if type -p rg &> /dev/null; then
   echo "delta-git installed" >> $log_file
 else
@@ -140,7 +140,7 @@ cd alacritty
 rustup override set stable
 rustup update stable
 
-sudo dnf -y install cmake freetype-devel fontconfig-devel libxcb-devel libxkbcommon-devel g++
+apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
 
 cargo build --release
 
@@ -182,3 +182,8 @@ ln -s ~/.config/.tmux.conf ~/.tmux.conf
 rm ~/.zshrc
 mv .zshrc ~/.config/
 ln -s ~/.config/.zshrc ~/.zshrc
+
+cd ~/
+
+echo "######### SUMMARY ########"
+cat $log_file
