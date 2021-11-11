@@ -152,9 +152,33 @@ sudo update-desktop-database
 cd ~/
 
 # dotfiles
-  # neovim
-  # .gitconfig
-  # tmux
-  # .zshrc
-  # alacritty
-  # i3
+git clone https://github.com/jakecorrenti/dotfiles.git
+
+cd dotfiles
+
+# neovim
+rm ~/.config/nvim
+mv nvim ~/.config/
+
+# alacritty
+rm ~/.config/alacritty
+mv alacritty ~/.config/
+
+# i3
+rm ~/.config/i3
+mv i3 ~/.config/
+
+# .gitconfig
+rm ~/.gitconfig
+mv .gitconfig ~/.config/
+ln -s ~/.config/.gitconfig ~/.gitignore
+
+# tmux
+rm ~/.tmux.conf
+mv .tmux.conf ~/.config/
+ln -s ~/.config/.tmux.conf ~/.tmux.conf
+
+# .zshrc
+rm ~/.zshrc
+mv .zshrc ~/.config/
+ln -s ~/.config/.zshrc ~/.zshrc
