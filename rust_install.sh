@@ -3,16 +3,9 @@
 # things to install
 log_file=~/install_progress_log.txt
 
-# rust 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-if type -p rustc &> /dev/null; then
-  echo "rust installed" >> $log_file
-else
-  echo "rust failed to install" >> $log_file
-fi
 
 # bat (cargo)
-sudo apt -y install bat
+cargo install bat
 if type -p bat &> /dev/null; then
   echo "bat installed" >> $log_file
 else
@@ -20,7 +13,7 @@ else
 fi
 
 # exa (cargo)
-sudo apt -y install exa
+cargo install exa
 if type -p bat &> /dev/null; then
   echo "exa installed" >> $log_file
 else
@@ -28,7 +21,7 @@ else
 fi
 
 # delta (cargo)
-sudo apt -y install delta-git
+cargo install delta-git
 if type -p delta &> /dev/null; then
   echo "delta-git installed" >> $log_file
 else
@@ -36,7 +29,7 @@ else
 fi
 
 # ripgrep (cargo)
-sudo apt -y install ripgrep
+cargo install ripgrep
 if type -p rg &> /dev/null; then
   echo "delta-git installed" >> $log_file
 else
@@ -73,3 +66,7 @@ cd ~/dotfiles
 
 rm ~/.config/alacritty
 mv alacritty ~/.config/
+
+echo "######### SUMMARY ########"
+cat $log_file
+rm $log_file

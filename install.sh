@@ -82,6 +82,14 @@ fi
 
 chsh -s $(which zsh)
 
+# rust 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+if type -p rustc &> /dev/null; then
+  echo "rust installed" >> $log_file
+else
+  echo "rust failed to install" >> $log_file
+fi
+
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -119,3 +127,4 @@ cd ~/
 
 echo "######### SUMMARY ########"
 cat $log_file
+rm $log_file
