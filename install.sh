@@ -80,7 +80,7 @@ else
   echo "zsh failed to install" >> $log_file
 fi
 
-chsh -s $(which zsh)
+#chsh -s $(which zsh)
 
 # rust 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
