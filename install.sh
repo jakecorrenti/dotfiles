@@ -90,11 +90,6 @@ else
   echo "rust failed to install" >> $log_file
 fi
 
-# oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-exit
-
 cd ~/
 
 # dotfiles
