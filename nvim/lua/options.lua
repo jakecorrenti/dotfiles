@@ -1,10 +1,10 @@
-local vim = vim
 local opt = vim.opt
 
 vim.g.mapleader = " "
 vim.o.shortmess = vim.o.shortmess .. "c"
 
-opt.laststatus = 2
+opt.scrolloff = 4
+opt.laststatus = 1
 opt.showcmd = true
 opt.incsearch = true
 opt.expandtab = true
@@ -24,4 +24,3 @@ opt.relativenumber = true
 opt.signcolumn = "no"
 opt.wrap = true
 opt.colorcolumn = "80"
-opt.background = "dark"
