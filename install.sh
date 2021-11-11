@@ -93,6 +93,8 @@ fi
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+exit
+
 cd ~/
 
 # dotfiles
@@ -128,3 +130,6 @@ cd ~/
 echo "######### SUMMARY ########"
 cat $log_file
 rm $log_file
+
+echo "######## NOTE ########"
+echo "restart your terminal before doing rust install script"
