@@ -14,7 +14,7 @@ fi
 
 # exa (cargo)
 cargo install exa
-if type -p bat &> /dev/null; then
+if type -p exa &> /dev/null; then
   echo "exa installed" >> $log_file
 else
   echo "exa failed to install" >> $log_file
@@ -31,9 +31,9 @@ fi
 # ripgrep (cargo)
 cargo install ripgrep
 if type -p rg &> /dev/null; then
-  echo "delta-git installed" >> $log_file
+  echo "ripgrep installed" >> $log_file
 else
-  echo "delta-git failed to install" >> $log_file
+  echo "ripgrep failed to install" >> $log_file
 fi
 
 # cargo-watch (cargo)
