@@ -128,7 +128,6 @@ ln -s ~/.config/.bashrc ~/.bashrc
 cd ~/
 
 mv ~/dotfiles/.git ~/.config/
-rm -rf ~/dotfiles
 
 # github cli
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg

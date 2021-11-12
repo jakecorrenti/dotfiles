@@ -67,6 +67,9 @@ cd ~/dotfiles
 rm ~/.config/alacritty
 mv alacritty ~/.config/
 
+cd ~/
+rm -rf ~/dotfiles
+
 echo "######### SUMMARY ########"
 cat $log_file
 rm $log_file
