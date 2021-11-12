@@ -20,6 +20,14 @@ else
   echo "curl failed to install" >> $log_file
 fi
 
+# cmake
+sudo apt -y install cmake
+if type -p cmake &> /dev/null; then
+  echo "cmake installed" >> $log_file
+else
+  echo "cmake failed to install" >> $log_file
+fi
+
 # python
 sudo apt -y install python3
 if type -p python3 &> /dev/null; then
