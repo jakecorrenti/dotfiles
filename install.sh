@@ -45,6 +45,8 @@ else
 fi
 
 # neovim
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-get update
 sudo apt -y install neovim 
 if type -p nvim &> /dev/null; then
   echo "neovim installed" >> $log_file
@@ -111,7 +113,7 @@ mv i3 ~/.config/
 # .gitconfig
 rm ~/.gitconfig
 mv .gitconfig ~/.config/
-ln -s ~/.config/.gitconfig ~/.gitignore
+ln -s ~/.config/.gitconfig ~/.gitconfig
 
 # tmux
 rm ~/.tmux.conf
