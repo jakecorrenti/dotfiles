@@ -21,11 +21,11 @@ else
 fi
 
 # delta (cargo)
-cargo install delta-git
+cargo install git-delta
 if type -p delta &> /dev/null; then
-  echo "delta-git installed" >> $log_file
+  echo "delta installed" >> $log_file
 else
-  echo "delta-git failed to install" >> $log_file
+  echo "delta failed to install" >> $log_file
 fi
 
 # ripgrep (cargo)
@@ -51,7 +51,7 @@ cd alacritty
 rustup override set stable
 rustup update stable
 
-apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+sudo apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
 
 cargo build --release
 

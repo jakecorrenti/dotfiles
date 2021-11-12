@@ -72,16 +72,6 @@ else
   echo "dmenu failed to install" >> $log_file
 fi
 
-# zsh
-sudo apt -y install zsh
-if type -p zsh &> /dev/null; then
-  echo "zsh installed" >> $log_file
-else
-  echo "zsh failed to install" >> $log_file
-fi
-
-#chsh -s $(which zsh)
-
 # rust 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 if type -p rustc &> /dev/null; then
