@@ -106,9 +106,9 @@ mv .tmux.conf ~/.config/
 ln -s ~/.config/.tmux.conf ~/.tmux.conf
 
 # .bashrc
-#rm ~/.bashrc
-#mv .bashrc ~/.config/
-#ln -s ~/.config/.bashrc ~/.bashrc
+rm ~/.bashrc
+mv .bashrc ~/.config/
+ln -s ~/.config/.bashrc ~/.bashrc
 
 cd ~/
 
