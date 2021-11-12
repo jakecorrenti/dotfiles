@@ -105,10 +105,10 @@ rm ~/.tmux.conf
 mv .tmux.conf ~/.config/
 ln -s ~/.config/.tmux.conf ~/.tmux.conf
 
-# .zshrc
-rm ~/.zshrc
-mv .zshrc ~/.config/
-ln -s ~/.config/.zshrc ~/.zshrc
+# .bashrc
+#rm ~/.bashrc
+#mv .bashrc ~/.config/
+#ln -s ~/.config/.bashrc ~/.bashrc
 
 cd ~/
 
