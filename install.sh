@@ -88,6 +88,11 @@ else
   echo "rust failed to install" >> $log_file
 fi
 
+# SourceCodePro NF Font
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip
+unzip SourceCodePro.zip -d ~/.fonts
+fc-cache -fv
+
 cd ~/
 
 # dotfiles
