@@ -51,7 +51,7 @@ cd alacritty
 rustup override set stable
 rustup update stable
 
-dnf install cmake freetype-devel fontconfig-devel libxcb-devel libxkbcommon-devel g++
+sudo dnf -y install cmake freetype-devel fontconfig-devel libxcb-devel libxkbcommon-devel g++
 
 cargo build --release
 
