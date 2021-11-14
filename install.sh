@@ -45,8 +45,7 @@ else
 fi
 
 # neovim
-dnf copr enable agriffis/neovim-nightly
-dnf install -y neovim python3-neovim
+sudo dnf install -y neovim python3-neovim
 if type -p nvim &> /dev/null; then
   echo "neovim installed" >> $log_file
 else
