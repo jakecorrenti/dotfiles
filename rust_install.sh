@@ -51,7 +51,7 @@ cd alacritty
 rustup override set stable
 rustup update stable
 
-sudo apt-get install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+dnf install cmake freetype-devel fontconfig-devel libxcb-devel libxkbcommon-devel g++
 
 cargo build --release
 

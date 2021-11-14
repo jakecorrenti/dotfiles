@@ -2,10 +2,10 @@
 
 # things to install
 log_file=~/install_progress_log.txt
-sudo apt -y update
+sudo dnf -y update
 
 # git
-sudo apt -y install git
+sudo dnf -y install git
 if type -p git &> /dev/null; then
   echo "git installed" >> $log_file
 else
@@ -13,7 +13,7 @@ else
 fi
 
 # curl
-sudo apt -y install curl
+sudo dnf -y install curl
 if type -p curl &> /dev/null; then
   echo "curl installed" >> $log_file
 else
@@ -21,7 +21,7 @@ else
 fi
 
 # cmake
-sudo apt -y install cmake
+sudo dnf -y install cmake
 if type -p cmake &> /dev/null; then
   echo "cmake installed" >> $log_file
 else
@@ -29,7 +29,7 @@ else
 fi
 
 # python
-sudo apt -y install python3
+sudo dnf -y install python3
 if type -p python3 &> /dev/null; then
   echo "python3 installed" >> $log_file
 else
@@ -37,7 +37,7 @@ else
 fi
 
 # clangd
-sudo apt -y install clang
+sudo dnf -y install clang
 if type -p clang &> /dev/null; then
   echo "clang installed" >> $log_file
 else
@@ -45,9 +45,8 @@ else
 fi
 
 # neovim
-sudo add-apt-repository ppa:neovim-ppa/unstable
-sudo apt-get update
-sudo apt -y install neovim 
+dnf copr enable agriffis/neovim-nightly
+dnf install -y neovim python3-neovim
 if type -p nvim &> /dev/null; then
   echo "neovim installed" >> $log_file
 else
@@ -55,7 +54,7 @@ else
 fi
 
 # tmux
-sudo apt -y install tmux
+sudo dnf -y install tmux
 if type -p tmux &> /dev/null; then
   echo "tmux installed" >> $log_file
 else 
@@ -63,7 +62,7 @@ else
 fi
 
 # i3
-sudo apt -y install i3 i3status dmenu 
+sudo dnf -y install i3 i3status dmenu 
 if type -p i3 &> /dev/null; then
   echo "i3 installed" >> $log_file
 else
@@ -130,10 +129,8 @@ cd ~/
 mv ~/dotfiles/.git ~/.config/
 
 # github cli
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-sudo apt update
-sudo apt install gh
+sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf install gh
 if type -p gh &> /dev/null; then
   echo "github cli installed" >> $log_file
 else
