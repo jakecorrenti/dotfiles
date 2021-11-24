@@ -10,7 +10,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/hyper.yml
+  - ~/.config/alacritty/apprentice.yml
 
 # window.transparent: 0.8
 
@@ -57,7 +57,7 @@ font:
     family: SauceCodePro NF
 
     # The `style` can be specified to pick a specific face.
-    style: Regular
+    style: Medium
 
   # Bold font face
   bold:
@@ -84,7 +84,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 9.0
+  size: 8.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
