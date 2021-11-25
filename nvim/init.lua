@@ -3,8 +3,6 @@ require "keymaps"
 
 local vim = vim
 
-vim.cmd[[colorscheme apprentice]]
-
 -- highlight the current yanked line
 vim.api.nvim_exec(
   [[
