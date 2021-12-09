@@ -112,6 +112,20 @@ rm ~/.bashrc
 mv .bashrc ~/.config/
 ln -s ~/.config/.bashrc ~/.bashrc
 
+# awesome
+mv awesome ~/.config/
+
+# rofi
+mv rofi ~/.config/
+
+# resolution change script
+mv resolution_change.sh ~/.config/
+ln -s ~/.config/resolution_change.sh ~/resolution_change.sh
+
+# install scripts
+mv install.sh ~/.config/
+mv rust_install.sh ~/.config/
+
 cd ~/
 
 mv ~/dotfiles/.git ~/.config/
