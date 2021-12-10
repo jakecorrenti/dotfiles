@@ -4,7 +4,7 @@
 log_file=~/install_progress_log.txt
 
 # git
-sudo apt-get install git
+sudo apt-get install -y git
 if type -p git &> /dev/null; then
   echo "git installed" >> $log_file
 else
@@ -12,15 +12,44 @@ else
 fi
 
 # curl
-sudo apt-get install curl
+sudo apt-get install -y curl
 if type -p curl &> /dev/null; then
   echo "curl installed" >> $log_file
 else
   echo "curl failed to install" >> $log_file
 fi
 
+# golang
+wget https://dl.google.com/go/go1.17.5.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
+rm go1.17.5.linux-amd64.tar.gz
+echo "PATH=$PATH:/usr/local/go/bin" >> ~/.profile
+echo "GOPATH=$HOME/go" >> ~/.profile
+source ~/.profile
+if type -p go &> /dev/null; then
+  echo "golang installed" >> $log_file
+else
+  echo "golang failed to install" >> $log_file
+fi
+
+# htop
+sudo apt-get install -y htop
+if type -p htop &> /dev/null; then
+  echo "htop installed" >> $log_file
+else
+  echo "htop failed to install" >> $log_file
+fi
+
+# neofetch
+sudo apt-get install -y neofetch
+if type -p neofetch &> /dev/null; then
+  echo "neofetch installed" >> $log_file
+else
+  echo "neofetch failed to install" >> $log_file
+fi
+
 # cmake
-sudo apt-get install cmake
+sudo apt-get install -y cmake
 if type -p cmake &> /dev/null; then
   echo "cmake installed" >> $log_file
 else
@@ -28,7 +57,7 @@ else
 fi
 
 # python
-sudo apt-get install python3
+sudo apt-get install -y python3
 if type -p python3 &> /dev/null; then
   echo "python3 installed" >> $log_file
 else
@@ -36,7 +65,7 @@ else
 fi
 
 # clangd
-sudo apt-get install clang
+sudo apt-get install -y clang
 if type -p clang &> /dev/null; then
   echo "clang installed" >> $log_file
 else
@@ -46,7 +75,7 @@ fi
 # neovim
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
-sudo apt-get install neovim
+sudo apt-get install -y neovim
 if type -p nvim &> /dev/null; then
   echo "neovim installed" >> $log_file
 else
@@ -54,7 +83,7 @@ else
 fi
 
 # tmux
-sudo apt-get install tmux
+sudo apt-get install -y tmux
 if type -p tmux &> /dev/null; then
   echo "tmux installed" >> $log_file
 else 
@@ -62,16 +91,16 @@ else
 fi
 
 # awesome wm
-sudo apt-get install awesome
+sudo apt-get install -y awesome
 
 # xrandr
-sudo apt-get install xrandr
+sudo apt-get install -y xrandr
 
 # autorandr
-sudo apt-get install arandr
+sudo apt-get install -y arandr
 
 # rofi
-sudo apt-get install rofi
+sudo apt-get install -y rofi
 
 # rust 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
