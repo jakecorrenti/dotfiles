@@ -1,6 +1,5 @@
 export TERM="xterm-256color"
 export BAT_THEME="ansi"
-export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export EDITOR='nvim'
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
