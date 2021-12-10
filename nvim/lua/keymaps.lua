@@ -4,6 +4,8 @@ end
 
 local vim = vim
 
+key_mapper('i', 'jk', '<ESC>')
+
 -- terminal navigation
 key_mapper("t", "<C-h>", "<C-\\><C-N><C-w>h")
 key_mapper("t", "<C-j>", "<C-\\><C-N><C-w>j")
@@ -24,9 +26,3 @@ key_mapper("n", "<leader><", ":vertical resize -10 <CR>")
 -- window splitting
 key_mapper("n", "<leader>v", ":vsp <CR>")
 key_mapper("n", "<leader>s", ":sp <CR>")
-
--- tabs 
-key_mapper("n", "<leader>t", ":tabnew<CR>")
-key_mapper("n", "<leader>q", ":tabclose<CR>")
-key_mapper("n", "<leader>n", ":tabnext<CR>")
-key_mapper("n", "<leader>p", ":tabprevious<CR>")

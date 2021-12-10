@@ -3,6 +3,13 @@ require "keymaps"
 
 local vim = vim
 
+vim.cmd[[colorscheme tempus_future]]
+
+vim.cmd[[
+highlight TrailingWhitespace ctermbg=red guibg=red
+call matchadd("TrailingWhitespace", '\v\s+$')
+]]
+
 -- highlight the current yanked line
 vim.api.nvim_exec(
   [[

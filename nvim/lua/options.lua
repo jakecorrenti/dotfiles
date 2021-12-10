@@ -21,6 +21,14 @@ opt.expandtab = true
 opt.showmode = true
 opt.number = true
 opt.relativenumber = true
-opt.signcolumn = "no"
 opt.wrap = true
 opt.colorcolumn = "80"
+
+vim.g.neosolarized_contrast = "low"
+vim.g.neosolarized_visibilit = "low"
+vim.g.neosolarized_vertSplitBgTrans = 1
+vim.g.neosolarized_bol = 0
+vim.g.neosolarized_italic = 1
+
+vim.g.monokaipro_filter = "ristretto"
+vim.g.monokaipro_hide_inactive_statusline = true
