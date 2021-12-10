@@ -10,7 +10,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/hyper.yml
+  - ~/.config/alacritty/tempus_future.yml
 
 # window.transparent: 0.8
 
@@ -51,6 +51,8 @@ scrolling:
 
 # Font configuration
 font:
+  normal:
+    family: SauceCodePro NF
 
   # Point size
   size: 9.0
