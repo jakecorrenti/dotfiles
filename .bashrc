@@ -3,6 +3,8 @@ export BAT_THEME="ansi"
 export PATH=$PATH:/usr/local/go/bin
 export EDITOR='nvim'
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -89,7 +91,7 @@ alias cat="bat"
 # log into the linux server for school
 alias ssh='TERM=xterm-256color ssh'
 alias uml="ssh -l jcorrent cs.uml.edu"
-alias ls="exa -la --git --group-directories-first --icons"
+alias ls="exa -la --git --group-directories-first"
 alias rpi="ssh pi@raspberrypi.local"
 alias mars='java -jar Applications/Mars4_5.jar'
 alias tpersonal="tmux new-session -s personal"

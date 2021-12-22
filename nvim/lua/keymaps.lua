@@ -1,10 +1,10 @@
 local key_mapper = function(mode, key, result)
-  vim.api.nvim_set_keymap(mode, key, result, { noremap = true, silent = true })
+	vim.api.nvim_set_keymap(mode, key, result, { noremap = true, silent = true })
 end
 
 local vim = vim
 
-key_mapper('i', 'jk', '<ESC>')
+key_mapper("i", "jk", "<ESC>")
 
 -- terminal navigation
 key_mapper("t", "<C-h>", "<C-\\><C-N><C-w>h")
