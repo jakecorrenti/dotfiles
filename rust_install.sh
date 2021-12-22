@@ -44,29 +44,6 @@ else
   echo "cargo-watch failed to install" >> $log_file
 fi
 
-# alacritty 
-git clone https://github.com/alacritty/alacritty.git
-cd alacritty
-
-rustup override set table
-rustup update stable
-
-sudo dnf install -y cmake freetype-devel fontconfig-devel libxcb-devel libxkbcommon-devel g++
-
-cargo build --release
-
-sudo cp target/release/alacritty /usr/local/bin # or anywhere else in $PATH
-sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
-sudo desktop-file-install extra/linux/Alacritty.desktop
-sudo update-desktop-database
-
-cd ~/
-
-cd ~/dotfiles
-
-rm ~/.config/alacritty
-mv alacritty ~/.config/
-
 cd ~/
 rm -rf ~/dotfiles
 

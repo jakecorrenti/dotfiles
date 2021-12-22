@@ -30,3 +30,7 @@ require'lspconfig'.rust_analyzer.setup{}
 -- treesitter
 local configs = require "nvim-treesitter.configs"
 configs.setup { ensure_installed = "maintained", highlight = { enable = true } }
+
+require('gitsigns').setup({
+  current_line_blame = false,
+})

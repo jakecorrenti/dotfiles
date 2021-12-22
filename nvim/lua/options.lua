@@ -27,7 +27,7 @@ opt.number = true
 opt.relativenumber = true
 opt.wrap = true
 opt.colorcolumn = "80"
-opt.signcolumn = "no"
+opt.signcolumn = "yes"
 
 -- nerd commenter
 g.NERDSpaceDelims = 1
