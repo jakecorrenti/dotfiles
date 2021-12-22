@@ -27,23 +27,4 @@ opt.number = true
 opt.relativenumber = true
 opt.wrap = true
 opt.colorcolumn = "80"
-opt.signcolumn = "yes"
-
--- nerd commenter
-g.NERDSpaceDelims = 1
-g.NERDCompactSexyComs = 1
-g.NERDDefaultAlign = "left"
-g.NERDCommentEmptyLines = 1
-g.NERDTrimTrailingWhitespace = 1
-g.NERDToggleCheckAllLines = 1
-
--- startify bookmarks
-g.startify_bookmarks = {
-  { a = "~/.config/alacritty/alacritty.yml" },
-  { b = "~/.config/.bashrc" },
-  { k = "~/.config/kitty/kitty.conf" },
-  { m = "~/qmk_firmware/keyboards/lily58/keymaps/jakecorrenti/keymap.c" },
-  { n = "~/.config/nvim/init.lua" },
-  { t = "~/.tmux.conf" },
-}
-
+opt.signcolumn = "no"
