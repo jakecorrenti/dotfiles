@@ -52,8 +52,8 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
-editor = os.getenv("EDITOR") or "vim"
+terminal = "kitty"
+editor = os.getenv("EDITOR") or "vi"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -66,7 +66,6 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile,
-    -- awful.layout.suit.tile.bottom,
 }
 -- }}}
 
@@ -314,10 +313,6 @@ globalkeys = gears.table.join(
               end,
               {description = "restore minimized", group = "client"}),
 
-    -- Prompt
-    -- awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-      --        {description = "run prompt", group = "launcher"}),
-
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run {
@@ -330,7 +325,7 @@ globalkeys = gears.table.join(
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"}),
+              {description = "show the menubar", group = "launcher"})
 
     -- Rofi
     awful.key({ modkey },            "r",     function () awful.util.spawn("rofi -show drun") end,
@@ -576,6 +571,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 awful.spawn.with_shell("./resolution_change.sh")
-gears.wallpaper.maximized("/usr/share/backgrounds/pop/nick-nazzaro-ice-cave.png", s)
+gears.wallpaper.maximized("/usr/shared/backgrounds/pop/nick-nazzaro-ice-cave.png", s)
 beautiful.useless_gap = 4
 beautiful.gap_single_client = true
