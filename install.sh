@@ -4,7 +4,7 @@
 log_file=~/install_progress_log.txt
 
 # git
-sudo apt-get install -y git
+sudo pacman -S git
 if type -p git &> /dev/null; then
   echo "git installed" >> $log_file
 else
@@ -12,7 +12,7 @@ else
 fi
 
 # curl
-sudo apt-get install -y curl
+sudo pacman -S curl
 if type -p curl &> /dev/null; then
   echo "curl installed" >> $log_file
 else
@@ -33,7 +33,7 @@ else
 fi
 
 # htop
-sudo apt-get install -y htop
+sudo pacman -S htop
 if type -p htop &> /dev/null; then
   echo "htop installed" >> $log_file
 else
@@ -41,7 +41,7 @@ else
 fi
 
 # neofetch
-sudo apt-get install -y neofetch
+sudo pacman -S neofetch
 if type -p neofetch &> /dev/null; then
   echo "neofetch installed" >> $log_file
 else
@@ -49,7 +49,7 @@ else
 fi
 
 # cmake
-sudo apt-get install -y cmake
+sudo pacman -S cmake
 if type -p cmake &> /dev/null; then
   echo "cmake installed" >> $log_file
 else
@@ -57,7 +57,7 @@ else
 fi
 
 # python
-sudo apt-get install -y python3
+sudo pacman -S python3
 if type -p python3 &> /dev/null; then
   echo "python3 installed" >> $log_file
 else
@@ -65,7 +65,7 @@ else
 fi
 
 # clangd
-sudo apt-get install -y clang
+sudo pacman -S clang
 if type -p clang &> /dev/null; then
   echo "clang installed" >> $log_file
 else
@@ -73,8 +73,7 @@ else
 fi
 
 # neovim
-sudo add-apt-repository ppa:neovim-ppa/unstable
-sudo apt-get install -y neovim
+sudo pacman -S neovim
 if type -p nvim &> /dev/null; then
   echo "neovim installed" >> $log_file
 else
@@ -82,7 +81,7 @@ else
 fi
 
 # tmux
-sudo apt-get install -y tmux
+sudo pacman -S tmux
 if type -p tmux &> /dev/null; then
   echo "tmux installed" >> $log_file
 else 
@@ -90,20 +89,16 @@ else
 fi
 
 # awesome wm
-sudo apt-get install -y awesome
+sudo pacman -S awesome
 
 # xrandr
-sudo apt-get install -y xrandr
+sudo pacman -S xrandr
 
 # autorandr
-sudo apt-get install -y arandr
+sudo pacman -S arandr
 
 # rofi
-sudo apt-get install -y rofi
-
-# packer.nvim
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+sudo pacman -S rofi
 
 # rust 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -163,9 +158,7 @@ cd ~/
 mv ~/dotfiles/.git ~/.config/
 
 # github cli
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-sudo apt install -y gh
+sudo pacman -S github-cli
 if type -p gh &> /dev/null; then
   echo "github cli installed" >> $log_file
 else
