@@ -1,12 +1,12 @@
 require("options")
 require("keymaps")
+require("plugins")
+require("telescope_conf")
+require("cmp_conf")
 
 local vim = vim
 
-vim.cmd([[
-highlight TrailingWhitespace ctermbg=red guibg=red
-call matchadd("TrailingWhitespace", '\v\s+$')
-]])
+vim.cmd[[colorscheme rose-pine]]
 
 -- highlight the current yanked line
 vim.api.nvim_exec(
@@ -18,3 +18,14 @@ augroup END
 ]],
 	false
 )
+
+-- treesitter
+local configs = require "nvim-treesitter.configs"
+configs.setup { ensure_installed = "maintained", highlight = { enable = true } }
+
+local lsp_installer = require("nvim-lsp-installer")
+
+lsp_installer.on_server_ready(function(server)
+    local opts = {}
+    server:setup(opts)
+end)

@@ -26,5 +26,21 @@ opt.showmode = false
 opt.number = true
 opt.relativenumber = true
 opt.wrap = true
-opt.colorcolumn = "80"
 opt.signcolumn = "no"
+
+-- nerd commenter
+g.NERDSpaceDelims = 1
+g.NERDCompactSexyComs = 1
+g.NERDDefaultAlign = "left"
+g.NERDCommentEmptyLines = 1
+g.NERDTrimTrailingWhitespace = 1
+g.NERDToggleCheckAllLines = 1
+
+-- @usage 'main' | 'moon' | 'dawn'
+vim.g.rose_pine_variant = 'main'
+
+vim.g.rose_pine_bold_vertical_split_line = false
+vim.g.rose_pine_inactive_background = false
+vim.g.rose_pine_disable_background = false
+vim.g.rose_pine_disable_float_background = false
+vim.g.rose_pine_disable_italics = false
