@@ -37,7 +37,8 @@ g.NERDTrimTrailingWhitespace = 1
 g.NERDToggleCheckAllLines = 1
 
 -- @usage 'main' | 'moon' | 'dawn'
-vim.g.rose_pine_variant = 'main'
+-- vim.g.rose_pine_variant = 'main'
+vim.g.rose_pine_variant = 'moon'
 
 vim.g.rose_pine_bold_vertical_split_line = false
 vim.g.rose_pine_inactive_background = false
