@@ -5,7 +5,7 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- colorscheme
-  use {'rose-pine/neovim', as = 'rose-pine'}
+  use 'ulwlu/elly.vim'
 
   -- lsp
   use "rust-lang/rust.vim"

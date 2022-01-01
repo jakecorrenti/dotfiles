@@ -8,7 +8,7 @@ o.shortmess = vim.o.shortmess .. "c"
 opt.completeopt = "menu,menuone,noselect"
 opt.pumblend = 15
 opt.scrolloff = 4
-opt.laststatus = 1
+opt.laststatus = 0
 opt.showcmd = true
 opt.incsearch = true
 opt.expandtab = true
@@ -22,7 +22,7 @@ opt.updatetime = 50
 opt.hlsearch = true
 opt.termguicolors = true
 opt.expandtab = true
-opt.showmode = false
+opt.showmode = true
 opt.number = true
 opt.relativenumber = true
 opt.wrap = true
@@ -35,13 +35,3 @@ g.NERDDefaultAlign = "left"
 g.NERDCommentEmptyLines = 1
 g.NERDTrimTrailingWhitespace = 1
 g.NERDToggleCheckAllLines = 1
-
--- @usage 'main' | 'moon' | 'dawn'
--- vim.g.rose_pine_variant = 'main'
-vim.g.rose_pine_variant = 'moon'
-
-vim.g.rose_pine_bold_vertical_split_line = false
-vim.g.rose_pine_inactive_background = false
-vim.g.rose_pine_disable_background = false
-vim.g.rose_pine_disable_float_background = false
-vim.g.rose_pine_disable_italics = false
