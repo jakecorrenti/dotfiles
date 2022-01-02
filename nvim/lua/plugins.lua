@@ -6,6 +6,9 @@ return require('packer').startup(function()
 
   -- colorscheme
   use 'ulwlu/elly.vim'
+  use 'rktjmp/lush.nvim'
+  use 'usirin/bleed-purple.nvim'
+    use 'rebelot/kanagawa.nvim'
 
   -- lsp
   use "rust-lang/rust.vim"

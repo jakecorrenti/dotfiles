@@ -6,7 +6,7 @@ require("cmp_conf")
 
 local vim = vim
 
-vim.cmd[[colorscheme elly]]
+vim.cmd[[colorscheme kanagawa]]
 
 -- highlight the current yanked line
 vim.api.nvim_exec(
