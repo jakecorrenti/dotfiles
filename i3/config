@@ -181,4 +181,16 @@ bindsym $mod+r mode "resize"
 bar {
         position top
         status_command i3status
+  colors {
+    # separator #268bd2
+    background #2A2A37
+    #statusline #839496
+    focused_workspace #957fb8 #957fb8 #000000 #000000
+    inactive_workspace #2A2A37 #2A2A37 #54546D #000000
+    active_workspace #9CABCA #9CABCA #000000 #000000
+  }
 }
+
+# follows kanagawa.nvim color pallette
+# border background text indicator
+client.focused #957fb8 #957fb8 #000000 #000000
