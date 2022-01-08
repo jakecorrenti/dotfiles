@@ -6,6 +6,18 @@ require("cmp_conf")
 
 local vim = vim
 
+local default_colors = require'kanagawa.colors'.setup()
+require 'kanagawa'.setup ({
+    colors = {
+        diag = {
+            error = default_colors.autumnRed,
+            warning = default_colors.autumnYellow,
+            info = default_colors.dragonBlue,
+            hint = default_colors.waveAqua1,
+        }
+    },
+})
+
 vim.cmd[[colorscheme kanagawa]]
 
 -- highlight the current yanked line
