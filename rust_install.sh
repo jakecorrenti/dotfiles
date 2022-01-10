@@ -3,7 +3,6 @@
 # things to install
 log_file=~/install_progress_log.txt
 
-
 # bat (cargo)
 cargo install bat
 if type -p bat &> /dev/null; then
@@ -34,14 +33,6 @@ if type -p rg &> /dev/null; then
   echo "ripgrep installed" >> $log_file
 else
   echo "ripgrep failed to install" >> $log_file
-fi
-
-# cargo-watch (cargo)
-cargo install cargo-watch
-if type -p cargo-watch &> /dev/null; then
-  echo "cargo-watch installed" >> $log_file
-else
-  echo "cargo-watch failed to install" >> $log_file
 fi
 
 cd ~/
