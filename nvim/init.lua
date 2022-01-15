@@ -18,7 +18,7 @@ require 'kanagawa'.setup ({
     },
 })
 
-vim.cmd[[colorscheme kanagawa]]
+require('onedarkpro').load()
 
 -- highlight the current yanked line
 vim.api.nvim_exec(

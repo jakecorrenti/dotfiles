@@ -5,10 +5,8 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- colorscheme
-  use 'ulwlu/elly.vim'
-  use 'rktjmp/lush.nvim'
-  use 'usirin/bleed-purple.nvim'
-    use 'rebelot/kanagawa.nvim'
+  use 'rebelot/kanagawa.nvim'
+  use 'olimorris/onedarkpro.nvim'
 
   -- lsp
   use "rust-lang/rust.vim"
