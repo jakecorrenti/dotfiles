@@ -118,6 +118,9 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCode
 unzip SourceCodePro.zip -d ~/.fonts
 fc-cache -fv
 
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 cd ~/
 
 # dotfiles
