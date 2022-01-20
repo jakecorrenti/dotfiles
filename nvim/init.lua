@@ -18,7 +18,18 @@ require 'kanagawa'.setup ({
     },
 })
 
-require('onedarkpro').load()
+require 'lualine'.setup ({
+ options = {
+    icons_enabled = false,
+    theme = 'tokyonight',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+    disabled_filetypes = {},
+    always_divide_middle = true,
+  },
+})
+
+vim.cmd[[colorscheme tokyonight]]
 
 -- highlight the current yanked line
 vim.api.nvim_exec(
