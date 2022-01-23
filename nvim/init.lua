@@ -21,7 +21,7 @@ require 'kanagawa'.setup ({
 require 'lualine'.setup ({
  options = {
     icons_enabled = false,
-    theme = 'tokyonight',
+    theme = 'catppuccin',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
@@ -29,7 +29,7 @@ require 'lualine'.setup ({
   },
 })
 
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme catppuccin]]
 
 -- highlight the current yanked line
 vim.api.nvim_exec(

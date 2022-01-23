@@ -7,8 +7,10 @@ return require('packer').startup(function()
   -- colorscheme
   use 'rebelot/kanagawa.nvim'
   use 'folke/tokyonight.nvim'
-  use "ellisonleao/gruvbox.nvim"
-  use "rktjmp/lush.nvim"
+  use({
+	"catppuccin/nvim",
+	as = "catppuccin"
+  })
 
   -- lsp
   use "rust-lang/rust.vim"
