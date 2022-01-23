@@ -18,18 +18,7 @@ require 'kanagawa'.setup ({
     },
 })
 
-require 'lualine'.setup ({
- options = {
-    icons_enabled = false,
-    theme = 'catppuccin',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
-    disabled_filetypes = {},
-    always_divide_middle = true,
-  },
-})
-
-vim.cmd[[colorscheme catppuccin]]
+vim.cmd[[colorscheme gruvbox-flat]]
 
 -- highlight the current yanked line
 vim.api.nvim_exec(

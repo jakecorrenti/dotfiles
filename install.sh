@@ -112,6 +112,9 @@ else
   echo "rust failed to install" >> $log_file
 fi
 
+# ensure that the wifi is updated for fedora
+sudo dnf -y update iwlax2xx-firmware
+
 # SourceCodePro NF Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip
 unzip SourceCodePro.zip -d ~/.fonts

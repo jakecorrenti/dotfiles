@@ -7,10 +7,7 @@ return require('packer').startup(function()
   -- colorscheme
   use 'rebelot/kanagawa.nvim'
   use 'folke/tokyonight.nvim'
-  use({
-	"catppuccin/nvim",
-	as = "catppuccin"
-  })
+  use 'eddyekofo94/gruvbox-flat.nvim'
 
   -- lsp
   use "rust-lang/rust.vim"
@@ -30,7 +27,6 @@ return require('packer').startup(function()
 
   -- Miscellaneous
   use "preservim/nerdcommenter"
-  use "nvim-lualine/lualine.nvim"
 
     -- cmp
   use "hrsh7th/cmp-nvim-lsp"

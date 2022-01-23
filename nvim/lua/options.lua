@@ -50,3 +50,5 @@ g.gruvbox_bold = 0
 g.gruvbox_italic = 1
 g.gruvbox_sign_column = "bg0"
 g.gruvbox_transparent_bg = 0
+
+g.gruvbox_flat_style = "hard"
