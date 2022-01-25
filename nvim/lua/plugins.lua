@@ -8,6 +8,7 @@ return require('packer').startup(function()
   use 'rebelot/kanagawa.nvim'
   use 'folke/tokyonight.nvim'
   use 'eddyekofo94/gruvbox-flat.nvim'
+  use 'marko-cerovac/material.nvim'
 
   -- lsp
   use "rust-lang/rust.vim"

@@ -52,3 +52,5 @@ g.gruvbox_sign_column = "bg0"
 g.gruvbox_transparent_bg = 0
 
 g.gruvbox_flat_style = "hard"
+
+g.material_style = "deep ocean" -- also "darker" which i like
