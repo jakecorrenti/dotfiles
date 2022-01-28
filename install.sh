@@ -4,7 +4,7 @@
 log_file=~/install_progress_log.txt
 
 # git
-sudo dnf install -y git
+sudo pacman -S install -y git
 if type -p git &> /dev/null; then
   echo "git installed" >> $log_file
 else
@@ -12,7 +12,7 @@ else
 fi
 
 # curl
-sudo dnf install -y curl
+sudo pacman -S install -y curl
 if type -p curl &> /dev/null; then
   echo "curl installed" >> $log_file
 else
@@ -33,7 +33,7 @@ else
 fi
 
 # htop
-sudo dnf install -y htop
+sudo pacman -S install -y htop
 if type -p htop &> /dev/null; then
   echo "htop installed" >> $log_file
 else
@@ -41,7 +41,7 @@ else
 fi
 
 # neofetch
-sudo dnf install -y neofetch
+sudo pacman -S install -y neofetch
 if type -p neofetch &> /dev/null; then
   echo "neofetch installed" >> $log_file
 else
@@ -49,7 +49,7 @@ else
 fi
 
 # cmake
-sudo dnf install -y cmake
+sudo pacman -S install -y cmake
 if type -p cmake &> /dev/null; then
   echo "cmake installed" >> $log_file
 else
@@ -57,7 +57,7 @@ else
 fi
 
 # python
-sudo dnf install -y python3
+sudo pacman -S install -y python3
 if type -p python3 &> /dev/null; then
   echo "python3 installed" >> $log_file
 else
@@ -65,7 +65,7 @@ else
 fi
 
 # clangd
-sudo dnf install -y clang
+sudo pacman -S install -y clang
 if type -p clang &> /dev/null; then
   echo "clang installed" >> $log_file
 else
@@ -73,7 +73,7 @@ else
 fi
 
 # neovim
-sudo dnf install -y neovim python3-neovim
+sudo pacman -S neovim
 if type -p nvim &> /dev/null; then
   echo "neovim installed" >> $log_file
 else
@@ -81,7 +81,7 @@ else
 fi
 
 # tmux
-sudo dnf install -y tmux
+sudo pacman -S install -y tmux
 if type -p tmux &> /dev/null; then
   echo "tmux installed" >> $log_file
 else 
@@ -89,16 +89,16 @@ else
 fi
 
 # awesome wm
-sudo dnf install -y i3
+sudo pacman -S install -y i3
 
 # xrandr
-sudo dnf install -y xrandr
+sudo pacman -S install -y xrandr
 
 # autorandr
-sudo dnf install -y arandr
+sudo pacman -S install -y arandr
 
 # rofi
-sudo dnf install -y rofi
+sudo pacman -S install -y rofi
 
 # packer.nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
@@ -113,7 +113,7 @@ else
 fi
 
 # ensure that the wifi is updated for fedora
-sudo dnf -y update iwlax2xx-firmware
+# sudo apt-get -y update iwlax2xx-firmware
 
 # SourceCodePro NF Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip
@@ -176,8 +176,7 @@ cd ~/
 mv ~/dotfiles/.git ~/.config/
 
 # github cli
-sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-sudo dnf install gh
+sudo pacman -S github-cli
 if type -p gh &> /dev/null; then
   echo "github cli installed" >> $log_file
 else
