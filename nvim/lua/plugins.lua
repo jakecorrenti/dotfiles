@@ -20,6 +20,13 @@ return require('packer').startup(function()
 
   -- git
   use {"sindrets/diffview.nvim", requires = {"nvim-lua/plenary.nvim"}}
+  use {
+      'lewis6991/gitsigns.nvim',
+      requires = {
+        'nvim-lua/plenary.nvim'
+      },
+  -- tag = 'release' -- To use the latest release
+  }
 
   -- Telescope
   use "nvim-lua/popup.nvim"

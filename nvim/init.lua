@@ -2,7 +2,7 @@ require("options")
 require("keymaps")
 require("plugins")
 require("telescope_conf")
-require("cmp_conf")
+-- require("cmp_conf")
 
 local vim = vim
 
@@ -17,6 +17,10 @@ require 'kanagawa'.setup ({
         }
     },
 })
+
+require 'gitsigns'.setup({})
+
+vim.cmd[[highlight Pmenu guibg=black]]
 
 require('material').setup({
 	contrast = {
@@ -58,7 +62,7 @@ require('material').setup({
 	custom_highlights = {} -- Overwrite highlights with your own
 })
 
-vim.cmd[[colorscheme material]]
+-- vim.cmd[[colorscheme gruvbox-flat]]
 
 -- highlight the current yanked line
 vim.api.nvim_exec(
