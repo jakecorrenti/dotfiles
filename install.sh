@@ -4,7 +4,7 @@
 log_file=~/install_progress_log.txt
 
 # git
-sudo pacman -S install -y git
+sudo apt install -y git
 if type -p git &> /dev/null; then
   echo "git installed" >> $log_file
 else
@@ -12,7 +12,7 @@ else
 fi
 
 # curl
-sudo pacman -S install -y curl
+sudo apt install -y curl
 if type -p curl &> /dev/null; then
   echo "curl installed" >> $log_file
 else
@@ -33,7 +33,7 @@ else
 fi
 
 # htop
-sudo pacman -S install -y htop
+sudo apt install -y htop
 if type -p htop &> /dev/null; then
   echo "htop installed" >> $log_file
 else
@@ -41,7 +41,7 @@ else
 fi
 
 # neofetch
-sudo pacman -S install -y neofetch
+sudo apt install -y neofetch
 if type -p neofetch &> /dev/null; then
   echo "neofetch installed" >> $log_file
 else
@@ -49,7 +49,7 @@ else
 fi
 
 # cmake
-sudo pacman -S install -y cmake
+sudo apt install -y cmake
 if type -p cmake &> /dev/null; then
   echo "cmake installed" >> $log_file
 else
@@ -57,7 +57,7 @@ else
 fi
 
 # python
-sudo pacman -S install -y python3
+sudo apt install -y python3
 if type -p python3 &> /dev/null; then
   echo "python3 installed" >> $log_file
 else
@@ -65,7 +65,7 @@ else
 fi
 
 # clangd
-sudo pacman -S install -y clang
+sudo apt install -y clang
 if type -p clang &> /dev/null; then
   echo "clang installed" >> $log_file
 else
@@ -73,7 +73,10 @@ else
 fi
 
 # neovim
-sudo pacman -S neovim
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-get update
+sudo apt-get install -y neovim
+
 if type -p nvim &> /dev/null; then
   echo "neovim installed" >> $log_file
 else
@@ -81,7 +84,7 @@ else
 fi
 
 # tmux
-sudo pacman -S install -y tmux
+sudo apt install -y tmux
 if type -p tmux &> /dev/null; then
   echo "tmux installed" >> $log_file
 else 
@@ -89,16 +92,16 @@ else
 fi
 
 # awesome wm
-sudo pacman -S install -y i3
+sudo apt install -y i3
 
 # xrandr
-sudo pacman -S install -y xrandr
+sudo apt install -y xrandr
 
 # autorandr
-sudo pacman -S install -y arandr
+sudo apt install -y arandr
 
 # rofi
-sudo pacman -S install -y rofi
+sudo apt install -y rofi
 
 # packer.nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
@@ -176,7 +179,10 @@ cd ~/
 mv ~/dotfiles/.git ~/.config/
 
 # github cli
-sudo pacman -S github-cli
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+sudo apt update
+sudo apt install -y gh
 if type -p gh &> /dev/null; then
   echo "github cli installed" >> $log_file
 else
