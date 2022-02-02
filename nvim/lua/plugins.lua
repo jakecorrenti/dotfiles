@@ -9,6 +9,7 @@ return require('packer').startup(function()
   use 'folke/tokyonight.nvim'
   use 'eddyekofo94/gruvbox-flat.nvim'
   use 'marko-cerovac/material.nvim'
+  use 'AlessandroYorba/Alduin'
 
   -- lsp
   use "rust-lang/rust.vim"
