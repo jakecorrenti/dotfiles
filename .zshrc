@@ -83,7 +83,7 @@ alias cat="bat"
 # log into the linux server for school
 alias ssh='TERM=xterm-256color ssh'
 alias uml="ssh -l jcorrent cs.uml.edu"
-alias ls="exa -la --git --group-directories-first"
+alias ls="exa --git --group-directories-first --icons"
 alias rpi="ssh pi@raspberrypi.local"
 alias mars='java -jar Applications/Mars4_5.jar'
 alias tpersonal="tmux new-session -s personal"

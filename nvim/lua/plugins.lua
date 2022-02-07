@@ -11,6 +11,9 @@ return require('packer').startup(function()
   use 'marko-cerovac/material.nvim'
   use 'AlessandroYorba/Alduin'
   use 'arcticicestudio/nord-vim'
+  use 'tjdevries/colorbuddy.vim'
+  use'tjdevries/gruvbuddy.nvim'
+  use 'pineapplegiant/spaceduck'
 
   -- lsp
   use "rust-lang/rust.vim"
@@ -37,6 +40,10 @@ return require('packer').startup(function()
 
   -- Miscellaneous
   use "preservim/nerdcommenter"
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
     -- cmp
   use "hrsh7th/cmp-nvim-lsp"

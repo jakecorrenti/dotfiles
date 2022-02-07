@@ -20,7 +20,9 @@ require 'kanagawa'.setup ({
 
 require 'gitsigns'.setup({})
 
-vim.cmd[[colorscheme gruvbox-flat]]
+vim.cmd[[colorscheme spaceduck]]
+
+require('lualine').setup()
 
 -- highlight the current yanked line
 vim.api.nvim_exec(
