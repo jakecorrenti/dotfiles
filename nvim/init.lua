@@ -20,7 +20,7 @@ require 'kanagawa'.setup ({
 
 require 'gitsigns'.setup({})
 
-vim.cmd[[colorscheme alduin]]
+vim.cmd[[colorscheme gruvbox-flat]]
 
 -- highlight the current yanked line
 vim.api.nvim_exec(
@@ -39,7 +39,7 @@ autocmd BufWritePre * silent! lua vim.lsp.buf.formatting()
 
 -- treesitter
 local configs = require "nvim-treesitter.configs"
-configs.setup { ensure_installed = "maintained", highlight = { enable = true } }
+configs.setup { highlight = { enable = true } }
 
 local lsp_installer = require("nvim-lsp-installer")
 

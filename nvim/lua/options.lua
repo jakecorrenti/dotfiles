@@ -26,7 +26,7 @@ opt.showmode = false
 opt.number = true
 opt.relativenumber = true
 opt.wrap = true
-opt.signcolumn = "no"
+opt.signcolumn = "yes"
 
 -- nerd commenter
 g.NERDSpaceDelims = 1
@@ -52,5 +52,6 @@ g.gruvbox_sign_column = "bg0"
 g.gruvbox_transparent_bg = 0
 
 g.gruvbox_flat_style = "hard"
+g.gruvbox_transparent = true
 
 g.material_style = "deep ocean" -- also "darker" which i like
