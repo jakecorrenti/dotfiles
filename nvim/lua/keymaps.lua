@@ -2,8 +2,6 @@ local key_mapper = function(mode, key, result)
 	vim.api.nvim_set_keymap(mode, key, result, { noremap = true, silent = true })
 end
 
-local vim = vim
-
 key_mapper("i", "jk", "<ESC>")
 
 -- terminal navigation
@@ -47,6 +45,10 @@ key_mapper("n", "<leader>fh", ':lua require"telescope.builtin".help_tags()<CR>')
 key_mapper("n", "<leader>fb", ':lua require"telescope.builtin".buffers()<CR>')
 key_mapper("n", "<leader>fc", ':lua require"telescope.builtin".git_commits()<CR>')
 key_mapper("n", "<leader>fs", ':lua require"telescope.builtin".git_status()<CR>')
+
+-- diffview
+key_mapper("n", "<leader>do", ':DiffviewOpen<CR>')
+key_mapper("n", "<leader>dc", ':DiffviewClose<CR>')
 
 -- this fixes the issue where the pmenu would stay open when hitting ctrl-c to
 -- exit normal mode in the middle of a word with nvim-cmp

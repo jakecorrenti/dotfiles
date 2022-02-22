@@ -5,15 +5,14 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- colorscheme
-  use 'rebelot/kanagawa.nvim'
-  use 'folke/tokyonight.nvim'
-  use 'eddyekofo94/gruvbox-flat.nvim'
-  use 'marko-cerovac/material.nvim'
-  use 'AlessandroYorba/Alduin'
-  use 'arcticicestudio/nord-vim'
-  use 'tjdevries/colorbuddy.vim'
-  use'tjdevries/gruvbuddy.nvim'
-  use 'pineapplegiant/spaceduck'
+  use({
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    tag = 'v1.*',
+    config = function()
+        vim.cmd('colorscheme rose-pine')
+    end
+  })
 
   -- lsp
   use "rust-lang/rust.vim"
@@ -26,11 +25,11 @@ return require('packer').startup(function()
   -- git
   use {"sindrets/diffview.nvim", requires = {"nvim-lua/plenary.nvim"}}
   use {
-      'lewis6991/gitsigns.nvim',
-      requires = {
-        'nvim-lua/plenary.nvim'
-      },
-  -- tag = 'release' -- To use the latest release
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+    -- tag = 'release' -- To use the latest release
   }
 
   -- Telescope
@@ -40,10 +39,7 @@ return require('packer').startup(function()
 
   -- Miscellaneous
   use "preservim/nerdcommenter"
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+  use 'kyazdani42/nvim-web-devicons'
 
     -- cmp
   use "hrsh7th/cmp-nvim-lsp"

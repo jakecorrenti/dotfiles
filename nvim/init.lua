@@ -6,23 +6,7 @@ require("cmp_conf")
 
 local vim = vim
 
-local default_colors = require'kanagawa.colors'.setup()
-require 'kanagawa'.setup ({
-    colors = {
-        diag = {
-            error = default_colors.autumnRed,
-            warning = default_colors.autumnYellow,
-            info = default_colors.dragonBlue,
-            hint = default_colors.waveAqua1,
-        }
-    },
-})
-
-require 'gitsigns'.setup({})
-
-vim.cmd[[colorscheme spaceduck]]
-
-require('lualine').setup()
+require'gitsigns'.setup()
 
 -- highlight the current yanked line
 vim.api.nvim_exec(
@@ -41,7 +25,7 @@ autocmd BufWritePre * silent! lua vim.lsp.buf.formatting()
 
 -- treesitter
 local configs = require "nvim-treesitter.configs"
-configs.setup { highlight = { enable = true } }
+configs.setup {ensure_installed = "maintained", highlight = { enable = true } }
 
 local lsp_installer = require("nvim-lsp-installer")
 
