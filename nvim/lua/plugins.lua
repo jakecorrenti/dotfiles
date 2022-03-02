@@ -4,15 +4,7 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- colorscheme
-  use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    tag = 'v1.*',
-    config = function()
-        vim.cmd('colorscheme rose-pine')
-    end
-  })
+  use 'https://gitlab.com/__tpb/monokai-pro.nvim'
 
   -- lsp
   use "rust-lang/rust.vim"

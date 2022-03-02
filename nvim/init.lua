@@ -1,11 +1,10 @@
+local vim = vim
+
 require("options")
 require("keymaps")
 require("plugins")
 require("telescope_conf")
 require("cmp_conf")
-
-local vim = vim
-
 require'gitsigns'.setup()
 
 -- highlight the current yanked line
@@ -19,6 +18,9 @@ augroup END
 	false
 )
 
+vim.cmd[[colorscheme monokaipro]]
+
+-- format on save
 vim.api.nvim_exec([[
 autocmd BufWritePre * silent! lua vim.lsp.buf.formatting()
 ]], false)
@@ -27,6 +29,7 @@ autocmd BufWritePre * silent! lua vim.lsp.buf.formatting()
 local configs = require "nvim-treesitter.configs"
 configs.setup {ensure_installed = "maintained", highlight = { enable = true } }
 
+-- lsp
 local lsp_installer = require("nvim-lsp-installer")
 
 lsp_installer.on_server_ready(function(server)
