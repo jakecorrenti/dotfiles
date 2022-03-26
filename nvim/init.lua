@@ -4,7 +4,7 @@ require("options")
 require("keymaps")
 require("plugins")
 require("telescope_conf")
-require("cmp_conf")
+-- require("cmp_conf")
 require'gitsigns'.setup()
 
 -- highlight the current yanked line
@@ -18,7 +18,20 @@ augroup END
 	false
 )
 
-vim.cmd[[colorscheme monokaipro]]
+-- vim.cmd[[colorscheme dracula]]
+vim.cmd[[
+highlight Pmenu guibg=black
+highlight WinSeparator guibg=None
+]]
+
+require'fidget'.setup{}
+require'lualine'.setup {
+  sections = {
+    lualine_b = {'branch', 'diagnostics'},
+  },
+}
+
+vim.cmd[[set laststatus=3]]
 
 -- format on save
 vim.api.nvim_exec([[
@@ -30,16 +43,16 @@ local configs = require "nvim-treesitter.configs"
 configs.setup {ensure_installed = "maintained", highlight = { enable = true } }
 
 -- lsp
-local lsp_installer = require("nvim-lsp-installer")
-
-lsp_installer.on_server_ready(function(server)
-    local opts = {}
-    server:setup(opts)
-end)
-
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  underline = true,
-  virtual_text = true,
-  signs = true,
-  update_in_insert = true,
-})
+-- local lsp_installer = require("nvim-lsp-installer")
+--
+-- lsp_installer.on_server_ready(function(server)
+--     local opts = {}
+--     server:setup(opts)
+-- end)
+--
+-- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+--   underline = true,
+--   virtual_text = true,
+--   signs = true,
+--   update_in_insert = true,
+-- })

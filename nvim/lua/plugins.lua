@@ -1,45 +1,52 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+    use {
+      -- Packer can manage itself
+      'wbthomason/packer.nvim',
 
-  use 'https://gitlab.com/__tpb/monokai-pro.nvim'
+      'dracula/vim',
 
-  -- lsp
-  use "rust-lang/rust.vim"
-  use "neovim/nvim-lspconfig"
-  use 'williamboman/nvim-lsp-installer'
+      -- lsp
+      "rust-lang/rust.vim",
+      "neovim/nvim-lspconfig",
+      'williamboman/nvim-lsp-installer',
+      'j-hui/fidget.nvim',
 
-  -- treesitter
-  use "nvim-treesitter/nvim-treesitter"
+      -- treesitter
+      "nvim-treesitter/nvim-treesitter",
 
-  -- git
-  use {"sindrets/diffview.nvim", requires = {"nvim-lua/plenary.nvim"}}
-  use {
-    'lewis6991/gitsigns.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim'
-    },
-    -- tag = 'release' -- To use the latest release
+      -- git
+      {"sindrets/diffview.nvim", requires = {"nvim-lua/plenary.nvim"}},
+      {
+        'lewis6991/gitsigns.nvim',
+        requires = {
+          'nvim-lua/plenary.nvim'
+        },
+        -- tag = 'release' -- To use the latest release
+      },
+
+      -- Telescope
+      "nvim-lua/popup.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-lua/telescope.nvim",
+
+      -- Miscellaneous
+      "preservim/nerdcommenter",
+      'kyazdani42/nvim-web-devicons',
+      {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+      },
+
+      -- cmp
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/nvim-cmp",
+      "L3MON4D3/LuaSnip",
+      "saadparwaiz1/cmp_luasnip",
+      "hrsh7th/cmp-path",
+
   }
-
-  -- Telescope
-  use "nvim-lua/popup.nvim"
-  use "nvim-lua/plenary.nvim"
-  use "nvim-lua/telescope.nvim"
-
-  -- Miscellaneous
-  use "preservim/nerdcommenter"
-  use 'kyazdani42/nvim-web-devicons'
-
-    -- cmp
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-buffer"
-  use "hrsh7th/nvim-cmp"
-  use "L3MON4D3/LuaSnip"
-  use "saadparwaiz1/cmp_luasnip"
-  use "hrsh7th/cmp-path"
-
 end)
 
