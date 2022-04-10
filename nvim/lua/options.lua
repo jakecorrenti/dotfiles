@@ -20,13 +20,14 @@ opt.ignorecase = true
 opt.smartindent = true
 opt.updatetime = 50
 opt.hlsearch = true
-opt.termguicolors = false
+opt.termguicolors = true
 opt.expandtab = true
 opt.showmode = false
 opt.number = true
 opt.relativenumber = true
 opt.wrap = true
 opt.signcolumn = "no"
+opt.colorcolumn = "80"
 
 -- nerd commenter
 g.NERDSpaceDelims = 1
@@ -38,8 +39,19 @@ g.NERDToggleCheckAllLines = 1
 
 -- gruvbox config
 g.gruvbox_invert_selection = 1
-g.gruvbox_contrast_dark = "medium"
+g.gruvbox_contrast_dark = "hard"
 g.gruvbox_bold = 0
 g.gruvbox_italic = 1
 g.gruvbox_sign_column = "bg0"
 g.gruvbox_transparent_bg = 0
+
+-- sonokai config
+g.sonokai_enable_italic = 1
+g.sonokai_show_eob = 0
+g.sonokai_diagnostic_virtual_text = 'colored'
+g.sonokai_style = 'andromeda'
+
+-- zenbones config
+g.zenbones = {
+    lighten_noncurrent_window = true,
+}

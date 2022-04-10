@@ -6,6 +6,8 @@ return require('packer').startup(function()
       'wbthomason/packer.nvim',
 
       'dracula/vim',
+      'mcchrish/zenbones.nvim',
+      'rktjmp/lush.nvim',
 
       -- lsp
       "rust-lang/rust.vim",
