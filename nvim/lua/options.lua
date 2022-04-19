@@ -26,7 +26,7 @@ opt.showmode = false
 opt.number = true
 opt.relativenumber = true
 opt.wrap = true
-opt.signcolumn = "no"
+opt.signcolumn = "yes"
 opt.colorcolumn = "80"
 
 -- nerd commenter
@@ -55,3 +55,12 @@ g.sonokai_style = 'andromeda'
 g.zenbones = {
     lighten_noncurrent_window = true,
 }
+
+-- NeoSolarized theme
+g.neosolarized_contrast = "normal" -- or "normal"
+g.neosolarized_visibility = "normal"
+g.neosolarized_vertSplitBgTrans = 1
+g.neosolarized_bold = 1
+g.neosolarized_underline = 0
+g.neosolarized_italic = 1
+g.neosolarized_termtrans = 1

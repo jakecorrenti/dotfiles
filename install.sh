@@ -4,7 +4,7 @@
 log_file=~/install_progress_log.txt
 
 # git
-sudo apt install -y git
+sudo dnf install -y git
 if type -p git &> /dev/null; then
   echo "git installed" >> $log_file
 else
@@ -12,7 +12,7 @@ else
 fi
 
 # curl
-sudo apt install -y curl
+sudo dnf install -y curl
 if type -p curl &> /dev/null; then
   echo "curl installed" >> $log_file
 else
@@ -33,7 +33,7 @@ else
 fi
 
 # htop
-sudo apt install -y htop
+sudo dnf install -y htop
 if type -p htop &> /dev/null; then
   echo "htop installed" >> $log_file
 else
@@ -41,7 +41,7 @@ else
 fi
 
 # neofetch
-sudo apt install -y neofetch
+sudo dnf install -y neofetch
 if type -p neofetch &> /dev/null; then
   echo "neofetch installed" >> $log_file
 else
@@ -49,7 +49,7 @@ else
 fi
 
 # cmake
-sudo apt install -y cmake
+sudo dnf install -y cmake
 if type -p cmake &> /dev/null; then
   echo "cmake installed" >> $log_file
 else
@@ -57,7 +57,7 @@ else
 fi
 
 # python
-sudo apt install -y python3
+sudo dnf install -y python3
 if type -p python3 &> /dev/null; then
   echo "python3 installed" >> $log_file
 else
@@ -65,7 +65,7 @@ else
 fi
 
 # clangd
-sudo apt install -y clang
+sudo dnf install -y clang
 if type -p clang &> /dev/null; then
   echo "clang installed" >> $log_file
 else
@@ -73,9 +73,7 @@ else
 fi
 
 # neovim
-sudo add-apt-repository ppa:neovim-ppa/unstable
-sudo apt-get update
-sudo apt-get install -y neovim
+sudo dnf install -y neovim
 
 if type -p nvim &> /dev/null; then
   echo "neovim installed" >> $log_file
@@ -84,7 +82,7 @@ else
 fi
 
 # tmux
-sudo apt install -y tmux
+sudo dnf install -y tmux
 if type -p tmux &> /dev/null; then
   echo "tmux installed" >> $log_file
 else 
@@ -92,16 +90,16 @@ else
 fi
 
 # awesome wm
-sudo apt install -y i3
+sudo dnf install -y i3
 
 # xrandr
-sudo apt install -y xrandr
+sudo dnf install -y xrandr
 
 # autorandr
-sudo apt install -y arandr
+sudo dnf install -y arandr
 
 # rofi
-sudo apt install -y rofi
+sudo dnf install -y rofi
 
 # packer.nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
@@ -116,7 +114,7 @@ else
 fi
 
 # ensure that the wifi is updated for fedora
-# sudo apt-get -y update iwlax2xx-firmware
+sudo dnf -y update iwlax2xx-firmware
 
 # SourceCodePro NF Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip
@@ -179,10 +177,9 @@ cd ~/
 mv ~/dotfiles/.git ~/.config/
 
 # github cli
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-sudo apt update
-sudo apt install -y gh
+sudo dnf install 'dnf-command(config-manager)'
+sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo dnf install gh
 if type -p gh &> /dev/null; then
   echo "github cli installed" >> $log_file
 else

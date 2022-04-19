@@ -18,11 +18,13 @@ augroup END
 	false
 )
 
-vim.cmd[[colorscheme zenbones]]
--- vim.cmd[[
--- highlight Pmenu guibg=black
--- highlight WinSeparator guibg=None
--- ]]
+
+require'colorbuddy'.colorscheme'gruvbuddy'
+require'gitsigns'.setup()
+
+vim.cmd[[
+    highlight WinSeparator guibg=None
+]]
 
 require'lualine'.setup {
   sections = {
