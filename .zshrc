@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export TERM="xterm-256color"
-export BAT_THEME="ansi"
+export BAT_THEME="Solarized (light)"
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export EDITOR='nvim'

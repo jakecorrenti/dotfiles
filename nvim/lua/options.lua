@@ -29,33 +29,6 @@ opt.wrap = true
 opt.signcolumn = "yes"
 opt.colorcolumn = "80"
 
--- nerd commenter
-g.NERDSpaceDelims = 1
-g.NERDCompactSexyComs = 1
-g.NERDDefaultAlign = "left"
-g.NERDCommentEmptyLines = 1
-g.NERDTrimTrailingWhitespace = 1
-g.NERDToggleCheckAllLines = 1
-
--- gruvbox config
-g.gruvbox_invert_selection = 1
-g.gruvbox_contrast_dark = "hard"
-g.gruvbox_bold = 0
-g.gruvbox_italic = 1
-g.gruvbox_sign_column = "bg0"
-g.gruvbox_transparent_bg = 0
-
--- sonokai config
-g.sonokai_enable_italic = 1
-g.sonokai_show_eob = 0
-g.sonokai_diagnostic_virtual_text = 'colored'
-g.sonokai_style = 'andromeda'
-
--- zenbones config
-g.zenbones = {
-    lighten_noncurrent_window = true,
-}
-
 -- NeoSolarized theme
 g.neosolarized_contrast = "normal" -- or "normal"
 g.neosolarized_visibility = "normal"
@@ -63,4 +36,14 @@ g.neosolarized_vertSplitBgTrans = 1
 g.neosolarized_bold = 1
 g.neosolarized_underline = 0
 g.neosolarized_italic = 1
-g.neosolarized_termtrans = 1
+g.neosolarized_termtrans = 0
+
+-- startify bookmarks
+g.startify_bookmarks = {
+    { k = "~/.config/kitty/kitty.conf" },
+    { n = "~/.config/nvim/init.lua" },
+    { t = "~/.tmux.conf" },
+    { z = "~/.zshrc" },
+}
+
+g.nord_italic_comments = 1
