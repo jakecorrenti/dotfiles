@@ -14,6 +14,7 @@ return require('packer').startup(function()
         'williamboman/nvim-lsp-installer',
         'j-hui/fidget.nvim',
         "ray-x/lsp_signature.nvim",
+        "onsails/lspkind.nvim",
 
         -- treesitter
         "nvim-treesitter/nvim-treesitter",

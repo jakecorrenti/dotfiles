@@ -89,7 +89,6 @@ alias mars='java -jar Applications/Mars4_5.jar'
 alias tpersonal="tmux new-session -s personal"
 alias tschool="tmux new-session -s school"
 alias tresearch="tmux new-session -s research"
-alias nvim="~/nvim.appimage"
 
 # User configuration
 
