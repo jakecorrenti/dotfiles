@@ -7,6 +7,8 @@ return require('packer').startup(function()
 
         -- colorscheme
         'tiagovla/tokyodark.nvim',
+        "ellisonleao/gruvbox.nvim",
+        "rebelot/kanagawa.nvim",
 
         -- lsp
         "rust-lang/rust.vim",
@@ -39,6 +41,7 @@ return require('packer').startup(function()
         'kyazdani42/nvim-web-devicons',
         "mhinz/vim-startify",
         'tjdevries/cyclist.vim',
+        'nvim-lualine/lualine.nvim',
 
         -- cmp
         "hrsh7th/cmp-nvim-lsp",

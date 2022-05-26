@@ -38,6 +38,14 @@ g.neosolarized_underline = 0
 g.neosolarized_italic = 1
 g.neosolarized_termtrans = 0
 
+-- gruvbox theme
+g.gruvbox_invert_selection = 1
+g.gruvbox_contrast_dark = "hard"
+g.gruvbox_bold = 0
+g.gruvbox_italic = 1
+g.gruvbox_sign_column = "bg0"
+g.gruvbox_transparent_bg = 1
+
 -- startify bookmarks
 g.startify_bookmarks = {
     { k = "~/.config/kitty/kitty.conf" },
