@@ -1,6 +1,7 @@
 [user]
   name = Jake Correnti
-  email = jcorrenti13@outlook.com
+  email = jcorrenti13@gmail.com
+	signingkey = 6433DD3968E81324
 
 [core]
   pager = delta
@@ -16,7 +17,7 @@
   diffFilter = delta --color-only
 
 [pull]
-  rebase = false
+  rebase = true
 
 [init]
   defaultBranch = main

@@ -116,5 +116,5 @@ alias twork="tmux new-session -s work"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
+
 eval "$(starship init zsh)"

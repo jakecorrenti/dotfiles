@@ -4,6 +4,10 @@ end
 
 key_mapper("i", "jk", "<ESC>")
 
+-- tabs
+key_mapper("n", "<leader>t", ":tabnew<CR>")
+key_mapper("n", "<leader>w", ":tabclose<CR>")
+
 -- terminal navigation
 key_mapper("t", "<C-h>", "<C-\\><C-N><C-w>h")
 key_mapper("t", "<C-j>", "<C-\\><C-N><C-w>j")

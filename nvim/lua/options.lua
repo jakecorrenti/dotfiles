@@ -1,36 +1,37 @@
-local opt = vim.opt
 local g = vim.g
 local o = vim.o
 
 g.mapleader = " "
 o.shortmess = vim.o.shortmess .. "c"
 
-opt.completeopt = "menu,menuone,noselect"
-opt.pumblend = 15
-opt.scrolloff = 4
-opt.laststatus = 3
-opt.showcmd = true
-opt.incsearch = true
-opt.expandtab = true
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.softtabstop = 4
-opt.smartcase = true
-opt.ignorecase = true
-opt.smartindent = true
-opt.updatetime = 50
-opt.hlsearch = true
-opt.termguicolors = true
-opt.expandtab = true
-opt.showmode = false
-opt.number = true
-opt.relativenumber = true
-opt.wrap = true
-opt.signcolumn = "yes"
-opt.colorcolumn = "80"
+o.completeopt = "menu,menuone,noselect"
+o.pumblend = 15
+o.scrolloff = 4
+o.laststatus = 3
+o.showcmd = true
+o.incsearch = true
+o.expandtab = true
+o.tabstop = 4
+o.shiftwidth = 4
+o.softtabstop = 4
+o.smartcase = true
+o.ignorecase = true
+o.smartindent = true
+o.updatetime = 50
+o.hlsearch = true
+o.termguicolors = true
+o.expandtab = true
+o.showmode = false
+o.number = true
+o.relativenumber = true
+o.wrap = true
+o.signcolumn = "yes"
+o.colorcolumn = "80"
+o.background = "dark"
+o.cursorline = true
 
 -- NeoSolarized theme
-g.neosolarized_contrast = "normal" -- or "normal"
+g.neosolarized_contrast = "low" -- or "normal"
 g.neosolarized_visibility = "normal"
 g.neosolarized_vertSplitBgTrans = 1
 g.neosolarized_bold = 1
@@ -38,20 +39,15 @@ g.neosolarized_underline = 0
 g.neosolarized_italic = 1
 g.neosolarized_termtrans = 0
 
--- gruvbox theme
-g.gruvbox_invert_selection = 1
-g.gruvbox_contrast_dark = "hard"
-g.gruvbox_bold = 0
-g.gruvbox_italic = 1
-g.gruvbox_sign_column = "bg0"
-g.gruvbox_transparent_bg = 1
-
 -- startify bookmarks
 g.startify_bookmarks = {
     { k = "~/.config/kitty/kitty.conf" },
     { n = "~/.config/nvim/init.lua" },
     { t = "~/.tmux.conf" },
     { z = "~/.zshrc" },
+    { w = "~/.config/i3/config" },
 }
 
 g.nord_italic_comments = 1
+
+g.catppuccin_flavour = "dusk" -- latte, frappe, macchiato, mocha

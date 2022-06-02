@@ -6,9 +6,12 @@ return require('packer').startup(function()
         'wbthomason/packer.nvim',
 
         -- colorscheme
-        'tiagovla/tokyodark.nvim',
-        "ellisonleao/gruvbox.nvim",
-        "rebelot/kanagawa.nvim",
+        'fcpg/vim-farout',
+        'olimorris/onedarkpro.nvim',
+        {
+            "catppuccin/nvim",
+            as = "catppuccin"
+        },
 
         -- lsp
         "rust-lang/rust.vim",
@@ -40,7 +43,6 @@ return require('packer').startup(function()
         "preservim/nerdcommenter",
         'kyazdani42/nvim-web-devicons',
         "mhinz/vim-startify",
-        'tjdevries/cyclist.vim',
         'nvim-lualine/lualine.nvim',
 
         -- cmp
