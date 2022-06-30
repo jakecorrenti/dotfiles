@@ -6,19 +6,24 @@ return require('packer').startup(function()
         'wbthomason/packer.nvim',
 
         -- colorscheme
-        'fcpg/vim-farout',
-        'olimorris/onedarkpro.nvim',
+        'ellisonleao/gruvbox.nvim',
+        'ntk148v/vim-horizon',
+        'folke/tokyonight.nvim',
+
         {
-            "catppuccin/nvim",
-            as = "catppuccin"
+            "mcchrish/zenbones.nvim",
+            -- Optionally install Lush. Allows for more configuration or extending the colorscheme
+            -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+            -- In Vim, compat mode is turned on as Lush only works in Neovim.
+            requires = "rktjmp/lush.nvim"
         },
+
 
         -- lsp
         "rust-lang/rust.vim",
         "neovim/nvim-lspconfig",
         'williamboman/nvim-lsp-installer',
         'j-hui/fidget.nvim',
-        "ray-x/lsp_signature.nvim",
         "onsails/lspkind.nvim",
 
         -- treesitter
@@ -44,6 +49,25 @@ return require('packer').startup(function()
         'kyazdani42/nvim-web-devicons',
         "mhinz/vim-startify",
         'nvim-lualine/lualine.nvim',
+        {
+            "folke/todo-comments.nvim",
+            requires = "nvim-lua/plenary.nvim",
+            config = function()
+                require("todo-comments").setup {
+                }
+            end
+        },
+        {
+            "folke/trouble.nvim",
+            requires = "kyazdani42/nvim-web-devicons",
+            config = function()
+                require("trouble").setup {
+                    -- your configuration comes here
+                    -- or leave it empty to use the default settings
+                    -- refer to the configuration section below
+                }
+            end
+        },
 
         -- cmp
         "hrsh7th/cmp-nvim-lsp",

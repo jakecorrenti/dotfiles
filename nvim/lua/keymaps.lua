@@ -49,10 +49,14 @@ key_mapper("n", "<leader>fh", ':lua require"telescope.builtin".help_tags()<CR>')
 key_mapper("n", "<leader>fb", ':lua require"telescope.builtin".buffers()<CR>')
 key_mapper("n", "<leader>fc", ':lua require"telescope.builtin".git_commits()<CR>')
 key_mapper("n", "<leader>fs", ':lua require"telescope.builtin".git_status()<CR>')
+key_mapper("n", "<leader>ft", ':TodoTelescope<CR>')
 
 -- diffview
 key_mapper("n", "<leader>do", ':DiffviewOpen<CR>')
 key_mapper("n", "<leader>dc", ':DiffviewClose<CR>')
+
+-- trouble.nvim
+key_mapper("n", "<leader>xx", ":TroubleToggle<CR>")
 
 -- this fixes the issue where the pmenu would stay open when hitting ctrl-c to
 -- exit normal mode in the middle of a word with nvim-cmp
