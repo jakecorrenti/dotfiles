@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export TERM="xterm-256color"
-export BAT_THEME="Solarized (light)"
+export BAT_THEME="ansi"
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export EDITOR='nvim'
@@ -79,13 +79,14 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-alias cat="bat"
-# log into the linux server for school
-alias ssh='TERM=xterm-256color ssh'
+
 alias uml="ssh -l jcorrent cs.uml.edu"
-alias ls="exa --git --group-directories-first --icons"
 alias rpi="ssh pi@raspberrypi.local"
-alias mars='java -jar Applications/Mars4_5.jar'
+
+alias cat="bat"
+alias ssh='TERM=xterm-256color ssh'
+alias ls="exa --git --group-directories-first --icons"
+
 alias tpersonal="tmux new-session -s personal"
 alias tschool="tmux new-session -s school"
 alias tresearch="tmux new-session -s research"

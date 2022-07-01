@@ -35,6 +35,16 @@ else
   echo "ripgrep failed to install" >> $log_file
 fi
 
+# alacritty
+cd ~/alacritty
+rustup override set stable
+rustup update stable
+cargo build --release
+sudo cp target/release/alacritty /usr/local/bin # or anywhere else in $PATH
+sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+sudo desktop-file-install extra/linux/Alacritty.desktop
+sudo update-desktop-database
+
 cd ~/
 rm -rf ~/dotfiles
 

@@ -89,8 +89,12 @@ else
   echo "tmux failed to install" >> $log_file
 fi
 
-# awesome wm
-sudo dnf install -y i3
+# alacritty
+git clone https://github.com/alacritty/alacritty.git
+sudo dnf install -y cmake freetype-devel fontconfig-devel libxcb-devel libxkbcommon-devel g++
+
+# i3-gaps
+sudo dnf install -y i3-gaps
 
 # xrandr
 sudo dnf install -y xrandr
@@ -177,9 +181,9 @@ cd ~/
 mv ~/dotfiles/.git ~/.config/
 
 # github cli
-sudo dnf install 'dnf-command(config-manager)'
+sudo dnf install -y 'dnf-command(config-manager)'
 sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-sudo dnf install gh
+sudo dnf install -y gh
 if type -p gh &> /dev/null; then
   echo "github cli installed" >> $log_file
 else
