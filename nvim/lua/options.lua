@@ -46,6 +46,7 @@ g.startify_bookmarks = {
     { t = "~/.tmux.conf" },
     { z = "~/.zshrc" },
     { w = "~/.config/i3/config" },
+    { a = "~/.config/alacritty/alacritty.yml" },
 }
 
 g.nord_italic_comments = 1

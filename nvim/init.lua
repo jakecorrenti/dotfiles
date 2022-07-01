@@ -4,7 +4,7 @@ require("plugins")
 require("keymaps")
 require("cmp_conf")
 require("telescope_conf")
-require 'gitsigns'.setup {}
+--require 'gitsigns'.setup {}
 require "fidget".setup {}
 
 -- highlight the current yanked line
@@ -22,8 +22,9 @@ augroup END
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
 
 vim.cmd [[
-    colorscheme nord
+    colorscheme default
     highlight WinSeparator guibg=None
+    highlight SignColumn guibg=black
 
     set laststatus=3
 ]]

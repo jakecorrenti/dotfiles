@@ -56,7 +56,7 @@ bindsym $mod+Right exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ t
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 
 for_window [class="^.*"] border pixel 1
 
@@ -196,25 +196,25 @@ bar {
         position top
         status_command i3status
 
-        colors {
-            separator  #1f222d
-            background #1f222d
-            statusline #81a1c1
+        #colors {
+            #separator  #1f222d
+            #background #1f222d
+            #statusline #81a1c1
 
-            #                   border  background text
-            focused_workspace  #1f222d #1f222d    #81a1c1
-            active_workspace   #1f222d #252936    #5e81ac
-            inactive_workspace #1f222d #1f222d    #4c566a
-            urgent_workspace   #1f222d #1f222d    #ee829f
-            binding_mode       #1f222d #81a1c1    #2e3440
-        }
+            ##                   border  background text
+            #focused_workspace  #1f222d #1f222d    #81a1c1
+            #active_workspace   #1f222d #252936    #5e81ac
+            #inactive_workspace #1f222d #1f222d    #4c566a
+            #urgent_workspace   #1f222d #1f222d    #ee829f
+            #binding_mode       #1f222d #81a1c1    #2e3440
+        #}
 }
 
-    client.focused          #81a1c1 #81a1c1 #ffffff #81a1c1
-    client.unfocused        #2e3440 #1f222d #888888 #1f222d
-    client.focused_inactive #2e3440 #1f222d #888888 #1f222d
-    client.placeholder      #2e3440 #1f222d #888888 #1f222d
-    client.urgent           #900000 #900000 #ffffff #900000
+    #client.focused          #81a1c1 #81a1c1 #ffffff #81a1c1
+    #client.unfocused        #2e3440 #1f222d #888888 #1f222d
+    #client.focused_inactive #2e3440 #1f222d #888888 #1f222d
+    #client.placeholder      #2e3440 #1f222d #888888 #1f222d
+    #client.urgent           #900000 #900000 #ffffff #900000
 
-    client.background       #242424
+    #client.background       #242424
 # Review the lines below and append to ~/.config/i3/config
