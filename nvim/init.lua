@@ -22,9 +22,9 @@ augroup END
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
 
 vim.cmd [[
-    colorscheme default
     highlight WinSeparator guibg=None
     highlight SignColumn guibg=black
+    highlight Pmenu guibg=black
 
     set laststatus=3
 ]]

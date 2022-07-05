@@ -16,4 +16,5 @@ configuration{
     sidebar-mode: true;
 }
 
-@theme "nord"
+//@theme "nord"
+@theme "/usr/share/rofi/themes/DarkBlue.rasi"
