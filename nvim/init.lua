@@ -53,3 +53,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
     signs = true,
     update_in_insert = true,
 })
+
+-- Enable telescope fzf native, if installed
+pcall(require('telescope').load_extension, 'fzf')

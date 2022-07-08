@@ -85,7 +85,7 @@ alias rpi="ssh pi@raspberrypi.local"
 
 alias cat="bat"
 alias ssh='TERM=xterm-256color ssh'
-alias ls="exa --git --group-directories-first --icons"
+alias ls="exa --git --group-directories-first"
 
 alias tpersonal="tmux new-session -s personal"
 alias tschool="tmux new-session -s school"

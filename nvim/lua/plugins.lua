@@ -24,7 +24,6 @@ return require('packer').startup(function()
         "neovim/nvim-lspconfig",
         'williamboman/nvim-lsp-installer',
         'j-hui/fidget.nvim',
-        "onsails/lspkind.nvim",
 
         -- treesitter
         "nvim-treesitter/nvim-treesitter",
@@ -43,10 +42,10 @@ return require('packer').startup(function()
         "nvim-lua/popup.nvim",
         "nvim-lua/plenary.nvim",
         "nvim-lua/telescope.nvim",
+        { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable "make" == 1 },
 
         -- Miscellaneous
         "preservim/nerdcommenter",
-        'kyazdani42/nvim-web-devicons',
         "mhinz/vim-startify",
         'nvim-lualine/lualine.nvim',
         {
