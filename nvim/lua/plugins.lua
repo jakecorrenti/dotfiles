@@ -7,17 +7,6 @@ return require('packer').startup(function()
 
         -- colorscheme
         'ellisonleao/gruvbox.nvim',
-        'ntk148v/vim-horizon',
-        'folke/tokyonight.nvim',
-
-        {
-            "mcchrish/zenbones.nvim",
-            -- Optionally install Lush. Allows for more configuration or extending the colorscheme
-            -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
-            -- In Vim, compat mode is turned on as Lush only works in Neovim.
-            requires = "rktjmp/lush.nvim"
-        },
-
 
         -- lsp
         "rust-lang/rust.vim",
