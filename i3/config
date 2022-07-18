@@ -37,10 +37,6 @@ exec --no-startup-id nm-applet
 #exec ~/.config/.resolution_change.sh
 exec --no-startup-id nitrogen --restore
 
-# gaps config
-gaps inner 5
-gaps outer 5
-
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 # raise volume
