@@ -7,6 +7,7 @@ require("telescope_conf")
 require 'gitsigns'.setup {
     numhl = true
 }
+require 'lualine'.setup {}
 require "fidget".setup {}
 require("gruvbox").setup({
     undercurl = true,
