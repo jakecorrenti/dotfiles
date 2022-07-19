@@ -4,9 +4,7 @@ require("plugins")
 require("keymaps")
 require("cmp_conf")
 require("telescope_conf")
-require 'gitsigns'.setup {
-    numhl = true
-}
+--require 'gitsigns'.setup {}
 require 'lualine'.setup {}
 require "fidget".setup {}
 require("gruvbox").setup({
@@ -21,9 +19,6 @@ require("gruvbox").setup({
     invert_intend_guides = false,
     inverse = true, -- invert background for search, diffs, statuslines and errors
     contrast = "", -- can be "hard", "soft" or empty string
-    overrides = {
-        SignColumn = { bg = "#282828" }
-    },
 })
 
 -- highlight the current yanked line
@@ -41,7 +36,7 @@ augroup END
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
 
 vim.cmd [[
-    colorscheme minimal
+    colorscheme ayu
     highlight WinSeparator guibg=None
 
     set laststatus=3

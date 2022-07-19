@@ -35,7 +35,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 #exec ~/.config/.resolution_change.sh
-exec --no-startup-id nitrogen --restore
+#exec --no-startup-id nitrogen --restore
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id polybar -c $HOME/.config/polybar/config.ini main

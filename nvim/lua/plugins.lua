@@ -8,6 +8,8 @@ return require('packer').startup(function()
         -- colorscheme
         'ellisonleao/gruvbox.nvim',
         'Yazeed1s/minimal.nvim',
+        'Shatur/neovim-ayu',
+        'ayu-theme/ayu-vim',
 
         -- lsp
         "rust-lang/rust.vim",
