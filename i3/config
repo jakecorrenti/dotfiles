@@ -34,11 +34,11 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-#exec ~/.config/.resolution_change.sh
+exec ~/.config/resolution_change.sh
 #exec --no-startup-id nitrogen --restore
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id polybar -c $HOME/.config/polybar/config.ini main
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+#exec_always --no-startup-id polybar -c $HOME/.config/polybar/config.ini main
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -170,10 +170,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym h resize grow width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym l resize shrink width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -191,23 +191,10 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-        #position top
-        #status_command i3status --config ~/.config/i3/status.conf
-
-        #colors {
-            #separator  #1f222d
-            #background #1f222d
-            #statusline #81a1c1
-
-            ##                   border  background text
-            #focused_workspace  #1f222d #1f222d    #81a1c1
-            #active_workspace   #1f222d #252936    #5e81ac
-            #inactive_workspace #1f222d #1f222d    #4c566a
-            #urgent_workspace   #1f222d #1f222d    #ee829f
-            #binding_mode       #1f222d #81a1c1    #2e3440
-        #}
-#}
+bar {
+        position top
+        status_command i3status --config ~/.config/i3/status.conf
+}
 
     #client.focused          #81a1c1 #81a1c1 #ffffff #81a1c1
     #client.unfocused        #2e3440 #1f222d #888888 #1f222d

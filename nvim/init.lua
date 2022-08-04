@@ -4,22 +4,7 @@ require("plugins")
 require("keymaps")
 require("cmp_conf")
 require("telescope_conf")
---require 'gitsigns'.setup {}
-require 'lualine'.setup {}
 require "fidget".setup {}
-require("gruvbox").setup({
-    undercurl = true,
-    underline = true,
-    bold = true,
-    italic = true,
-    strikethrough = true,
-    invert_selection = false,
-    invert_signs = false,
-    invert_tabline = false,
-    invert_intend_guides = false,
-    inverse = true, -- invert background for search, diffs, statuslines and errors
-    contrast = "", -- can be "hard", "soft" or empty string
-})
 
 -- highlight the current yanked line
 vim.api.nvim_exec(
@@ -36,8 +21,9 @@ augroup END
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
 
 vim.cmd [[
-    colorscheme ayu
+    colorscheme horizon
     highlight WinSeparator guibg=None
+    highlight Pmenu guibg=black guifg=white
 
     set laststatus=3
 ]]
@@ -62,7 +48,7 @@ end)
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = false,
-    virtual_text = false,
+    virtual_text = true,
     signs = true,
     update_in_insert = true,
 })
