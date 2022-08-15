@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  Alduin = {
+    loaded = true,
+    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/Alduin",
+    url = "https://github.com/AlessandroYorba/Alduin"
+  },
   LuaSnip = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -103,6 +108,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/fidget.nvim",
     url = "https://github.com/j-hui/fidget.nvim"
+  },
+  ["gruvbox.nvim"] = {
+    loaded = true,
+    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
+    url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
   ["lsp_lines.nvim"] = {
     config = { "\27LJ\2\0027\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14lsp_lines\frequire\0" },
@@ -167,11 +177,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-lua/telescope.nvim"
-  },
-  ["vim-horizon"] = {
-    loaded = true,
-    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/vim-horizon",
-    url = "https://github.com/ntk148v/vim-horizon"
   },
   ["vim-startify"] = {
     loaded = true,

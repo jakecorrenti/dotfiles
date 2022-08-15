@@ -6,7 +6,8 @@ return require('packer').startup(function()
         'wbthomason/packer.nvim',
 
         -- colorscheme
-        'ntk148v/vim-horizon',
+        'AlessandroYorba/Alduin',
+        "ellisonleao/gruvbox.nvim",
 
         -- lsp
         "rust-lang/rust.vim",

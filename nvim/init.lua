@@ -5,6 +5,20 @@ require("keymaps")
 require("cmp_conf")
 require("telescope_conf")
 require "fidget".setup {}
+require("gruvbox").setup({
+    undercurl = true,
+    underline = true,
+    bold = false,
+    italic = true,
+    strikethrough = true,
+    invert_selection = false,
+    invert_signs = false,
+    invert_tabline = false,
+    invert_intend_guides = false,
+    inverse = true, -- invert background for search, diffs, statuslines and errors
+    contrast = "hard", -- can be "hard", "soft" or empty string
+    overrides = {},
+})
 
 -- highlight the current yanked line
 vim.api.nvim_exec(
@@ -21,9 +35,8 @@ augroup END
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
 
 vim.cmd [[
-    colorscheme horizon
+    colorscheme gruvbox
     highlight WinSeparator guibg=None
-    highlight Pmenu guibg=black guifg=white
 
     set laststatus=3
 ]]
