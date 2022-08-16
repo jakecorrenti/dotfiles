@@ -14,12 +14,6 @@ return require('packer').startup(function()
         "neovim/nvim-lspconfig",
         'williamboman/nvim-lsp-installer',
         'j-hui/fidget.nvim',
-        {
-            "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-            config = function()
-                require("lsp_lines").setup()
-            end,
-        },
 
         -- treesitter
         "nvim-treesitter/nvim-treesitter",
