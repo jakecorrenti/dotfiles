@@ -160,7 +160,7 @@ _G.packer_plugins = {
     url = "https://github.com/rust-lang/rust.vim"
   },
   ["telescope-fzf-native.nvim"] = {
-    cond = { false },
+    cond = { true },
     loaded = false,
     needs_bufread = false,
     only_cond = true,
@@ -171,6 +171,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jake/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-lua/telescope.nvim"
+  },
+  vim = {
+    loaded = true,
+    path = "/home/jake/.local/share/nvim/site/pack/packer/start/vim",
+    url = "https://github.com/dracula/vim"
   },
   ["vim-startify"] = {
     loaded = true,

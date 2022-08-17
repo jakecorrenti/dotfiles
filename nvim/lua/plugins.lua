@@ -8,6 +8,7 @@ return require('packer').startup(function()
         -- colorscheme
         'AlessandroYorba/Alduin',
         "ellisonleao/gruvbox.nvim",
+        "dracula/vim",
 
         -- lsp
         "rust-lang/rust.vim",

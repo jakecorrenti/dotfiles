@@ -35,7 +35,7 @@ augroup END
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
 
 vim.cmd [[
-    colorscheme gruvbox
+    colorscheme dracula
     highlight WinSeparator guibg=None
 
     set laststatus=3

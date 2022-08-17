@@ -271,7 +271,7 @@ set $orange #d65d0e
 # finds out, if available)
 bar {
     i3bar_command i3bar
-	status_command i3status
+    status_command i3status
 	position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
@@ -282,18 +282,16 @@ bar {
 	bindsym button5 nop
 #   font xft:URWGothic-Book 11
 	strip_workspace_numbers yes
-
     colors {
-        # bar background color
-        background $bg
-        # text color used for blocks that do not have a color specified.
-        statusline $gray
-        # workspaces section            
-        #                    border  backgr. text
-        focused_workspace    $gray $gray $darkgray
-        inactive_workspace   $darkgray $darkgray $yellow
-        active_workspace     $darkgray $darkgray $yellow
-        urgent_workspace     $red $red $bg
+      background #282A36
+      statusline #F8F8F2
+      separator  #44475A
+
+      focused_workspace  #44475A #44475A #F8F8F2
+      active_workspace   #282A36 #44475A #F8F8F2
+      inactive_workspace #282A36 #282A36 #BFBFBF
+      urgent_workspace   #FF5555 #FF5555 #F8F8F2
+      binding_mode       #FF5555 #FF5555 #F8F8F2
     }
 
 }
@@ -301,30 +299,11 @@ bar {
 gaps inner 4
 gaps outer 3
 
-    #client.focused          #81a1c1 #81a1c1 #ffffff #81a1c1
-    #client.unfocused        #2e3440 #1f222d #888888 #1f222d
-    #client.focused_inactive #2e3440 #1f222d #888888 #1f222d
-    #client.placeholder      #2e3440 #1f222d #888888 #1f222d
-    #client.urgent           #900000 #900000 #ffffff #900000
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
 
-    #client.background       #242424
-# Review the lines below and append to ~/.config/i3/config
-
-# green gruvbox
- #class                 border|backgr|text|indicator|child_border
-#client.focused          $green $green $darkgray $purple $darkgray
-#client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
-#client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
-#client.urgent           $red $red $white $red $red
-
-
-# Theme colors
-# class                   border  backgr. text    indic.   child_border
-  #client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  client.focused          $orange $orange #80FFF9 #FDF6E3
-  client.focused_inactive $darkgray $darkgray #1ABC9C #454948
-  client.unfocused        $darkgray $darkgray #1ABC9C #454948
-  client.urgent           $red $red #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
-
-  client.background       $gray
+client.background       #F8F8F2
