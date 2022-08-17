@@ -18,10 +18,6 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
--- Load Debian menu entries
-local debian = require("debian.menu")
-local has_fdo, freedesktop = pcall(require, "freedesktop")
-
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -52,7 +48,7 @@ end
 beautiful.init(gears.filesystem.get_configuration_dir() .. "theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "alacritty"
+terminal = "kitty"
 editor = os.getenv("EDITOR") or "vi"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -80,24 +76,10 @@ myawesomemenu = {
     { "quit", function() awesome.quit() end },
 }
 
-local menu_awesome = { "awesome", myawesomemenu, beautiful.awesome_icon }
-local menu_terminal = { "open terminal", terminal }
-
-if has_fdo then
-    mymainmenu = freedesktop.menu.build({
-        before = { menu_awesome },
-        after = { menu_terminal }
-    })
-else
-    mymainmenu = awful.menu({
-        items = {
-            menu_awesome,
-            { "Debian", debian.menu.Debian_menu.Debian },
-            menu_terminal,
-        }
-    })
-end
-
+mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
+    { "open terminal", terminal }
+}
+})
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
     menu = mymainmenu })
@@ -314,6 +296,13 @@ globalkeys = gears.table.join(
         end,
         { description = "restore minimized", group = "client" }),
 
+    -- Rofi
+    awful.key({ modkey }, "r", function() awful.util.spawn("rofi -show drun") end,
+        { description = "open drun with rofi", group = "launcher" }),
+    -- Firefox
+    awful.key({ modkey }, "d", function() awful.util.spawn("firefox") end,
+        { description = "open Firefox", group = "applications" }),
+
     awful.key({ modkey }, "x",
         function()
             awful.prompt.run {
@@ -326,13 +315,7 @@ globalkeys = gears.table.join(
         { description = "lua execute prompt", group = "awesome" }),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-        { description = "show the menubar", group = "launcher" }),
-    -- Rofi
-    awful.key({ modkey }, "r", function() awful.util.spawn("rofi -show drun") end,
-        { description = "open drun with rofi", group = "launcher" }),
-    -- Firefox
-    awful.key({ modkey }, "d", function() awful.util.spawn("firefox") end,
-        { description = "open Firefox", group = "applications" })
+        { description = "show the menubar", group = "launcher" })
 )
 
 clientkeys = gears.table.join(
@@ -480,7 +463,8 @@ awful.rules.rules = {
             "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
             "Wpa_gui",
             "veromix",
-            "xtightvncviewer" },
+            "xtightvncviewer"
+        },
 
         -- Note that the name property shown in xprop might be set slightly after creation of the client
         -- and the name shown there might not match defined rules here.
@@ -570,6 +554,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 awful.spawn.with_shell("~/.config/resolution_change.sh")
-awful.spawn.with_shell("feh --bg-fill /home/jakecorrenti/Pictures/forest-hut.png")
+awful.spawn.with_shell("feh --bg-fill /home/jake/Pictures/gruv-material-texture.png")
 beautiful.useless_gap = 5
 beautiful.gap_single_client = true

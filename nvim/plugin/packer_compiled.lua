@@ -160,7 +160,7 @@ _G.packer_plugins = {
     url = "https://github.com/rust-lang/rust.vim"
   },
   ["telescope-fzf-native.nvim"] = {
-    cond = { true },
+    cond = { false },
     loaded = false,
     needs_bufread = false,
     only_cond = true,

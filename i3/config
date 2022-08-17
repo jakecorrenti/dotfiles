@@ -35,7 +35,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 exec ~/.config/resolution_change.sh
-#exec --no-startup-id nitrogen --restore
+exec --no-startup-id nitrogen --restore
 
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #exec_always --no-startup-id polybar -c $HOME/.config/polybar/config.ini main
@@ -55,7 +55,7 @@ bindsym $mod+Right exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ t
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 for_window [class="^.*"] border pixel 1
 
@@ -256,7 +256,7 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
 # set primary gruvbox colorscheme colors
-set $bg #282828
+set $bg #1d2021
 set $red #cc241d
 set $green #98971a
 set $yellow #d79921
@@ -265,6 +265,7 @@ set $purple #b16286
 set $aqua #689d68
 set $gray #a89984
 set $darkgray #1d2021
+set $orange #d65d0e
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -286,16 +287,19 @@ bar {
         # bar background color
         background $bg
         # text color used for blocks that do not have a color specified.
-        statusline $yellow
+        statusline $gray
         # workspaces section            
         #                    border  backgr. text
-        focused_workspace    $aqua $aqua $darkgray
+        focused_workspace    $gray $gray $darkgray
         inactive_workspace   $darkgray $darkgray $yellow
         active_workspace     $darkgray $darkgray $yellow
         urgent_workspace     $red $red $bg
     }
 
 }
+
+gaps inner 4
+gaps outer 3
 
     #client.focused          #81a1c1 #81a1c1 #ffffff #81a1c1
     #client.unfocused        #2e3440 #1f222d #888888 #1f222d
@@ -316,10 +320,11 @@ bar {
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+  #client.focused          #556064 #556064 #80FFF9 #FDF6E3
+  client.focused          $orange $orange #80FFF9 #FDF6E3
+  client.focused_inactive $darkgray $darkgray #1ABC9C #454948
+  client.unfocused        $darkgray $darkgray #1ABC9C #454948
+  client.urgent           $red $red #1ABC9C #268BD2
   client.placeholder      #000000 #0c0c0c #ffffff #000000 
 
-  client.background       #2B2C2B
+  client.background       $gray
