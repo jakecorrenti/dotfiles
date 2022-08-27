@@ -45,7 +45,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_configuration_dir() .. "theme.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "/themes/gruvbox/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
@@ -554,6 +554,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 awful.spawn.with_shell("~/.config/resolution_change.sh")
-awful.spawn.with_shell("feh --bg-fill /home/jake/Pictures/gruv-material-texture.png")
-beautiful.useless_gap = 5
+awful.spawn.with_shell("feh --bg-fill /home/jakecorrenti/Pictures/road.jpg")
+beautiful.useless_gap = 4
 beautiful.gap_single_client = true

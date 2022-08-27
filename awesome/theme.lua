@@ -11,24 +11,27 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font = "sans 8"
+theme.font = "JetBrainsMono 8"
 
-theme.bg_normal   = "#1d2021"
-theme.bg_focus    = "#3c3836"
-theme.bg_urgent   = "#cc2f1d"
-theme.bg_minimize = "#7c6f64"
-theme.bg_systray  = theme.bg_normal
+-- {{{ Colors
+theme.fg_normal  = "#F8F8F2"
+theme.fg_focus   = "#F8F8F2"
+theme.fg_urgent  = "#F8F8F2"
+theme.bg_normal  = "#282A36"
+theme.bg_focus   = "#6272A4"
+theme.bg_urgent  = "#FF5555"
+theme.bg_systray = "#44475A"
+-- }}}
 
-theme.fg_normal   = "#ebdbb2"
-theme.fg_focus    = "#ebdbb2"
-theme.fg_urgent   = "#ebdbb2"
-theme.fg_minimize = "#ebdbb2"
+-- {{{ Borders
+theme.useless_gap   = dpi(4)
+theme.border_width  = dpi(2)
+theme.border_normal = "#282A36" 
+theme.border_focus  = "#6272A4" 
+theme.border_marked = "#44475A"
+-- }}}
 
-theme.useless_gap   = dpi(0)
-theme.border_width  = dpi(1)
-theme.border_normal = "#000000"
-theme.border_focus  = "#d65d0e"
-theme.border_marked = "#91231c"
+theme.tasklist_disable_icon = true
 
 -- There are other variable sets
 -- overriding the default one when

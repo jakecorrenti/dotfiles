@@ -16,7 +16,7 @@ require("gruvbox").setup({
     invert_tabline = false,
     invert_intend_guides = false,
     inverse = true, -- invert background for search, diffs, statuslines and errors
-    contrast = "hard", -- can be "hard", "soft" or empty string
+    contrast = "", -- can be "hard", "soft" or empty string
     overrides = {},
 })
 
@@ -35,7 +35,7 @@ augroup END
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
 
 vim.cmd [[
-    colorscheme dracula
+    colorscheme gruvbox-material
     highlight WinSeparator guibg=None
 
     set laststatus=3
