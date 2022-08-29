@@ -50,3 +50,7 @@ g.startify_bookmarks = {
 }
 
 g.nord_italic_comments = 1
+
+g.gruvbox_material_show_eob = 0
+g.gruvbox_material_enable_italics = 1
+g.gruvbox_material_diagnostic_virtual_text = 'colored'
