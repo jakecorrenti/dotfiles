@@ -10,6 +10,7 @@ return require('packer').startup(function()
         "ellisonleao/gruvbox.nvim",
         "dracula/vim",
         "sainnhe/gruvbox-material",
+        { "EdenEast/nightfox.nvim", tag = "v1.0.0" },
 
         -- lsp
         "rust-lang/rust.vim",
