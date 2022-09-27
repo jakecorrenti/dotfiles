@@ -6,11 +6,8 @@ return require('packer').startup(function()
         'wbthomason/packer.nvim',
 
         -- colorscheme
-        'AlessandroYorba/Alduin',
         "ellisonleao/gruvbox.nvim",
-        "dracula/vim",
         "sainnhe/gruvbox-material",
-        { "EdenEast/nightfox.nvim", tag = "v1.0.0" },
 
         -- lsp
         "rust-lang/rust.vim",
@@ -23,6 +20,7 @@ return require('packer').startup(function()
 
         -- git
         { "sindrets/diffview.nvim", requires = { "nvim-lua/plenary.nvim" } },
+        'lewis6991/gitsigns.nvim',
 
         -- Telescope
         "nvim-lua/popup.nvim",

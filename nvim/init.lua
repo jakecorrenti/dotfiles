@@ -19,6 +19,7 @@ require("gruvbox").setup({
     contrast = "", -- can be "hard", "soft" or empty string
     overrides = {},
 })
+require('gitsigns').setup()
 
 -- highlight the current yanked line
 vim.api.nvim_exec(
