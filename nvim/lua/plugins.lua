@@ -8,6 +8,7 @@ return require('packer').startup(function()
         -- colorscheme
         "ellisonleao/gruvbox.nvim",
         "sainnhe/gruvbox-material",
+        "folke/tokyonight.nvim",
 
         -- lsp
         "rust-lang/rust.vim",

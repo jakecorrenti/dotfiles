@@ -36,7 +36,7 @@ augroup END
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
 
 vim.cmd [[
-    colorscheme gruvbox-material
+    colorscheme tokyonight-night
     highlight WinSeparator guibg=None
 
     set laststatus=3
