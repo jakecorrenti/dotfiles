@@ -3,7 +3,7 @@
 ## Install Script
 to install everyting, first make sure that `git` is installed:
 ```bash
-$ sudo apt-get install -y git
+$ sudo pacman -S git
 ```
 make sure you are in the `dotfiles` directory that you just cloned
 ```bash
