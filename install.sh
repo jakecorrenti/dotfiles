@@ -1,178 +1,79 @@
 #!/bin/bash
 
-# things to install
-log_file=~/install_progress_log.txt
-
-# git
-sudo dnf install -y git
-if type -p git &> /dev/null; then
-  echo "git installed" >> $log_file
-else
-  echo "git failed to install" >> $log_file
-fi
-
-# curl
-sudo dnf install -y curl
-if type -p curl &> /dev/null; then
-  echo "curl installed" >> $log_file
-else
-  echo "curl failed to install" >> $log_file
-fi
-
-# golang
-wget https://dl.google.com/go/go1.17.5.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
-rm go1.17.5.linux-amd64.tar.gz
-echo "PATH=$PATH:/usr/local/go/bin" >> ~/.profile
-echo "GOPATH=$HOME/go" >> ~/.profile
-source ~/.profile
-if type -p go &> /dev/null; then
-  echo "golang installed" >> $log_file
-else
-  echo "golang failed to install" >> $log_file
-fi
-
-# htop
-sudo dnf install -y htop
-if type -p htop &> /dev/null; then
-  echo "htop installed" >> $log_file
-else
-  echo "htop failed to install" >> $log_file
-fi
-
-# neofetch
-sudo dnf install -y neofetch
-if type -p neofetch &> /dev/null; then
-  echo "neofetch installed" >> $log_file
-else
-  echo "neofetch failed to install" >> $log_file
-fi
-
-# cmake
-sudo dnf install -y cmake
-if type -p cmake &> /dev/null; then
-  echo "cmake installed" >> $log_file
-else
-  echo "cmake failed to install" >> $log_file
-fi
-
-# python
-sudo dnf install -y python3
-if type -p python3 &> /dev/null; then
-  echo "python3 installed" >> $log_file
-else
-  echo "python3 failed to install" >> $log_file
-fi
-
-# clangd
-sudo dnf install -y clang
-if type -p clang &> /dev/null; then
-  echo "clang installed" >> $log_file
-else
-  echo "clang failed to install" >> $log_file
-fi
-
-# neovim
-sudo dnf install -y neovim
-
-if type -p nvim &> /dev/null; then
-  echo "neovim installed" >> $log_file
-else
-  echo "neovim failed to install" >> $log_file
-fi
-
-# tmux
-sudo dnf install -y tmux
-if type -p tmux &> /dev/null; then
-  echo "tmux installed" >> $log_file
-else 
-  echo "tmux failed to install" >> $log_file
-fi
-
-# alacritty
-git clone https://github.com/alacritty/alacritty.git
-sudo dnf install -y cmake freetype-devel fontconfig-devel libxcb-devel libxkbcommon-devel g++
-
-# i3-gaps
-sudo dnf install -y i3-gaps
-
-# xrandr
-sudo dnf install -y xrandr
-
-# autorandr
-sudo dnf install -y arandr
-
-# rofi
-sudo dnf install -y rofi
-
-# packer.nvim
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-# rust 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-if type -p rustc &> /dev/null; then
-  echo "rust installed" >> $log_file
-else
-  echo "rust failed to install" >> $log_file
-fi
-
-# ensure that the wifi is updated for fedora
-sudo dnf -y update iwlax2xx-firmware
+sudo pacman -S git
+sudo pacman -S curl
+sudo pacman -S btop
+sudo pacman -S neofetch
+sudo pacman -S cmake
+sudo pacman -S python3
+sudo pacman -S clang
+sudo pacman -S neovim
+sudo pacman -S github-cli
+gh auth login
+sudo pacman -S tmux
+sudo pacman -S i3-gaps
+sudo pacman -S arandr
+sudo pacman -S rofi
+sudo pacman -S btrfs-progs
+sudo pacman -S conmon
+sudo pacman -S cni-plugins
+sudo pacman -S containers-common
+sudo pacman -S crun
+sudo pacman -S device-mapper
+sudo pacman -S glib2
+sudo pacman -S glibc
+sudo pacman -S go
+sudo pacman -S gpgme
+sudo pacman -S iptables
+sudo pacman -S libassuan
+sudo pacman -S libgpg-error
+sudo pacman -S libseccomp
+sudo pacman -S make
+sudo pacman -S pkgconfig
+sudo pacman -S libsystemd
+sudo pacman -S go-md2man
+sudo pacman -S capnproto
+sudo pacman -S slirp4netns
+sudo pacman -S catatonit
 
 # SourceCodePro NF Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip
 unzip SourceCodePro.zip -d ~/.fonts
 fc-cache -fv
 
-# oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+wget https://dl.google.com/go/go1.19.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz
+rm go1.19.linux-amd64.tar.gz
+echo "PATH=$PATH:/usr/local/go/bin" >> ~/.profile
+echo "GOPATH=$HOME/go" >> ~/.profile
+source ~/.profile
 
-cd ~/
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
-# dotfiles
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 git clone https://github.com/jakecorrenti/dotfiles.git
-
 cd dotfiles
 
-# neovim
-rm ~/.config/nvim
 mv nvim ~/.config/
 
-# .gitconfig
-rm ~/.gitconfig
 mv .gitconfig ~/.config/
 ln -s ~/.config/.gitconfig ~/.gitconfig
 
-# tmux
-rm ~/.tmux.conf
 mv .tmux.conf ~/.config/
 ln -s ~/.config/.tmux.conf ~/.tmux.conf
 
-# .bashrc
 rm ~/.bashrc
 mv .bashrc ~/.config/
 ln -s ~/.config/.bashrc ~/.bashrc
 
-# zshrc
-rm ~/.zshrc
-mv .zshrc ~/.config/
-ln -s ~/.config/.zshrc ~/.zshrc
-
-# awesome
-mv i3 ~/.config/
-
-# readme
 mv README.md ~/.config/
 
-# rofi
 mv rofi ~/.config/
 
-# resolution change script
 mv resolution_change.sh ~/.config/
 ln -s ~/.config/resolution_change.sh ~/resolution_change.sh
 
-# install scripts
 mv install.sh ~/.config/
 mv rust_install.sh ~/.config/
 
@@ -180,20 +81,49 @@ cd ~/
 
 mv ~/dotfiles/.git ~/.config/
 
-# github cli
-sudo dnf install -y 'dnf-command(config-manager)'
-sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-sudo dnf install -y gh
-if type -p gh &> /dev/null; then
-  echo "github cli installed" >> $log_file
-else
-  echo "github cli failed to install" >> $log_file
-fi
-gh auth login
+cd ~/
 
-echo "######### SUMMARY ########"
-cat $log_file
-rm $log_file
+git clone https://github.com/containers/conmon
+cd conmon
+export GOCACHE="$(mktemp -d)"
+make
+sudo make podman
+
+cd
+
+git clone https://github.com/opencontainers/runc.git $GOPATH/src/github.com/opencontainers/runc
+cd $GOPATH/src/github.com/opencontainers/runc
+make BUILDTAGS="selinux seccomp"
+sudo cp runc /usr/bin/runc
+
+cd
+
+sudo mkdir -p /etc/containers
+sudo curl -L -o /etc/containers/registries.conf https://src.fedoraproject.org/rpms/containers-common/raw/main/f/registries.conf
+sudo curl -L -o /etc/containers/policy.json https://src.fedoraproject.org/rpms/containers-common/raw/main/f/default-policy.json
+
+git clone https://github.com/containers/podman/
+cd podman
+make BUILDTAGS="selinux seccomp"
+sudo make install PREFIX=/usr
+
+cd ~/go/src/github.com
+mkdir containers
+cd containers
+gh repo clone podman
+cd podman
+sudo touch /etc/subuid /etc/subgid
+sudo chmod 644 /etc/subuid /etc/subgid
+sudo usermod --add-subuids 100000-165535 --add-subgids 100000-165535 jakecorrenti
+podman system migrate
+
+cd ~/
+gh repo clone dotfiles
+cd dotfiles
+rm -rf ~/.config/kitty
+mv kitty ~/.config/kitty
+cd ~/
+rm -rf dotfiles/
 
 echo "######## NOTE ########"
 echo "restart your terminal before doing rust install script"
