@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
   },
+  ["elly.vim"] = {
+    loaded = true,
+    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/elly.vim",
+    url = "https://github.com/ulwlu/elly.vim"
+  },
   ["fidget.nvim"] = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/fidget.nvim",
