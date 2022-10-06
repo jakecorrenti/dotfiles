@@ -12,6 +12,7 @@ sudo pacman -S github-cli
 gh auth login
 sudo pacman -S tmux
 sudo pacman -S i3-gaps
+sudo pacman -S i3status
 sudo pacman -S arandr
 sudo pacman -S rofi
 sudo pacman -S btrfs-progs
@@ -35,6 +36,7 @@ sudo pacman -S go-md2man
 sudo pacman -S capnproto
 sudo pacman -S slirp4netns
 sudo pacman -S catatonit
+sudo pacman -S unzip
 
 # SourceCodePro NF Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip
@@ -49,6 +51,8 @@ echo "GOPATH=$HOME/go" >> ~/.profile
 source ~/.profile
 
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
