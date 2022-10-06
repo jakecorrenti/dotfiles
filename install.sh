@@ -37,6 +37,7 @@ sudo pacman -S capnproto
 sudo pacman -S slirp4netns
 sudo pacman -S catatonit
 sudo pacman -S unzip
+sudo pacman -S nitrogen
 
 # SourceCodePro NF Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip
@@ -60,6 +61,9 @@ git clone https://github.com/jakecorrenti/dotfiles.git
 cd dotfiles
 
 mv nvim ~/.config/
+
+rm -rf ~/.config/i3
+mv i3 ~/.config/i3
 
 mv .gitconfig ~/.config/
 ln -s ~/.config/.gitconfig ~/.gitconfig
