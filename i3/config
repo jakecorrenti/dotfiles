@@ -206,37 +206,24 @@ bar {
         status_command i3status
 
         colors {
-           ## bar background color
-            #background $bg
-            ## text color used for blocks that do not have a color specified.
-            #statusline $yellow
-            ## workspaces section            
-            ##                    border  backgr. text
-            #focused_workspace    $aqua $aqua $darkgray
-            #inactive_workspace   $darkgray $darkgray $yellow
-            #active_workspace     $darkgray $darkgray $yellow
-            #urgent_workspace     $red $red $bg
-            background #1a1b26
-            statusline #a9b1d6
-            separator #3a3f4b
+            background #111a1f
+            separator #9b9257
+            statusline #acb3b5
 
-            focused_workspace  #3a3f4b #1a1b26 #c678dd
-            active_workspace   #1a1b26 #1a1b26 #acb0d0
-            inactive_workspace #1a1b26 #1a1b26 #abb2bf
-            urgent_workspace   #f7768e #f7768e #fffff
-            binding_mode       #2f343a #900000 #ffffff
+            ##                    border  backgr. text
+            focused_workspace  #161f2a #798362 #111a1f
+            active_workspace   #161f2a #111a1f #acb3b5
+            inactive_workspace #161f2a #111a1f #acb3b5
+            urgent_workspace   #f7768e #8d7856 #fffff
         }
 
 }
 
 # class                 border|backgr|text|indicator|child_border
-#client.focused          $gray $gray $darkgray $gray $gray
-#client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
-#client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
-#client.urgent           $red $red $white $red $red
-client.focused           #9aa5ce #364A82 	#c0caf5 #9aa5ce   	#9aa5ce
-client.focused_inactive  #16161d #16161d 	#c0caf5 #16161d   	#16161d
-client.unfocused         #16161d #16161d 	#c0caf5 #16161d   	#16161d
+client.focused           #798362 #798362 	#acb3b5 #798362   	#798362
+client.focused_inactive  #16161d #16161d 	#acb3b5 #16161d   	#16161d
+client.unfocused         #16161d #16161d 	#acb3b5 #16161d   	#16161d
+client.urgent            #8d7856 #8d7856    #ffffff #8d7856     #8d7856
 
 gaps inner 4
 gaps outer 3
