@@ -10,6 +10,8 @@ return require('packer').startup(function()
         "sainnhe/gruvbox-material",
         "folke/tokyonight.nvim",
         "ulwlu/elly.vim",
+        "rebelot/kanagawa.nvim",
+        "dracula/vim",
 
         -- lsp
         "rust-lang/rust.vim",
