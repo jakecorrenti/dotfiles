@@ -1,23 +1,20 @@
 # dotfiles
 
-## Install Script
-to install everyting, first make sure that `git` is installed:
+### Clone the repository 
 ```bash
-$ sudo pacman -S git
+gh repo clone jakecorrenti/dotfiles
 ```
-make sure you are in the `dotfiles` directory that you just cloned
+or
 ```bash
-$ cd dotfiles
-```
-
-run the initial install script
-```bash
-$ chmod +x install.sh
-$ ./install.sh
+git clone https://github.com/jakecorrenti/dotfiles.git
 ```
 
-restart your terminal, then run the rust install script
+### Run the initial install script
 ```bash
-$ chmod +x rust_install.sh
-$ ./rust_install.sh
+$ sh install.sh
+```
+
+### Restart your terminal, then run the rust install script
+```bash
+$ sh ~/.config/rust_install.sh
 ```
