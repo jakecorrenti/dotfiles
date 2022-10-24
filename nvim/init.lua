@@ -20,6 +20,13 @@ require("gruvbox").setup({
     overrides = {},
 })
 require('gitsigns').setup()
+require "lsp_signature".setup({
+    bind = true, -- This is mandatory, otherwise border config won't get registered.
+    handler_opts = {
+        border = "rounded"
+    }
+})
+require('lsp_lines').setup()
 
 -- highlight the current yanked line
 vim.api.nvim_exec(
@@ -62,7 +69,7 @@ end)
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = false,
-    virtual_text = true,
+    virtual_text = false,
     signs = true,
     update_in_insert = true,
 })

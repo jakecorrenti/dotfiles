@@ -18,6 +18,8 @@ return require('packer').startup(function()
         "neovim/nvim-lspconfig",
         'williamboman/nvim-lsp-installer',
         'j-hui/fidget.nvim',
+        'ray-x/lsp_signature.nvim',
+        "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 
         -- treesitter
         "nvim-treesitter/nvim-treesitter",
