@@ -121,3 +121,4 @@ fi
 . "$HOME/.cargo/env"
 
 eval "$(starship init bash)"
+~/.config/update_config.sh

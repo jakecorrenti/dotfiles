@@ -44,9 +44,8 @@ g.startify_bookmarks = {
     { k = "~/.config/kitty/kitty.conf" },
     { n = "~/.config/nvim/init.lua" },
     { t = "~/.tmux.conf" },
-    { z = "~/.zshrc" },
+    { b = "~/.bashrc" },
     { w = "~/.config/i3/config" },
-    { a = "~/.config/alacritty/alacritty.yml" },
 }
 
 g.nord_italic_comments = 1
