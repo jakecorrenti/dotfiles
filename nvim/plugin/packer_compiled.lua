@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/nerdcommenter",
     url = "https://github.com/preservim/nerdcommenter"
   },
+  ["nord-vim"] = {
+    loaded = true,
+    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/nord-vim",
+    url = "https://github.com/arcticicestudio/nord-vim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/nvim-cmp",

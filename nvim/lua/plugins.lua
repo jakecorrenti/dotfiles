@@ -10,6 +10,7 @@ return require('packer').startup(function()
         "sainnhe/gruvbox-material",
         "folke/tokyonight.nvim",
         "olimorris/onedarkpro.nvim",
+        "arcticicestudio/nord-vim",
 
         -- lsp
         "rust-lang/rust.vim",

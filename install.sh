@@ -128,6 +128,9 @@ podman system migrate
 cd ~/
 gh repo clone dotfiles
 cd dotfiles
+
+sudo cp rofi-power-menu /usr/bin/
+
 rm -rf ~/.config/kitty
 mv kitty ~/.config/kitty
 cd ~/
