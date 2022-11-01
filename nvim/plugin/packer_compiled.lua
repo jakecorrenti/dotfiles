@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["base16-black-metal-scheme"] = {
+    loaded = true,
+    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/base16-black-metal-scheme",
+    url = "https://github.com/metalelf0/base16-black-metal-scheme"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -133,6 +138,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
+  },
+  ["lush.nvim"] = {
+    loaded = true,
+    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/lush.nvim",
+    url = "https://github.com/rktjmp/lush.nvim"
   },
   nerdcommenter = {
     loaded = true,
@@ -211,6 +221,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/vim-startify",
     url = "https://github.com/mhinz/vim-startify"
+  },
+  ["zenbones.nvim"] = {
+    loaded = true,
+    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/zenbones.nvim",
+    url = "https://github.com/mcchrish/zenbones.nvim"
   }
 }
 

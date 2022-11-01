@@ -54,3 +54,8 @@ g.gruvbox_material_background = 'hard'
 g.gruvbox_material_show_eob = 0
 g.gruvbox_material_enable_italics = 1
 g.gruvbox_material_diagnostic_virtual_text = 'colored'
+
+g.zenbones = {
+    --darkness = 'warm',
+    lighten_noncurrent_window = true,
+}
