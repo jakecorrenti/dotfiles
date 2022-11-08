@@ -47,7 +47,7 @@ augroup END
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
 
 vim.cmd [[
-    colorscheme base16-black-metal
+    colorscheme zenbones
     highlight WinSeparator guibg=None
 
     set laststatus=3
