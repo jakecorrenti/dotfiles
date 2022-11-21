@@ -38,6 +38,7 @@ sudo pacman -S slirp4netns
 sudo pacman -S catatonit
 sudo pacman -S unzip
 sudo pacman -S nitrogen
+sudo pacman -S scrot
 
 # SourceCodePro NF Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SourceCodePro.zip
