@@ -16,8 +16,10 @@ require("gruvbox").setup({
     invert_tabline = false,
     invert_intend_guides = false,
     inverse = true, -- invert background for search, diffs, statuslines and errors
-    contrast = "", -- can be "hard", "soft" or empty string
-    overrides = {},
+    contrast = "hard", -- can be "hard", "soft" or empty string
+    overrides = {
+        SignColumn = { bg = "NONE", },
+    },
 })
 require('gitsigns').setup()
 require "lsp_signature".setup({
@@ -47,7 +49,7 @@ augroup END
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
 
 vim.cmd [[
-    colorscheme catppuccin
+    colorscheme gruvbox
     highlight WinSeparator guibg=None
 
     set laststatus=3

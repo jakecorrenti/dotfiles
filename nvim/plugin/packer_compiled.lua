@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
   },
+  everforest = {
+    loaded = true,
+    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/everforest",
+    url = "https://github.com/sainnhe/everforest"
+  },
   ["fidget.nvim"] = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/fidget.nvim",
@@ -153,11 +158,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/nerdcommenter",
     url = "https://github.com/preservim/nerdcommenter"
-  },
-  ["nord-vim"] = {
-    loaded = true,
-    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/nord-vim",
-    url = "https://github.com/arcticicestudio/nord-vim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -221,11 +221,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
-  },
-  vim = {
-    loaded = true,
-    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/vim",
-    url = "https://github.com/challenger-deep-theme/vim"
   },
   ["vim-startify"] = {
     loaded = true,

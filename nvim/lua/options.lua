@@ -59,3 +59,8 @@ g.zenbones = {
     --darkness = 'warm',
     lighten_noncurrent_window = true,
 }
+
+g.everforest_background = 'hard' -- soft, medium, hard
+g.everforest_enable_italic = 1
+g.everforest_show_eob = 0
+g.everforest_diagnostic_virtual_text = 'colored'

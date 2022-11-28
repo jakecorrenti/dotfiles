@@ -8,10 +8,10 @@ return require('packer').startup(function()
         -- colorscheme
         "ellisonleao/gruvbox.nvim",
         "sainnhe/gruvbox-material",
+        "sainnhe/everforest",
         "folke/tokyonight.nvim",
         "olimorris/onedarkpro.nvim",
         { "catppuccin/nvim", as = "catppuccin" },
-        "arcticicestudio/nord-vim",
         {
             "mcchrish/zenbones.nvim",
             -- Optionally install Lush. Allows for more configuration or extending the colorscheme
@@ -20,7 +20,6 @@ return require('packer').startup(function()
             requires = "rktjmp/lush.nvim"
         },
         'metalelf0/base16-black-metal-scheme',
-        'challenger-deep-theme/vim',
 
         -- lsp
         "rust-lang/rust.vim",
@@ -31,7 +30,7 @@ return require('packer').startup(function()
         "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 
         -- treesitter
-         "nvim-treesitter/nvim-treesitter",
+        "nvim-treesitter/nvim-treesitter",
 
         -- git
         { "sindrets/diffview.nvim", requires = { "nvim-lua/plenary.nvim" } },
