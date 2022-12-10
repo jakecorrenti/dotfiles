@@ -41,6 +41,7 @@ g.neosolarized_termtrans = 0
 
 -- startify bookmarks
 g.startify_bookmarks = {
+    { a = "~/.config/alacritty/alacritty.yml" },
     { k = "~/.config/kitty/kitty.conf" },
     { n = "~/.config/nvim/init.lua" },
     { t = "~/.tmux.conf" },

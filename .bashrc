@@ -122,3 +122,4 @@ fi
 
 eval "$(starship init bash)"
 ~/.config/update_config.sh
+source ~/.bash_completion/alacritty

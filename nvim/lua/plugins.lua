@@ -7,10 +7,9 @@ return require('packer').startup(function()
 
         -- colorscheme
         "ellisonleao/gruvbox.nvim",
-        "sainnhe/gruvbox-material",
         "sainnhe/everforest",
         "folke/tokyonight.nvim",
-        "olimorris/onedarkpro.nvim",
+        'Yazeed1s/minimal.nvim',
         { "catppuccin/nvim", as = "catppuccin" },
         {
             "mcchrish/zenbones.nvim",

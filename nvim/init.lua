@@ -30,9 +30,6 @@ require "lsp_signature".setup({
     hint_prefix = "=> ",
 })
 require('lsp_lines').setup()
-require('onedarkpro').setup({
-    dark_theme = "onedark_dark",
-})
 
 -- highlight the current yanked line
 vim.api.nvim_exec(
@@ -49,9 +46,8 @@ augroup END
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
 
 vim.cmd [[
+    colorscheme minimal
     highlight WinSeparator guibg=None
-    highlight Pmenu guibg=black
-    highlight SignColumn guibg=black
 
     set laststatus=3
 ]]
