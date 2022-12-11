@@ -26,6 +26,17 @@ return require('packer').startup(function()
         'williamboman/nvim-lsp-installer',
         'j-hui/fidget.nvim',
         'ray-x/lsp_signature.nvim',
+        {
+            "folke/todo-comments.nvim",
+            requires = "nvim-lua/plenary.nvim",
+            config = function()
+                require("todo-comments").setup {
+                    -- your configuration comes here
+                    -- or leave it empty to use the default settings
+                    -- refer to the configuration section below
+                }
+            end
+        },
         "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 
         -- treesitter

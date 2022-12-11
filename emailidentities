@@ -1,0 +1,11 @@
+[General]
+Default Identity=2021861955
+
+[Identity #0]
+Default Domain=archlinux
+Disable Fcc=false
+Identity=Unnamed
+Image Location=
+Inline Signature=
+Signature Enabled=false
+uoid=2021861955

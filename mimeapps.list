@@ -1,0 +1,5 @@
+[Default Applications]
+application/pdf=org.gnome.Evince.desktop
+
+[Added Associations]
+application/pdf=org.gnome.Evince.desktop;
