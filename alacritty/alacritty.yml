@@ -185,28 +185,51 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (minimal)
+#colors:
+  #primary:
+    #background: '#1A1B1F'
+    #foreground: '#DFE0EA'
+  #normal:
+    #black:   '#272932'
+    #red:     '#E85A84'
+    #green:   '#94DD8E'
+    #yellow:  '#E9D26C'
+    #blue:    '#7EB7E6'
+    #magenta: '#D895C7'
+    #cyan:    '#89BEB7'
+    #white:   '#CFD0D7'
+  #bright:
+    #black:   '#16181D'
+    #red:     '#E85A84'
+    #green:   '#94DD8E'
+    #yellow:  '#E9D26C'
+    #blue:    '#7EB7E6'
+    #magenta: '#D895C7'
+    #cyan:    '#89BEB7'
+    #white:   '#DFE0EA'
+# Colors (melange)
 colors:
   primary:
-    background: '#1A1B1F'
-    foreground: '#DFE0EA'
+    foreground: '#ECE1D7'
+    background: '#2A2520'
   normal:
-    black:   '#272932'
-    red:     '#E85A84'
-    green:   '#94DD8E'
-    yellow:  '#E9D26C'
-    blue:    '#7EB7E6'
-    magenta: '#D895C7'
-    cyan:    '#89BEB7'
-    white:   '#CFD0D7'
+    black:   '#352F2A'
+    red:     '#B65C60'
+    green:   '#78997A'
+    yellow:  '#EBC06D'
+    blue:    '#9AACCE'
+    magenta: '#B380B0'
+    cyan:    '#86A3A3'
+    white:   '#A38D78'
   bright:
-    black:   '#16181D'
-    red:     '#E85A84'
-    green:   '#94DD8E'
-    yellow:  '#E9D26C'
-    blue:    '#7EB7E6'
-    magenta: '#D895C7'
-    cyan:    '#89BEB7'
-    white:   '#DFE0EA'
+    black:   '#4D453E'
+    red:     '#F17C64'
+    green:   '#99D59D'
+    yellow:  '#EBC06D'
+    blue:    '#9AACCE'
+    magenta: '#CE9BCB'
+    cyan:    '#88B3B2'
+    white:   '#C1A78E'
 
 # Colors (Tomorrow Night)
 #colors:

@@ -19,6 +19,8 @@ return require('packer').startup(function()
             requires = "rktjmp/lush.nvim"
         },
         'metalelf0/base16-black-metal-scheme',
+        'AlessandroYorba/Alduin',
+        "savq/melange",
 
         -- lsp
         "rust-lang/rust.vim",
