@@ -5,22 +5,6 @@ require("keymaps")
 require("cmp_conf")
 require("telescope_conf")
 require "fidget".setup {}
-require("gruvbox").setup({
-    undercurl = true,
-    underline = true,
-    bold = false,
-    italic = true,
-    strikethrough = true,
-    invert_selection = false,
-    invert_signs = false,
-    invert_tabline = false,
-    invert_intend_guides = false,
-    inverse = true, -- invert background for search, diffs, statuslines and errors
-    contrast = "hard", -- can be "hard", "soft" or empty string
-    overrides = {
-        SignColumn = { bg = "NONE", },
-    },
-})
 require('gitsigns').setup()
 require "lsp_signature".setup({
     bind = true, -- This is mandatory, otherwise border config won't get registered.

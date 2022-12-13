@@ -84,16 +84,6 @@ _G.packer_plugins = {
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["base16-black-metal-scheme"] = {
-    loaded = true,
-    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/base16-black-metal-scheme",
-    url = "https://github.com/metalelf0/base16-black-metal-scheme"
-  },
-  catppuccin = {
-    loaded = true,
-    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -119,11 +109,6 @@ _G.packer_plugins = {
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
   },
-  everforest = {
-    loaded = true,
-    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/everforest",
-    url = "https://github.com/sainnhe/everforest"
-  },
   ["fidget.nvim"] = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/fidget.nvim",
@@ -134,11 +119,6 @@ _G.packer_plugins = {
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
-  },
   ["lsp_lines.nvim"] = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/lsp_lines.nvim",
@@ -148,11 +128,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
-  },
-  ["lush.nvim"] = {
-    loaded = true,
-    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/lush.nvim",
-    url = "https://github.com/rktjmp/lush.nvim"
   },
   melange = {
     loaded = true,
@@ -228,20 +203,10 @@ _G.packer_plugins = {
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
   },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
-  },
   ["vim-startify"] = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/vim-startify",
     url = "https://github.com/mhinz/vim-startify"
-  },
-  ["zenbones.nvim"] = {
-    loaded = true,
-    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/zenbones.nvim",
-    url = "https://github.com/mcchrish/zenbones.nvim"
   }
 }
 
