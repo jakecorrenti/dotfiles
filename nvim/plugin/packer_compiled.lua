@@ -74,11 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  Alduin = {
-    loaded = true,
-    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/Alduin",
-    url = "https://github.com/AlessandroYorba/Alduin"
-  },
   LuaSnip = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -128,11 +123,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
-  },
-  melange = {
-    loaded = true,
-    path = "/home/jakecorrenti/.local/share/nvim/site/pack/packer/start/melange",
-    url = "https://github.com/savq/melange"
   },
   ["minimal.nvim"] = {
     loaded = true,

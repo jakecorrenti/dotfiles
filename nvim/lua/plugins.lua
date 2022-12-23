@@ -7,8 +7,6 @@ return require('packer').startup(function()
 
         -- colorscheme
         'Yazeed1s/minimal.nvim',
-        'AlessandroYorba/Alduin',
-        "savq/melange",
 
         -- lsp
         "rust-lang/rust.vim",
