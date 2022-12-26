@@ -43,6 +43,7 @@ return require('packer').startup(function()
         -- Miscellaneous
         "preservim/nerdcommenter",
         "mhinz/vim-startify",
+        'tamton-aquib/staline.nvim',
 
         -- cmp
         "hrsh7th/cmp-nvim-lsp",

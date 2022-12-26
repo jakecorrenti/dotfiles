@@ -14,6 +14,32 @@ require "lsp_signature".setup({
     hint_prefix = "=> ",
 })
 require('lsp_lines').setup()
+require "staline".setup {
+    sections = {
+        left = { '  ', 'mode', ' ', 'branch', ' ', 'lsp' },
+        mid = {},
+        right = { 'file_name', 'line_column' }
+    },
+    mode_colors = {
+        i = "#d4be98",
+        n = "#84a598",
+        c = "#8fbf7f",
+        v = "#fc802d",
+    },
+    defaults = {
+        true_colors = true,
+        line_column = " [%l/%L] :%c  ",
+        branch_symbol = " "
+    }
+}
+
+--require "staline".setup {
+--sections = {
+--left = { ("▁"):rep(vim.o.columns) }, -- change thickness: "_", "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"
+--mid = {},
+--right = {}
+--},
+--}
 
 -- highlight the current yanked line
 vim.api.nvim_exec(
@@ -30,8 +56,8 @@ augroup END
 vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
 
 vim.cmd [[
+    colorscheme minimal
     highlight WinSeparator guibg=None
-    highlight Pmenu guibg=black
 
     set laststatus=3
 ]]

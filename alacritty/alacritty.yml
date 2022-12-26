@@ -185,28 +185,28 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (minimal)
-#colors:
-  #primary:
-    #background: '#1A1B1F'
-    #foreground: '#DFE0EA'
-  #normal:
-    #black:   '#272932'
-    #red:     '#E85A84'
-    #green:   '#94DD8E'
-    #yellow:  '#E9D26C'
-    #blue:    '#7EB7E6'
-    #magenta: '#D895C7'
-    #cyan:    '#89BEB7'
-    #white:   '#CFD0D7'
-  #bright:
-    #black:   '#16181D'
-    #red:     '#E85A84'
-    #green:   '#94DD8E'
-    #yellow:  '#E9D26C'
-    #blue:    '#7EB7E6'
-    #magenta: '#D895C7'
-    #cyan:    '#89BEB7'
-    #white:   '#DFE0EA'
+colors:
+  primary:
+    background: '#1A1B1F'
+    foreground: '#DFE0EA'
+  normal:
+    black:   '#272932'
+    red:     '#E85A84'
+    green:   '#94DD8E'
+    yellow:  '#E9D26C'
+    blue:    '#7EB7E6'
+    magenta: '#D895C7'
+    cyan:    '#89BEB7'
+    white:   '#CFD0D7'
+  bright:
+    black:   '#16181D'
+    red:     '#E85A84'
+    green:   '#94DD8E'
+    yellow:  '#E9D26C'
+    blue:    '#7EB7E6'
+    magenta: '#D895C7'
+    cyan:    '#89BEB7'
+    white:   '#DFE0EA'
 # Colors (melange)
 #colors:
   #primary:
@@ -230,9 +230,10 @@ font:
     #magenta: '#CE9BCB'
     #cyan:    '#88B3B2'
     #white:   '#C1A78E'
-colors:
-  primary:
-    background: '#000000'
+# Colors (black)
+#colors:
+  #primary:
+    #background: '#000000'
 
 # Colors (Tomorrow Night)
 #colors:
