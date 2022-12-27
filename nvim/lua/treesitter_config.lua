@@ -1,2 +1,2 @@
 local configs = require "nvim-treesitter.configs"
-configs.setup { highlight = { enable = true } }
+configs.setup { ensure_installed = "all", highlight = { enable = true } }
