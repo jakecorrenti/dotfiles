@@ -2,6 +2,7 @@ local g = vim.g
 local o = vim.o
 
 g.mapleader = " "
+g.laststatus = 3
 o.shortmess = vim.o.shortmess .. "c"
 
 o.completeopt = "menu,menuone,noselect"
@@ -45,23 +46,19 @@ g.startify_bookmarks = {
     { k = "~/.config/kitty/kitty.conf" },
     { n = "~/.config/nvim/init.lua" },
     { t = "~/.tmux.conf" },
-    { b = "~/.bashrc" },
+    { z = "~/.zshrc" },
     { w = "~/.config/i3/config" },
 }
 
-g.nord_italic_comments = 1
+-- highlight the current yanked line
+vim.api.nvim_exec(
+    [[
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})
+augroup END
+]]   ,
+    false
+)
 
-g.gruvbox_material_background = 'hard'
-g.gruvbox_material_show_eob = 0
-g.gruvbox_material_enable_italics = 1
-g.gruvbox_material_diagnostic_virtual_text = 'colored'
-
-g.zenbones = {
-    --darkness = 'warm',
-    lighten_noncurrent_window = true,
-}
-
-g.everforest_background = 'hard' -- soft, medium, hard
-g.everforest_enable_italic = 1
-g.everforest_show_eob = 0
-g.everforest_diagnostic_virtual_text = 'colored'
+vim.cmd('colorscheme minimal')

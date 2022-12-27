@@ -1,8 +1,6 @@
-local vim = vim
+require('lazy_config')
 require("options")
-require("plugins")
-require("keymaps")
-require("cmp_conf")
+require("keymaps");
 require("telescope_conf")
 require "fidget".setup {}
 require('gitsigns').setup()
@@ -13,7 +11,6 @@ require "lsp_signature".setup({
     },
     hint_prefix = "=> ",
 })
-require('lsp_lines').setup()
 require "staline".setup {
     sections = {
         left = { '  ', 'mode', ' ', 'branch', ' ', 'lsp' },
@@ -32,6 +29,19 @@ require "staline".setup {
         branch_symbol = " "
     }
 }
+require("bufferline").setup {
+    options = {
+        numbers = "ordinal",
+        diagnostics = "nvim_lsp",
+        diagnostics_update_in_insert = true,
+    }
+}
+require('Comment').setup()
+require('todo-comments').setup()
+require('trouble').setup({
+    use_diagnostic_signs = true,
+    icons = false,
+})
 
 --require "staline".setup {
 --sections = {
@@ -41,51 +51,8 @@ require "staline".setup {
 --},
 --}
 
--- highlight the current yanked line
-vim.api.nvim_exec(
-    [[
-augroup highlight_yank
-    autocmd!
-    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})
-augroup END
-]]   ,
-    false
-)
-
--- auto recompile packer
-vim.cmd [[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
-
-vim.cmd [[
-    colorscheme minimal
-    highlight WinSeparator guibg=None
-
-    set laststatus=3
-]]
-
--- format on save
-vim.api.nvim_exec([[
-autocmd BufWritePre * silent! lua vim.lsp.buf.formatting()
-]], false)
-
--- treesitter
-local configs = require "nvim-treesitter.configs"
-configs.setup { highlight = { enable = true } }
-
--- lsp
-local lsp_installer = require("nvim-lsp-installer")
-
-lsp_installer.on_server_ready(function(server)
-    local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-    local opts = { capabilities = capabilities }
-    server:setup(opts)
-end)
-
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-    underline = false,
-    virtual_text = false,
-    signs = true,
-    update_in_insert = true,
-})
+require('treesitter_config')
+require('lsp_config')
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
