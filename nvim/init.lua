@@ -4,6 +4,7 @@ require("keymaps");
 require("telescope_conf")
 require "fidget".setup {}
 require('gitsigns').setup()
+require('cmp_conf')
 require "lsp_signature".setup({
     bind = true, -- This is mandatory, otherwise border config won't get registered.
     handler_opts = {
@@ -42,17 +43,7 @@ require('trouble').setup({
     use_diagnostic_signs = true,
     icons = false,
 })
-
---require "staline".setup {
---sections = {
---left = { ("▁"):rep(vim.o.columns) }, -- change thickness: "_", "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"
---mid = {},
---right = {}
---},
---}
-
 require('treesitter_config')
 require('lsp_config')
-
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
