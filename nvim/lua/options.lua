@@ -26,7 +26,7 @@ o.showmode = false
 o.number = true
 o.relativenumber = true
 o.wrap = true
-o.signcolumn = "no"
+o.signcolumn = "yes"
 o.colorcolumn = "80"
 o.background = "dark"
 o.cursorline = false
@@ -65,4 +65,4 @@ augroup END
 )
 
 -- vim.cmd('colorscheme oh-lucy-evening')
-vim.cmd('highlight Pmenu guibg=gray')
+vim.cmd('colorscheme tempus_classic')
