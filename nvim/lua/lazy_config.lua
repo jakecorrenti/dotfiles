@@ -1,3 +1,4 @@
+local vim = vim
 -- bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -19,11 +20,15 @@ require("lazy").setup({
     -- lsp
     "rust-lang/rust.vim",
     "neovim/nvim-lspconfig",
-    'williamboman/nvim-lsp-installer',
+    -- 'williamboman/nvim-lsp-installer',
     'j-hui/fidget.nvim',
     'ray-x/lsp_signature.nvim',
     { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
     "folke/trouble.nvim",
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'simrat39/rust-tools.nvim',
+    'mfussenegger/nvim-dap',
 
     -- treesitter
     "nvim-treesitter/nvim-treesitter",
@@ -42,7 +47,6 @@ require("lazy").setup({
     "numToStr/Comment.nvim",
     "mhinz/vim-startify",
     'tamton-aquib/staline.nvim',
-    { 'akinsho/bufferline.nvim', requires = 'nvim-tree/nvim-web-devicons' },
 
     -- cmp
     "hrsh7th/cmp-nvim-lsp",

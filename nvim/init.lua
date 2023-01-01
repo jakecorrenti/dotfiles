@@ -30,13 +30,6 @@ require "staline".setup {
         branch_symbol = " "
     }
 }
-require("bufferline").setup {
-    options = {
-        numbers = "ordinal",
-        diagnostics = "nvim_lsp",
-        diagnostics_update_in_insert = true,
-    }
-}
 require('Comment').setup()
 require('todo-comments').setup()
 require('trouble').setup({
@@ -44,6 +37,31 @@ require('trouble').setup({
     icons = false,
 })
 require('treesitter_config')
-require('lsp_config')
+require('mason').setup()
+require('mason-lspconfig').setup({
+    ensure_installed = {"sumneko_lua", "rust_analyzer", "gopls"},
+    automatic_installation = true,
+})
+require('mason-lspconfig').setup_handlers {
+    function (server_name)
+        local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+        local opts = { capabilities = capabilities }
+        require("lspconfig")[server_name].setup{
+            options = opts,
+        }
+
+    end,
+
+    ["rust_analyzer"] = function()
+        local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+        local opts = { capabilities = capabilities }
+        require("rust-tools").setup({
+            server = {
+                options = opts
+            }
+        })
+    end
+}
+-- require('lsp_config')
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
