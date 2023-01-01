@@ -26,7 +26,7 @@ o.showmode = false
 o.number = true
 o.relativenumber = true
 o.wrap = true
-o.signcolumn = "yes"
+o.signcolumn = "no"
 o.colorcolumn = "80"
 o.background = "dark"
 o.cursorline = false
@@ -39,6 +39,9 @@ g.neosolarized_bold = 1
 g.neosolarized_underline = 0
 g.neosolarized_italic = 1
 g.neosolarized_termtrans = 0
+
+-- material
+g.material_style = "darker"
 
 -- startify bookmarks
 g.startify_bookmarks = {
@@ -61,4 +64,5 @@ augroup END
     false
 )
 
-vim.cmd('colorscheme minimal')
+-- vim.cmd('colorscheme oh-lucy-evening')
+vim.cmd('highlight Pmenu guibg=gray')

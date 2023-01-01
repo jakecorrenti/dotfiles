@@ -184,29 +184,53 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
+# Colors (oh-lucy-evening)
+# colors:
+#   primary:
+#     background: '#1E1D23'
+#     foreground: '#DED7D0'
+#   normal:
+#     black:   '#938884'
+#     red:     '#FF7DA3'
+#     green:   '#7EC49D'
+#     yellow:  '#EFD472'
+#     blue:    '#8BB8D0'
+#     magenta: '#BDA9D4'
+#     cyan:    '#BDA9D4'
+#     white:   '#DED7D0'
+#   bright:
+#     black:   '#938884'
+#     red:     '#FF7DA3'
+#     green:   '#7EC49D'
+#     yellow:  '#EFD472'
+#     blue:    '#8BB8D0'
+#     magenta: '#BDA9D4'
+#     cyan:    '#BDA9D4'
+#     white:   '#DED7D0'
+
 # Colors (minimal)
-colors:
-  primary:
-    background: '#1A1B1F'
-    foreground: '#DFE0EA'
-  normal:
-    black:   '#272932'
-    red:     '#E85A84'
-    green:   '#94DD8E'
-    yellow:  '#E9D26C'
-    blue:    '#7EB7E6'
-    magenta: '#D895C7'
-    cyan:    '#89BEB7'
-    white:   '#CFD0D7'
-  bright:
-    black:   '#16181D'
-    red:     '#E85A84'
-    green:   '#94DD8E'
-    yellow:  '#E9D26C'
-    blue:    '#7EB7E6'
-    magenta: '#D895C7'
-    cyan:    '#89BEB7'
-    white:   '#DFE0EA'
+# colors:
+#   primary:
+#     background: '#1A1B1F'
+#     foreground: '#DFE0EA'
+#   normal:
+#     black:   '#272932'
+#     red:     '#E85A84'
+#     green:   '#94DD8E'
+#     yellow:  '#E9D26C'
+#     blue:    '#7EB7E6'
+#     magenta: '#D895C7'
+#     cyan:    '#89BEB7'
+#     white:   '#CFD0D7'
+#   bright:
+#     black:   '#16181D'
+#     red:     '#E85A84'
+#     green:   '#94DD8E'
+#     yellow:  '#E9D26C'
+#     blue:    '#7EB7E6'
+#     magenta: '#D895C7'
+#     cyan:    '#89BEB7'
+#     white:   '#DFE0EA'
 # Colors (melange)
 #colors:
   #primary:
@@ -231,9 +255,9 @@ colors:
     #cyan:    '#88B3B2'
     #white:   '#C1A78E'
 # Colors (black)
-#colors:
-  #primary:
-    #background: '#000000'
+colors:
+  primary:
+    background: '#000000'
 
 # Colors (Tomorrow Night)
 #colors:
