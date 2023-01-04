@@ -1,3 +1,4 @@
+local vim = vim
 require('lazy_config')
 require("options")
 require("keymaps");
@@ -52,16 +53,15 @@ require('mason-lspconfig').setup_handlers {
 
     end,
 
-    ["rust_analyzer"] = function()
-        local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-        local opts = { capabilities = capabilities }
-        require("rust-tools").setup({
-            server = {
-                options = opts
-            }
-        })
-    end
+    -- ["rust_analyzer"] = function()
+    --     local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+    --     local opts = { capabilities = capabilities }
+    --     require("rust-tools").setup({
+    --         server = {
+    --             options = opts
+    --         }
+    --     })
+    -- end
 }
--- require('lsp_config')
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')

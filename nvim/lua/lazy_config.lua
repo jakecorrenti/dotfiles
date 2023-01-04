@@ -20,7 +20,6 @@ require("lazy").setup({
     -- lsp
     "rust-lang/rust.vim",
     "neovim/nvim-lspconfig",
-    -- 'williamboman/nvim-lsp-installer',
     'j-hui/fidget.nvim',
     'ray-x/lsp_signature.nvim',
     { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" },
