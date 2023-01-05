@@ -65,4 +65,4 @@ augroup END
 )
 
 -- vim.cmd('colorscheme oh-lucy-evening')
-vim.cmd('colorscheme tempus_classic')
+vim.cmd('colorscheme onedark_dark')

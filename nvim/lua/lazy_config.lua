@@ -16,6 +16,11 @@ vim.opt.runtimepath:prepend(lazypath)
 require("lazy").setup({
     -- colorscheme
     'Yazeed1s/oh-lucy.nvim',
+    {
+        "olimorris/onedarkpro.nvim",
+        priority = 1000 -- Ensure it loads first
+    },
+    'rktjmp/lush.nvim',
 
     -- lsp
     "rust-lang/rust.vim",

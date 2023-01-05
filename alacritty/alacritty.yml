@@ -184,38 +184,74 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (tempus_classic)
+# Colors (onedarkpro)
+# onedarkpro.nvim - onedark
 colors:
-  name: 'Tempus Classic'
-  author: 'Protesilaos Stavrou (https://protesilaos.com)'
-  description: 'Dark theme with warm hues (WCAG AA compliant)'
   primary:
-    foreground: '#aeadaf'
-    background: '#232323'
-  cursor:
-    text: '#232323'
-    cursor: '#aeadaf'
-  selection:
-    text: '#232323'
-    background: '#aeadaf'
+    # background: "#282c34"
+    background: "#000000"
+    foreground: "#abb2bf"
+
   normal:
-    black: '#232323'
-    red: '#d4823d'
-    green: '#8c9e3d'
-    yellow: '#b1942b'
-    blue: '#6e9cb0'
-    magenta: '#b58d88'
-    cyan: '#6da280'
-    white: '#949d9f'
+    black: "#282c34"
+    red: "#e06c75"
+    green: "#98c379"
+    yellow: "#e5c07b"
+    blue: "#61afef"
+    magenta: "#c678dd"
+    cyan: "#56b6c2"
+    white: "#abb2bf"
+
   bright:
-    black: '#312e30'
-    red: '#d0913d'
-    green: '#96a42d'
-    yellow: '#a8a030'
-    blue: '#8e9cc0'
-    magenta: '#d58888'
-    cyan: '#7aa880'
-    white: '#aeadaf'
+    black: "#5d636f"
+    red: "#ee8288"
+    green: "#c0e79a"
+    yellow: "#f8d893"
+    blue: "#7bb9f9"
+    magenta: "#d88ef8"
+    cyan: "#85d7e5"
+    white: "#cfd6e4"
+
+  cursor:
+    text: CellBackground
+    cursor: CellForeground # syntax-cursor-color
+
+  selection:
+    text: CellForeground
+    background: "#3e4452"
+
+# Colors (tempus_classic)
+# colors:
+#   name: 'Tempus Classic'
+#   author: 'Protesilaos Stavrou (https://protesilaos.com)'
+#   description: 'Dark theme with warm hues (WCAG AA compliant)'
+#   primary:
+#     foreground: '#aeadaf'
+#     background: '#232323'
+#   cursor:
+#     text: '#232323'
+#     cursor: '#aeadaf'
+#   selection:
+#     text: '#232323'
+#     background: '#aeadaf'
+#   normal:
+#     black: '#232323'
+#     red: '#d4823d'
+#     green: '#8c9e3d'
+#     yellow: '#b1942b'
+#     blue: '#6e9cb0'
+#     magenta: '#b58d88'
+#     cyan: '#6da280'
+#     white: '#949d9f'
+#   bright:
+#     black: '#312e30'
+#     red: '#d0913d'
+#     green: '#96a42d'
+#     yellow: '#a8a030'
+#     blue: '#8e9cc0'
+#     magenta: '#d58888'
+#     cyan: '#7aa880'
+#     white: '#aeadaf'
 
 # Colors (oh-lucy-evening)
 # colors:
