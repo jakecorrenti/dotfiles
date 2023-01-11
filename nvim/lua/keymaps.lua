@@ -39,7 +39,7 @@ key_mapper("n", "gr", ":lua vim.lsp.buf.references() <CR>")
 key_mapper("n", "<space>e", ":lua vim.diagnostic.open_float() <CR>")
 key_mapper("n", "K", ":lua vim.lsp.buf.hover()<CR>")
 key_mapper("n", "<space>rn", ":lua vim.lsp.buf.rename()<CR>")
-key_mapper("n", "<leader>fo", ":lua vim.lsp.buf.formatting()<CR>")
+key_mapper("n", "<leader>fo", ":lua vim.lsp.buf.format()<CR>")
 
 -- Telescope
 key_mapper("n", "<leader>ff", ':lua require"telescope.builtin".find_files()<CR>')

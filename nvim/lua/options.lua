@@ -1,3 +1,4 @@
+local vim = vim
 local g = vim.g
 local o = vim.o
 
@@ -64,5 +65,7 @@ augroup END
     false
 )
 
--- vim.cmd('colorscheme oh-lucy-evening')
-vim.cmd('colorscheme onedark_dark')
+vim.cmd[[
+highlight Pmenu guibg=black
+highlight SignColumn guibg=black
+]]
