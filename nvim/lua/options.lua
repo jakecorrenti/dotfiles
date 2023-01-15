@@ -41,16 +41,20 @@ g.neosolarized_underline = 0
 g.neosolarized_italic = 1
 g.neosolarized_termtrans = 0
 
--- material
-g.material_style = "darker"
+-- zenbones light
+g.zenbones_lightness = 'dim'
+g.zenbones_darken_noncurrent_window = true
+
+-- zenbones dark
+g.zenbones_lighten_noncurrent_window = true
 
 -- startify bookmarks
 g.startify_bookmarks = {
     { a = "~/.config/alacritty/alacritty.yml" },
     { k = "~/.config/kitty/kitty.conf" },
     { n = "~/.config/nvim/init.lua" },
-    { t = "~/.tmux.conf" },
-    { z = "~/.zshrc" },
+    { t = "~/.config/.tmux.conf" },
+    { z = "~/.config/.zshrc" },
     { w = "~/.config/i3/config" },
 }
 
@@ -65,7 +69,4 @@ augroup END
     false
 )
 
-vim.cmd[[
-highlight Pmenu guibg=black
-highlight SignColumn guibg=black
-]]
+vim.cmd('colorscheme zenbones')
