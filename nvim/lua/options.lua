@@ -51,7 +51,6 @@ g.zenbones_lighten_noncurrent_window = true
 -- startify bookmarks
 g.startify_bookmarks = {
     { a = "~/.config/alacritty/alacritty.yml" },
-    { k = "~/.config/kitty/kitty.conf" },
     { n = "~/.config/nvim/init.lua" },
     { t = "~/.config/.tmux.conf" },
     { z = "~/.config/.zshrc" },
