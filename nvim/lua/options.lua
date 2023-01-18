@@ -54,7 +54,7 @@ g.startify_bookmarks = {
     { n = "~/.config/nvim/init.lua" },
     { t = "~/.config/.tmux.conf" },
     { z = "~/.config/.zshrc" },
-    { w = "~/.config/i3/config" },
+    { w = "~/.config/awesome/rc.lua" },
 }
 
 -- highlight the current yanked line
