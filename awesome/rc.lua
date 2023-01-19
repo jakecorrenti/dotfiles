@@ -581,6 +581,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 awful.spawn.with_shell("~/.config/resolution_change.sh")
-awful.spawn.with_shell("feh --bg-fill /home/jakecorrenti/Pictures/okpsguyla9s81.jpg")
-beautiful.useless_gap = 5
-beautiful.gap_single_client = true
+-- awful.spawn.with_shell("feh --bg-fill /home/jakecorrenti/Pictures/okpsguyla9s81.jpg")
+-- beautiful.useless_gap = 5
+-- beautiful.gap_single_client = true

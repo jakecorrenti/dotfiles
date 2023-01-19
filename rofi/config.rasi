@@ -126,4 +126,5 @@ element-text, element-icon {
     text-color: inherit;
 }
 //@theme "/usr/share/rofi/themes/dmenu.rasi"
-@theme "/usr/share/rofi/themes/Pop-Dark.rasi"
+//@theme "/usr/share/rofi/themes/Pop-Dark.rasi"
+@theme "/usr/share/rofi/themes/sidebar.rasi"

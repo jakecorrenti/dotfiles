@@ -3,7 +3,7 @@ require("options")
 require("keymaps");
 require("telescope_conf")
 require "fidget".setup {}
-require('gitsigns').setup()
+-- require('gitsigns').setup()
 require('cmp_conf')
 require "lsp_signature".setup({
     bind = true, -- This is mandatory, otherwise border config won't get registered.

@@ -68,4 +68,6 @@ augroup END
     false
 )
 
-vim.cmd('colorscheme zenbones')
+-- vim.cmd('colorscheme zenbones')
+vim.cmd('highlight Pmenu guibg=black')
+vim.cmd('highlight SignColumn guibg=black')

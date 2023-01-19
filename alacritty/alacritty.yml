@@ -158,7 +158,7 @@ font:
     #style: Bold Italic7
 
   # Point size
-  size: 8
+  size: 9.5
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -185,31 +185,31 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (zenbones dark)
-colors:
-  primary:
-    foreground: '#B4BDC3'
-    background: '#1C1917'
-  cursor:
-    cursor: '#C4CACF'
-    text: '#1C1917'
-  normal:
-    black:   '#1C1917'
-    red:     '#DE6E7C'
-    green:   '#819B69'
-    yellow:  '#B77E64'
-    blue:    '#6099C0'
-    magenta: '#B279A7'
-    cyan:    '#66A5AD'
-    white:   '#B4BDC3'
-  bright:
-    black:   '#403833'
-    red:     '#E8838F'
-    green:   '#8BAE68'
-    yellow:  '#D68C67'
-    blue:    '#61ABDA'
-    magenta: '#CF86C1'
-    cyan:    '#65B8C1'
-    white:   '#888F94'
+# colors:
+#   primary:
+#     foreground: '#B4BDC3'
+#     background: '#1C1917'
+#   cursor:
+#     cursor: '#C4CACF'
+#     text: '#1C1917'
+#   normal:
+#     black:   '#1C1917'
+#     red:     '#DE6E7C'
+#     green:   '#819B69'
+#     yellow:  '#B77E64'
+#     blue:    '#6099C0'
+#     magenta: '#B279A7'
+#     cyan:    '#66A5AD'
+#     white:   '#B4BDC3'
+#   bright:
+#     black:   '#403833'
+#     red:     '#E8838F'
+#     green:   '#8BAE68'
+#     yellow:  '#D68C67'
+#     blue:    '#61ABDA'
+#     magenta: '#CF86C1'
+#     cyan:    '#65B8C1'
+#     white:   '#888F94'
 
 # Colors (zenbones light)
 # colors:
@@ -239,36 +239,36 @@ colors:
 #     white:   '#4F5E68'
 
 # Colors (Hyper)
-# colors:
-#   # Default colors
-#   primary:
-#     background: '0x000000'
-#     foreground: '0xffffff'
-#   cursor:
-#     text: '0xF81CE5'
-#     cursor: '0xffffff'
-#
-#   # Normal colors
-#   normal:
-#     black:   '0x000000'
-#     red:     '0xfe0100'
-#     green:   '0x33ff00'
-#     yellow:  '0xfeff00'
-#     blue:    '0x0066ff'
-#     magenta: '0xcc00ff'
-#     cyan:    '0x00ffff'
-#     white:   '0xd0d0d0'
-#
-#   # Bright colors
-#   bright:
-#     black:   '0x808080'
-#     red:     '0xfe0100'
-#     green:   '0x33ff00'
-#     yellow:  '0xfeff00'
-#     blue:    '0x0066ff'
-#     magenta: '0xcc00ff'
-#     cyan:    '0x00ffff'
-#     white:   '0xFFFFFF'
+colors:
+  # Default colors
+  primary:
+    background: '0x000000'
+    foreground: '0xffffff'
+  cursor:
+    text: '0xF81CE5'
+    cursor: '0xffffff'
+
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xfe0100'
+    green:   '0x33ff00'
+    yellow:  '0xfeff00'
+    blue:    '0x0066ff'
+    magenta: '0xcc00ff'
+    cyan:    '0x00ffff'
+    white:   '0xd0d0d0'
+
+  # Bright colors
+  bright:
+    black:   '0x808080'
+    red:     '0xfe0100'
+    green:   '0x33ff00'
+    yellow:  '0xfeff00'
+    blue:    '0x0066ff'
+    magenta: '0xcc00ff'
+    cyan:    '0x00ffff'
+    white:   '0xFFFFFF'
 
   # Transparent cell backgrounds
   #
