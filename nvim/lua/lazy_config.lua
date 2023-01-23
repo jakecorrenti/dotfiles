@@ -19,6 +19,7 @@ require("lazy").setup({
     'jesseleite/nvim-noirbuddy',
     "mcchrish/zenbones.nvim",
     "rktjmp/lush.nvim",
+    "ellisonleao/gruvbox.nvim",
 
     -- lsp
     "rust-lang/rust.vim",

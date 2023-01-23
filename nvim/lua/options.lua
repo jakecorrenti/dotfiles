@@ -54,7 +54,7 @@ g.startify_bookmarks = {
     { n = "~/.config/nvim/init.lua" },
     { t = "~/.config/.tmux.conf" },
     { z = "~/.config/.zshrc" },
-    { w = "~/.config/awesome/rc.lua" },
+    { w = "~/.config/i3/config" },
 }
 
 -- highlight the current yanked line
@@ -67,7 +67,3 @@ augroup END
 ]]   ,
     false
 )
-
--- vim.cmd('colorscheme zenbones')
-vim.cmd('highlight Pmenu guibg=black')
-vim.cmd('highlight SignColumn guibg=black')
