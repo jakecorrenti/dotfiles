@@ -3,7 +3,7 @@ require("options")
 require("keymaps");
 require("telescope_conf")
 require "fidget".setup {}
--- require('gitsigns').setup()
+require('gitsigns').setup()
 require("gruvbox").setup({
   undercurl = true,
   underline = true,
@@ -20,7 +20,7 @@ require("gruvbox").setup({
   overrides = {
       SignColumn = {bg = "#1d2021"},
   },
-  dim_inactive = true,
+  dim_inactive = false,
 })
 require('cmp_conf')
 require "lsp_signature".setup({
@@ -56,4 +56,4 @@ require('mason-lspconfig').setup_handlers {
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
-vim.cmd('colorscheme zenbones')
+vim.cmd('colorscheme terafox')

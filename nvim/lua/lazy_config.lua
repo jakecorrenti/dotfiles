@@ -20,6 +20,7 @@ require("lazy").setup({
     "mcchrish/zenbones.nvim",
     "rktjmp/lush.nvim",
     "ellisonleao/gruvbox.nvim",
+    "EdenEast/nightfox.nvim",
 
     -- lsp
     "rust-lang/rust.vim",
