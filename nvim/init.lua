@@ -15,12 +15,8 @@ require("gruvbox").setup({
   invert_tabline = false,
   invert_intend_guides = false,
   inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "hard", -- can be "hard", "soft" or empty string
+  contrast = "", -- can be "hard", "soft" or empty string
   palette_overrides = {},
-  overrides = {
-      SignColumn = {bg = "#1d2021"},
-  },
-  dim_inactive = false,
 })
 require('cmp_conf')
 require "lsp_signature".setup({
@@ -56,4 +52,4 @@ require('mason-lspconfig').setup_handlers {
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
-vim.cmd('colorscheme terafox')
+vim.cmd('colorscheme gruvbox')

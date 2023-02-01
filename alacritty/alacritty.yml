@@ -184,6 +184,130 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 schemes:
+  gruvbox-light: &gruvbox-light
+    # Default colors
+    primary:
+      # hard contrast: background = '0xf9f5d7'
+      background: '0xfbf1c7'
+      # soft contrast: background = '0xf2e5bc'
+      foreground: '0x3c3836'
+
+    # Normal colors
+    normal:
+      black:   '0xfbf1c7'
+      red:     '0xcc241d'
+      green:   '0x98971a'
+      yellow:  '0xd79921'
+      blue:    '0x458588'
+      magenta: '0xb16286'
+      cyan:    '0x689d6a'
+      white:   '0x7c6f64'
+
+    # Bright colors
+    bright:
+      black:   '0x928374'
+      red:     '0x9d0006'
+      green:   '0x79740e'
+      yellow:  '0xb57614'
+      blue:    '0x076678'
+      magenta: '0x8f3f71'
+      cyan:    '0x427b58'
+      white:   '0x3c3836'
+  kanagawa: &kanagawa
+    primary:
+      background: '0x1f1f28'
+      foreground: '0xdcd7ba'
+
+    normal:
+      black:   '0x090618'
+      red:     '0xc34043'
+      green:   '0x76946a'
+      yellow:  '0xc0a36e'
+      blue:    '0x7e9cd8'
+      magenta: '0x957fb8'
+      cyan:    '0x6a9589'
+      white:   '0xc8c093'
+
+    bright:
+      black:   '0x727169'
+      red:     '0xe82424'
+      green:   '0x98bb6c'
+      yellow:  '0xe6c384'
+      blue:    '0x7fb4ca'
+      magenta: '0x938aa9'
+      cyan:    '0x7aa89f'
+      white:   '0xdcd7ba'
+
+    selection:
+      background: '0x2d4f67'
+      foreground: '0xc8c093'
+
+    indexed_colors:
+      - { index: 16, color: '0xffa066' }
+      - { index: 17, color: '0xff5d62' }
+  rose-pine: &rose-pine
+    primary:
+      background: "0x191724"
+      foreground: "0xe0def4"
+    cursor:
+      text: "0xe0def4"
+      cursor: "0x524f67"
+    vi_mode_cursor:
+      text: "0xe0def4"
+      cursor: "0x524f67"
+    line_indicator:
+      foreground: None
+      background: None
+    selection:
+      text: "0xe0def4"
+      background: "0x403d52"
+    normal:
+      black: "0x26233a"
+      red: "0xeb6f92"
+      green: "0x31748f"
+      yellow: "0xf6c177"
+      blue: "0x9ccfd8"
+      magenta: "0xc4a7e7"
+      cyan: "0xebbcba"
+      white: "0xe0def4"
+    bright:
+      black: "0x6e6a86"
+      red: "0xeb6f92"
+      green: "0x31748f"
+      yellow: "0xf6c177"
+      blue: "0x9ccfd8"
+      magenta: "0xc4a7e7"
+      cyan: "0xebbcba"
+      white: "0xe0def4"
+    hints:
+      start:
+        foreground: "#908caa"
+        background: "#1f1d2e"
+      end:
+        foreground: "#6e6a86"
+        background: "#1f1d2e"
+  melange: &melange
+    primary:
+      foreground: '#ECE1D7'
+      background: '#292522'
+    normal:
+      black:   '#34302C'
+      red:     '#BD8183'
+      green:   '#78997A'
+      yellow:  '#E49B5D'
+      blue:    '#7F91B2'
+      magenta: '#B380B0'
+      cyan:    '#7B9695'
+      white:   '#C1A78E'
+    bright:
+      black:   '#867462'
+      red:     '#D47766'
+      green:   '#85B695'
+      yellow:  '#EBC06D'
+      blue:    '#A3A9CE'
+      magenta: '#CF9BC2'
+      cyan:    '#89B3B6'
+      white:   '#ECE1D7'
   terafox: &terafox
     # Default colors
     primary:
@@ -296,7 +420,7 @@ schemes:
     # Default colors
     primary:
       # hard contrast: background = '0x1d2021'
-      background: '0x1d2021'
+      background: '0x282828'
       # medium contrast: background: '0x282828'
       # soft contrast: background = '0x32302f'
       foreground: '0xebdbb2'
@@ -323,7 +447,7 @@ schemes:
       cyan:    '0x8ec07c'
       white:   '0xebdbb2'
 
-colors: *terafox
+colors: *gruvbox-light
 
   # Transparent cell backgrounds
   #

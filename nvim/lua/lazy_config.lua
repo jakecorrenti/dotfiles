@@ -16,11 +16,11 @@ vim.opt.runtimepath:prepend(lazypath)
 require("lazy").setup({
     -- colorscheme
     'tjdevries/colorbuddy.nvim',
-    'jesseleite/nvim-noirbuddy',
     "mcchrish/zenbones.nvim",
     "rktjmp/lush.nvim",
     "ellisonleao/gruvbox.nvim",
-    "EdenEast/nightfox.nvim",
+    "savq/melange-nvim",
+    "rebelot/kanagawa.nvim",
 
     -- lsp
     "rust-lang/rust.vim",

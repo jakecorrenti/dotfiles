@@ -127,4 +127,5 @@ element-text, element-icon {
 }
 //@theme "/usr/share/rofi/themes/dmenu.rasi"
 //@theme "/usr/share/rofi/themes/Pop-Dark.rasi"
-@theme "/usr/share/rofi/themes/sidebar.rasi"
+//@theme "/usr/share/rofi/themes/sidebar.rasi"
+@theme "/usr/share/rofi/themes/gruvbox-light.rasi"
