@@ -29,12 +29,12 @@ o.relativenumber = true
 o.wrap = true
 o.signcolumn = "yes"
 o.colorcolumn = "80"
-o.background = "light"
+o.background = "dark"
 o.cursorline = false
 
 -- NeoSolarized theme
-g.neosolarized_contrast = "normal" -- or "normal"
-g.neosolarized_visibility = "normal"
+-- g.neosolarized_contrast = "normal" -- or "normal"
+-- g.neosolarized_visibility = "normal"
 g.neosolarized_vertSplitBgTrans = 1
 g.neosolarized_bold = 1
 g.neosolarized_underline = 0
@@ -56,6 +56,8 @@ g.startify_bookmarks = {
     { z = "~/.config/.zshrc" },
     { w = "~/.config/i3/config" },
 }
+
+g.everforest_background = 'soft'
 
 -- highlight the current yanked line
 vim.api.nvim_exec(

@@ -5,18 +5,19 @@ require("telescope_conf")
 require "fidget".setup {}
 require('gitsigns').setup()
 require("gruvbox").setup({
-  undercurl = true,
-  underline = true,
-  bold = true,
-  italic = true,
-  strikethrough = true,
-  invert_selection = false,
-  invert_signs = false,
-  invert_tabline = false,
-  invert_intend_guides = false,
-  inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "", -- can be "hard", "soft" or empty string
-  palette_overrides = {},
+    undercurl = true,
+    underline = true,
+    bold = true,
+    italic = true,
+    strikethrough = true,
+    invert_selection = false,
+    invert_signs = false,
+    invert_tabline = false,
+    invert_intend_guides = false,
+    inverse = true, -- invert background for search, diffs, statuslines and errors
+    contrast = "", -- can be "hard", "soft" or empty string
+    palette_overrides = {},
+    transparent_mode = true,
 })
 require('cmp_conf')
 require "lsp_signature".setup({
@@ -35,14 +36,14 @@ require('trouble').setup({
 require('treesitter_config')
 require('mason').setup()
 require('mason-lspconfig').setup({
-    ensure_installed = {"sumneko_lua", "rust_analyzer", "gopls"},
+    ensure_installed = { "sumneko_lua", "rust_analyzer", "gopls" },
     automatic_installation = true,
 })
 require('mason-lspconfig').setup_handlers {
-    function (server_name)
+    function(server_name)
         local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
         local opts = { capabilities = capabilities }
-        require("lspconfig")[server_name].setup{
+        require("lspconfig")[server_name].setup {
             options = opts,
         }
 
@@ -52,4 +53,9 @@ require('mason-lspconfig').setup_handlers {
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
-vim.cmd('colorscheme gruvbox')
+-- Lua
+vim.cmd('colorscheme tokyonight-moon')
+-- vim.cmd[[
+--     highlight Pmenu guibg=black
+--     highlight SignColumn guibg=black
+-- ]]

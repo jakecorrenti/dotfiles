@@ -15,12 +15,9 @@ vim.opt.runtimepath:prepend(lazypath)
 
 require("lazy").setup({
     -- colorscheme
-    'tjdevries/colorbuddy.nvim',
-    "mcchrish/zenbones.nvim",
-    "rktjmp/lush.nvim",
     "ellisonleao/gruvbox.nvim",
-    "savq/melange-nvim",
-    "rebelot/kanagawa.nvim",
+    'navarasu/onedark.nvim',
+    'folke/tokyonight.nvim',
 
     -- lsp
     "rust-lang/rust.vim",
@@ -38,7 +35,7 @@ require("lazy").setup({
     "nvim-treesitter/nvim-treesitter",
 
     -- git
-    { "sindrets/diffview.nvim", requires = { "nvim-lua/plenary.nvim" } },
+    { "sindrets/diffview.nvim",   requires = { "nvim-lua/plenary.nvim" } },
     'lewis6991/gitsigns.nvim',
 
     -- Telescope
