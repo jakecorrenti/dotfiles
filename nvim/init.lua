@@ -17,7 +17,7 @@ require("gruvbox").setup({
     inverse = true, -- invert background for search, diffs, statuslines and errors
     contrast = "", -- can be "hard", "soft" or empty string
     palette_overrides = {},
-    transparent_mode = true,
+    transparent_mode = false,
 })
 require('cmp_conf')
 require "lsp_signature".setup({
@@ -53,8 +53,7 @@ require('mason-lspconfig').setup_handlers {
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
--- Lua
-vim.cmd('colorscheme tokyonight-moon')
+vim.cmd('colorscheme zenbones')
 -- vim.cmd[[
 --     highlight Pmenu guibg=black
 --     highlight SignColumn guibg=black

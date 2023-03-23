@@ -18,6 +18,10 @@ require("lazy").setup({
     "ellisonleao/gruvbox.nvim",
     'navarasu/onedark.nvim',
     'folke/tokyonight.nvim',
+    'AlessandroYorba/Sierra',
+    "mcchrish/zenbones.nvim",
+    "rktjmp/lush.nvim",
+    'jaredgorski/SpaceCamp',
 
     -- lsp
     "rust-lang/rust.vim",
