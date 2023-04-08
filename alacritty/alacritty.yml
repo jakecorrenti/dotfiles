@@ -428,7 +428,8 @@ schemes:
   hyper: &hyper
     # Default colors
     primary:
-      background: '0x000000'
+      # background: '0x000000'
+      background: '#161616' # this is the oxocarbon background color
       foreground: '0xffffff'
     cursor:
       text: '0xF81CE5'
@@ -589,7 +590,7 @@ schemes:
       cyan: '#a4ffff'
       white: '#ffffff'
 
-colors: *zenbones_dark
+colors: *hyper
 
   # Transparent cell backgrounds
   #

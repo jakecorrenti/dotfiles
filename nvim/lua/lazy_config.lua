@@ -16,12 +16,8 @@ vim.opt.runtimepath:prepend(lazypath)
 require("lazy").setup({
     -- colorscheme
     "ellisonleao/gruvbox.nvim",
-    'navarasu/onedark.nvim',
-    'folke/tokyonight.nvim',
-    'AlessandroYorba/Sierra',
-    "mcchrish/zenbones.nvim",
-    "rktjmp/lush.nvim",
-    'jaredgorski/SpaceCamp',
+    "catppuccin/nvim",
+    "nyoom-engineering/oxocarbon.nvim",
 
     -- lsp
     "rust-lang/rust.vim",
@@ -60,4 +56,5 @@ require("lazy").setup({
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
     "hrsh7th/cmp-path",
+    "onsails/lspkind.nvim",
 })

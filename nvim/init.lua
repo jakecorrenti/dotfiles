@@ -15,7 +15,7 @@ require("gruvbox").setup({
     invert_tabline = false,
     invert_intend_guides = false,
     inverse = true, -- invert background for search, diffs, statuslines and errors
-    contrast = "", -- can be "hard", "soft" or empty string
+    contrast = "",  -- can be "hard", "soft" or empty string
     palette_overrides = {},
     transparent_mode = false,
 })
@@ -46,15 +46,10 @@ require('mason-lspconfig').setup_handlers {
         require("lspconfig")[server_name].setup {
             options = opts,
         }
-
     end,
 }
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
-vim.cmd('colorscheme zenbones')
--- vim.cmd[[
---     highlight Pmenu guibg=black
---     highlight SignColumn guibg=black
--- ]]
+vim.cmd.colorscheme "oxocarbon"
