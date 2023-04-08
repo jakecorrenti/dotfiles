@@ -590,7 +590,7 @@ schemes:
       cyan: '#a4ffff'
       white: '#ffffff'
 
-colors: *hyper
+colors: *gruvbox-light
 
   # Transparent cell backgrounds
   #

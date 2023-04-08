@@ -8,7 +8,6 @@ require("gruvbox").setup({
     undercurl = true,
     underline = true,
     bold = true,
-    italic = true,
     strikethrough = true,
     invert_selection = false,
     invert_signs = false,
@@ -36,7 +35,7 @@ require('trouble').setup({
 require('treesitter_config')
 require('mason').setup()
 require('mason-lspconfig').setup({
-    ensure_installed = { "sumneko_lua", "rust_analyzer", "gopls" },
+    ensure_installed = { "lua_ls", "rust_analyzer", "gopls" },
     automatic_installation = true,
 })
 require('mason-lspconfig').setup_handlers {
@@ -52,4 +51,4 @@ require('mason-lspconfig').setup_handlers {
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
-vim.cmd.colorscheme "oxocarbon"
+vim.cmd.colorscheme "gruvbox"
