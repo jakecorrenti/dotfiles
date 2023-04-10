@@ -41,13 +41,6 @@ g.neosolarized_underline = 0
 g.neosolarized_italic = 1
 g.neosolarized_termtrans = 0
 
--- zenbones light
-g.zenbones_lightness = 'dim'
-g.zenbones_darken_noncurrent_window = true
-
--- zenbones dark
-g.zenbones_lighten_noncurrent_window = true
-
 -- startify bookmarks
 g.startify_bookmarks = {
     { a = "~/.config/alacritty/alacritty.yml" },
