@@ -51,4 +51,4 @@ require('mason-lspconfig').setup_handlers {
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
-vim.cmd.colorscheme "minimal"
+vim.cmd.colorscheme "gruvbox"

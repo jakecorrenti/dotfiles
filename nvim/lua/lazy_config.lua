@@ -16,9 +16,6 @@ vim.opt.runtimepath:prepend(lazypath)
 require("lazy").setup({
     -- colorscheme
     "ellisonleao/gruvbox.nvim",
-    "catppuccin/nvim",
-    "nyoom-engineering/oxocarbon.nvim",
-    'Yazeed1s/minimal.nvim',
 
     -- lsp
     "rust-lang/rust.vim",
