@@ -15,8 +15,9 @@ vim.opt.runtimepath:prepend(lazypath)
 
 require("lazy").setup({
     -- colorscheme
-    "ellisonleao/gruvbox.nvim",
     "folke/tokyonight.nvim",
+    "mcchrish/zenbones.nvim",
+    "rktjmp/lush.nvim",
 
     -- lsp
     "rust-lang/rust.vim",
@@ -29,6 +30,7 @@ require("lazy").setup({
     'williamboman/mason-lspconfig.nvim',
     'simrat39/rust-tools.nvim',
     'mfussenegger/nvim-dap',
+    'simrat39/symbols-outline.nvim',
 
     -- treesitter
     "nvim-treesitter/nvim-treesitter",

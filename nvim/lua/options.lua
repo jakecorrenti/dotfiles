@@ -29,7 +29,7 @@ o.relativenumber = true
 o.wrap = true
 o.signcolumn = "yes"
 o.colorcolumn = "80"
-o.background = "dark"
+o.background = "light"
 o.cursorline = false
 
 -- NeoSolarized theme
@@ -40,6 +40,13 @@ g.neosolarized_bold = 1
 g.neosolarized_underline = 0
 g.neosolarized_italic = 1
 g.neosolarized_termtrans = 0
+
+-- zenbones light
+g.zenbones_lightness = 'dim'
+g.zenbones_darken_noncurrent_window = true
+
+-- zenbones dark
+g.zenbones_lighten_noncurrent_window = true
 
 -- startify bookmarks
 g.startify_bookmarks = {

@@ -123,3 +123,6 @@ alias tpersonal="tmux new-session -s personal"
 alias tschool="tmux new-session -s school"
 alias tresearch="tmux new-session -s research"
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+helpless() { "$@" --help | less }
+eval "$(starship init zsh)"
