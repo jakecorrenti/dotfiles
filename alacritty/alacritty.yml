@@ -721,7 +721,7 @@ schemes:
       cyan: '#00ca9a'
 
 
-colors: *zenbones_light
+colors: *zenbones_dark
 
   # Transparent cell backgrounds
   #

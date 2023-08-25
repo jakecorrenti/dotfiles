@@ -29,7 +29,7 @@ o.relativenumber = true
 o.wrap = true
 o.signcolumn = "yes"
 o.colorcolumn = "80"
-o.background = "light"
+o.background = "dark"
 o.cursorline = false
 
 -- NeoSolarized theme
