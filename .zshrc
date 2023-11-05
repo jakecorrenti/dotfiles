@@ -11,6 +11,7 @@ export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
+export HELIX_RUNTIME=~/src/helix/runtime
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
