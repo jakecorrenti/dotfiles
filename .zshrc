@@ -6,11 +6,12 @@ export ZSH="$HOME/.oh-my-zsh"
 export TERM="xterm-256color"
 export BAT_THEME="ansi"
 export PATH=$PATH:/usr/local/go/bin
-export EDITOR='nvim'
+export EDITOR='hx'
 export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
+export PATH=$PATH:$HOME/.local/bin
 export HELIX_RUNTIME=~/src/helix/runtime
 
 # Set name of the theme to load --- if set to "random", it will
@@ -127,3 +128,5 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 helpless() { "$@" --help | less }
 eval "$(starship init zsh)"
+
+[ -f "/home/jakecorrenti/.ghcup/env" ] && source "/home/jakecorrenti/.ghcup/env"

@@ -1,4 +1,4 @@
-theme = "base16_default_dark"
+theme = "doom_acario_dark"
 
 [editor]
 line-number = "relative"
