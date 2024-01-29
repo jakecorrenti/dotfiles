@@ -18,6 +18,7 @@ require("lazy").setup({
     "folke/tokyonight.nvim",
     "mcchrish/zenbones.nvim",
     "rktjmp/lush.nvim",
+    "sainnhe/everforest",
 
     -- lsp
     "rust-lang/rust.vim",

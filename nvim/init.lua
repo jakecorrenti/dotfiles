@@ -38,4 +38,4 @@ require("symbols-outline").setup()
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
 
-vim.cmd.colorscheme 'zenbones'
+vim.cmd.colorscheme 'everforest'

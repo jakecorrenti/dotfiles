@@ -1,33 +1,5 @@
-[colors.bright]
-black = "0x585858"
-blue = "0x7cafc2"
-cyan = "0x86c1b9"
-green = "0xa1b56c"
-magenta = "0xba8baf"
-red = "0xab4642"
-white = "0xf8f8f8"
-yellow = "0xf7ca88"
-
-[colors.cursor]
-cursor = "0xD85F00"
-text = "0xd8d8d8"
-
-[colors.normal]
-black = "0x000000"
-blue = "0x3679D8"
-cyan = "0x36D8BD"
-green = "0x79D836"
-magenta = "0x8041D8"
-red = "0xD83441"
-white = "0xFFFFFF"
-yellow = "0xD8B941"
-
-[colors.primary]
-background = "0x0D0E16"
-foreground = "0xC3DBE5"
-
 [font]
-size = 7
+size = 6.5
 
 [font.normal]
 family = "JetBrains Mono"
@@ -36,3 +8,29 @@ family = "JetBrains Mono"
 x = 1
 y = 4
 
+# Default colors
+[colors.primary]
+background = '#272e33'
+foreground = '#d3c6aa'
+
+# Normal colors
+[colors.normal]
+black =   '#414b50'
+red =     '#e67e80'
+green =   '#a7c080'
+yellow =  '#dbbc7f'
+blue =    '#7fbbb3'
+magenta = '#d699b6'
+cyan =    '#83c092'
+white =   '#d3c6aa'
+
+# Bright colors
+[colors.bright]
+black =   '#475258'
+red =     '#e67e80'
+green =   '#a7c080'
+yellow =  '#dbbc7f'
+blue =    '#7fbbb3'
+magenta = '#d699b6'
+cyan =    '#83c092'
+white =   '#d3c6aa'

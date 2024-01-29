@@ -41,6 +41,12 @@ g.neosolarized_underline = 0
 g.neosolarized_italic = 1
 g.neosolarized_termtrans = 0
 
+-- everforest
+g.everforest_background = 'hard'
+g.everforest_enable_italic = 1
+g.everforest_show_eob = 0
+g.everforest_diagnostic_virtual_text = 'highlighted'
+
 -- zenbones light
 g.zenbones_lightness = 'dim'
 g.zenbones_darken_noncurrent_window = true
@@ -50,14 +56,12 @@ g.zenbones_lighten_noncurrent_window = true
 
 -- startify bookmarks
 g.startify_bookmarks = {
-    { a = "~/.config/alacritty/alacritty.yml" },
+    { a = "~/.config/alacritty/alacritty.toml" },
     { n = "~/.config/nvim/init.lua" },
     { t = "~/.config/.tmux.conf" },
     { z = "~/.config/.zshrc" },
     { w = "~/.config/i3/config" },
 }
-
-g.everforest_background = 'soft'
 
 -- highlight the current yanked line
 vim.api.nvim_exec(
