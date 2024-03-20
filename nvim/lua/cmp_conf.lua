@@ -20,13 +20,13 @@ cmp.setup({
         end,
     },
     window = {
-        -- completion = cmp.config.window.bordered(),
+        completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
-        completion = {
-            -- winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-            col_offset = -3,
-            side_padding = 0,
-        },
+        -- completion = {
+        --     -- winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+        --     col_offset = -3,
+        --     side_padding = 0,
+        -- },
     },
     mapping = cmp.mapping.preset.insert({
         ['<C-u>'] = cmp.mapping.scroll_docs(-4),

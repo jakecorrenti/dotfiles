@@ -1,47 +1,61 @@
 [font]
-size = 6.5
+size = 6
 
 [font.normal]
-family = "JetBrains Mono"
+family = "Source Code pro"
 
 [font.offset]
 x = 1
 y = 4
 
-# Base16 Default Dark - alacritty color config
-# Chris Kempson (http://chriskempson.com)
+## Zenbones dark
 
-[colors]
-draw_bold_text_with_bright_colors = false
+# [colors.bright]
+# black = "#403833"
+# red = "#E8838F"
+# green = "#8BAE68"
+# yellow = "#D68C67"
+# blue = "#61ABDA"
+# magenta = "#CF86C1"
+# cyan = "#65B8C1"
+# white = "#888F94"
+# [colors.cursor]
+# cursor = "#C4CACF"
+# text = "#1C1917"
+# [colors.normal]
+# black = "#1C1917"
+# blue = "#6099C0"
+# cyan = "#66A5AD"
+# green = "#819B69"
+# magenta = "#B279A7"
+# red = "#DE6E7C"
+# white = "#B4BDC3"
+# yellow = "#B77E64"
+# [colors.primary]
+# background = "#1C1917"
+# foreground = "#B4BDC3"
 
-# Default colors
-[colors.primary]
-background = '0x181818'
-foreground = '0xd8d8d8'
-
-# Colors the cursor will use if `custom_cursor_colors` is true
-[colors.cursor]
-text = '0x181818'
-cursor = '0xd8d8d8'
-
-# Normal colors
-[colors.normal]
-black = '0x181818'
-red = '0xab4642'
-green = '0xa1b56c'
-yellow = '0xf7ca88'
-blue = '0x7cafc2'
-magenta = '0xba8baf'
-cyan = '0x86c1b9'
-white = '0xd8d8d8'
-
-# Bright colors
 [colors.bright]
-black = '0x585858'
-red = '0xdc9656'
-green = '0x282828'
-yellow = '0x383838'
-blue = '0xb8b8b8'
-magenta = '0xe8e8e8'
-cyan = '0xa16946'
-white = '0xf8f8f8'
+black = "#CFC1BA"
+red = "#94253E"
+green = "#3F5A22"
+yellow = "#803D1C"
+blue = "#1D5573"
+magenta = "#7B3B70"
+cyan = "#2B747C"
+white = "#4F5E68"
+[colors.cursor]
+cursor = "#2C363C"
+text = "#F0EDEC"
+[colors.normal]
+black = "#F0EDEC"
+blue = "#286486"
+cyan = "#3B8992"
+green = "#4F6C31"
+magenta = "#88507D"
+red = "#A8334C"
+white = "#2C363C"
+yellow = "#944927"
+[colors.primary]
+background = "#F0EDEC"
+foreground = "#2C363C"
