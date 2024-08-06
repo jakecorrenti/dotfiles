@@ -11,7 +11,6 @@ export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
-export PATH=$PATH:$HOME/.local/bin
 export HELIX_RUNTIME=~/src/helix/runtime
 
 # Set name of the theme to load --- if set to "random", it will
@@ -124,10 +123,7 @@ alias mars='java -jar Applications/Mars4_5.jar'
 alias tpersonal="tmux new-session -s personal"
 alias tschool="tmux new-session -s school"
 alias tresearch="tmux new-session -s research"
-alias nvim="~/nvim-linux64/bin/nvim"
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 helpless() { "$@" --help | less }
 eval "$(starship init zsh)"
-
-[ -f "/home/jakecorrenti/.ghcup/env" ] && source "/home/jakecorrenti/.ghcup/env"

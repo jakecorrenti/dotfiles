@@ -1,8 +1,21 @@
-theme = "doom_acario_dark"
+theme = "modus_vivendi"
 
 [editor]
 line-number = "relative"
 mouse = false
+auto-pairs = false
 
 [keys.insert]
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode
+
+[editor.soft-wrap]
+enable = true
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+
+# create a new minor mode bound to `+`
+[keys.normal."+"]
+c = ":run-shell-command cargo build"
+t = ":run-shell-command cargo test"

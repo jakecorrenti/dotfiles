@@ -1,61 +1,142 @@
 [font]
-size = 6
+size = 9
 
 [font.normal]
-family = "Source Code pro"
+# family = "JetBrains Mono"
+family = "Terminus"
 
 [font.offset]
 x = 1
 y = 4
 
-## Zenbones dark
-
-# [colors.bright]
-# black = "#403833"
-# red = "#E8838F"
-# green = "#8BAE68"
-# yellow = "#D68C67"
-# blue = "#61ABDA"
-# magenta = "#CF86C1"
-# cyan = "#65B8C1"
-# white = "#888F94"
-# [colors.cursor]
-# cursor = "#C4CACF"
-# text = "#1C1917"
-# [colors.normal]
-# black = "#1C1917"
-# blue = "#6099C0"
-# cyan = "#66A5AD"
-# green = "#819B69"
-# magenta = "#B279A7"
-# red = "#DE6E7C"
-# white = "#B4BDC3"
-# yellow = "#B77E64"
+### Gruvbox
+# # Default colors
 # [colors.primary]
-# background = "#1C1917"
-# foreground = "#B4BDC3"
+# # hard contrast background = = '#1d2021'
+# # medium background
+# # background = '#282828'
+# # hard background
+# background = '#1d2021'
+# # soft contrast background = = '#32302f'
+# foreground = '#ebdbb2'
+#
+# # Normal colors
+# [colors.normal]
+# black   = '#282828'
+# red     = '#cc241d'
+# green   = '#98971a'
+# yellow  = '#d79921'
+# blue    = '#458588'
+# magenta = '#b16286'
+# cyan    = '#689d6a'
+# white   = '#a89984'
+#
+# # Bright colors
+# [colors.bright]
+# black   = '#928374'
+# red     = '#fb4934'
+# green   = '#b8bb26'
+# yellow  = '#fabd2f'
+# blue    = '#83a598'
+# magenta = '#d3869b'
+# cyan    = '#8ec07c'
+# white   = '#ebdbb2'
 
-[colors.bright]
-black = "#CFC1BA"
-red = "#94253E"
-green = "#3F5A22"
-yellow = "#803D1C"
-blue = "#1D5573"
-magenta = "#7B3B70"
-cyan = "#2B747C"
-white = "#4F5E68"
-[colors.cursor]
-cursor = "#2C363C"
-text = "#F0EDEC"
-[colors.normal]
-black = "#F0EDEC"
-blue = "#286486"
-cyan = "#3B8992"
-green = "#4F6C31"
-magenta = "#88507D"
-red = "#A8334C"
-white = "#2C363C"
-yellow = "#944927"
+
+# Hyper
+# Default colors
 [colors.primary]
-background = "#F0EDEC"
-foreground = "#2C363C"
+background = '#000000'
+foreground = '#ffffff'
+
+[colors.cursor]
+text = '#F81CE5'
+cursor = '#ffffff'
+
+# Normal colors
+[colors.normal]
+black   = '#000000'
+red     = '#fe0100'
+green   = '#33ff00'
+yellow  = '#feff00'
+blue    = '#0066ff'
+magenta = '#cc00ff'
+cyan    = '#00ffff'
+white   = '#d0d0d0'
+
+# Bright colors
+[colors.bright]
+black   = '#808080'
+red     = '#fe0100'
+green   = '#33ff00'
+yellow  = '#feff00'
+blue    = '#0066ff'
+magenta = '#cc00ff'
+cyan    = '#00ffff'
+white   = '#FFFFFF'
+
+# tokyo night night
+# Default colors
+# [colors.primary]
+# background = '#1a1b26'
+# foreground = '#c0caf5'
+#
+# #[colors.cursor]
+# #cursor = '#c0caf5'
+# #text = '#1a1b26'
+#
+# # Normal colors
+# [colors.normal]
+# black = '#15161e'
+# red = '#f7768e'
+# green = '#9ece6a'
+# yellow = '#e0af68'
+# blue = '#7aa2f7'
+# magenta = '#bb9af7'
+# cyan = '#7dcfff'
+# white = '#a9b1d6'
+#
+# # Bright colors
+# [colors.bright]
+# black = '#414868'
+# red = '#f7768e'
+# green = '#9ece6a'
+# yellow = '#e0af68'
+# blue = '#7aa2f7'
+# magenta = '#bb9af7'
+# cyan = '#7dcfff'
+# white = '#c0caf5'
+#
+# # Indexed Colors
+# [[colors.indexed_colors]]
+# index = 16
+# color = '#ff9e64'
+#
+# [[colors.indexed_colors]]
+# index = 17
+# color = '#db4b4b'
+
+# minimal 
+# [colors.primary]
+# background = '#1A1B1F'
+# foreground = '#DFE0EA'
+#
+# [colors.bright]
+# black =   '#272932'
+# red =     '#E85A84'
+# green =   '#94DD8E'
+# yellow =  '#E9D26C'
+# blue =    '#7EB7E6'
+# magenta = '#D895C7'
+# cyan =    '#89BEB7'
+# white =   '#CFD0D7'
+#
+# [colors.normal]
+# black =   '#16181D'
+# red =     '#E85A84'
+# green =   '#94DD8E'
+# yellow =  '#E9D26C'
+# blue =    '#7EB7E6'
+# magenta = '#D895C7'
+# cyan =    '#89BEB7'
+# white =   '#DFE0EA'
