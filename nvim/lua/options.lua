@@ -28,8 +28,8 @@ o.number = true
 o.relativenumber = true
 o.wrap = true
 o.signcolumn = "yes"
-o.colorcolumn = "80"
-o.background = "light"
+-- o.colorcolumn = "80"
+o.background = "dark"
 o.cursorline = false
 
 -- NeoSolarized theme
@@ -60,7 +60,8 @@ g.startify_bookmarks = {
     { n = "~/.config/nvim/init.lua" },
     { t = "~/.config/.tmux.conf" },
     { z = "~/.config/.zshrc" },
-    { w = "~/.config/i3/config" },
+    { h = "~/.config/hypr/hyprland.conf" },
+    { w = "~/.config/waybar/" },
 }
 
 -- highlight the current yanked line

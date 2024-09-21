@@ -15,11 +15,10 @@ vim.opt.runtimepath:prepend(lazypath)
 
 require("lazy").setup({
     -- colorscheme
-    "folke/tokyonight.nvim",
-    "mcchrish/zenbones.nvim",
-    "rktjmp/lush.nvim",
-    "sainnhe/everforest",
-    'chriskempson/base16-vim',
+    { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
+    { "folke/tokyonight.nvim", lazy=false, priority=1000, opts = {}},
+    'Yazeed1s/minimal.nvim',
+    'Yazeed1s/oh-lucy.nvim',
 
     -- lsp
     "rust-lang/rust.vim",
