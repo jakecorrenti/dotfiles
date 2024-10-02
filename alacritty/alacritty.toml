@@ -1,47 +1,13 @@
 [font]
-size = 8
+size = 9
 
 [font.normal]
 # family = "JetBrains Mono"
-family = "Terminus"
+family = "Terminess Nerd Font"
 
 [font.offset]
 x = 1
 y = 4
-
-### Gruvbox
-# # Default colors
-# [colors.primary]
-# # hard contrast background = = '#1d2021'
-# # medium background
-# # background = '#282828'
-# # hard background
-# background = '#1d2021'
-# # soft contrast background = = '#32302f'
-# foreground = '#ebdbb2'
-#
-# # Normal colors
-# [colors.normal]
-# black   = '#282828'
-# red     = '#cc241d'
-# green   = '#98971a'
-# yellow  = '#d79921'
-# blue    = '#458588'
-# magenta = '#b16286'
-# cyan    = '#689d6a'
-# white   = '#a89984'
-#
-# # Bright colors
-# [colors.bright]
-# black   = '#928374'
-# red     = '#fb4934'
-# green   = '#b8bb26'
-# yellow  = '#fabd2f'
-# blue    = '#83a598'
-# magenta = '#d3869b'
-# cyan    = '#8ec07c'
-# white   = '#ebdbb2'
-
 
 # Hyper
 # Default colors
@@ -75,68 +41,69 @@ magenta = '#cc00ff'
 cyan    = '#00ffff'
 white   = '#FFFFFF'
 
-# tokyo night night
-# Default colors
+
+# Flow 
+# # Black and white
 # [colors.primary]
-# background = '#1a1b26'
-# foreground = '#c0caf5'
-#
-# #[colors.cursor]
-# #cursor = '#c0caf5'
-# #text = '#1a1b26'
+# background = '#1b2228'
+# foreground = '#b3c1cc'
 #
 # # Normal colors
 # [colors.normal]
-# black = '#15161e'
-# red = '#f7768e'
-# green = '#9ece6a'
-# yellow = '#e0af68'
-# blue = '#7aa2f7'
-# magenta = '#bb9af7'
-# cyan = '#7dcfff'
-# white = '#a9b1d6'
+# black = '#0d0d0d'
+# red = '#d98c93'
+# green = '#93d98c'
+# yellow = '#d9d28c'
+# blue = '#8cb9d9'
+# magenta = '#ac8cd9'
+# cyan = '#8cd9d2'
+# white = '#f2f2f2'
 #
 # # Bright colors
 # [colors.bright]
-# black = '#414868'
-# red = '#f7768e'
-# green = '#9ece6a'
-# yellow = '#e0af68'
-# blue = '#7aa2f7'
-# magenta = '#bb9af7'
-# cyan = '#7dcfff'
-# white = '#c0caf5'
+# black = '#0d0d0d'
+# red = '#d98c93'
+# green = '#93d98c'
+# yellow = '#d9d28c'
+# blue = '#8cb9d9'
+# magenta = '#ac8cd9'
+# cyan = '#8cd9d2'
+# white = '#f2f2f2'
 #
-# # Indexed Colors
+# # Search colors
+# [colors.search.matches]
+# foreground = '#ff007b'
+# background = '#0d0d0d'
+#
+# [colors.search.focused_match]
+# foreground = '#0d0d0d'
+# background = '#ff007b'
+#
+# # Selection colors
+# [colors.selection]
+# background = '#ff007b'
+# text = '#0d0d0d'
+#
+# # Cursors
+# # If you don't want to override original behavior, which is nice,
+# # remove [colors.cursor] and [colors.vi_mode_cursor].
+# [colors.cursor]
+# cursor = '#ff007b'
+# text = '#0d0d0d'
+#
+# [colors.vi_mode_cursor]
+# cursor = '#ff007b'
+# text = '#0d0d0d'
+#
+# [colors.footer_bar]
+# foreground = '#ff007b'
+# background = '#0d0d0d'
+#
 # [[colors.indexed_colors]]
-# index = 16
-# color = '#ff9e64'
+# index = 93
+# color = '#ac8cd9'
 #
+# # Fluo Colors
 # [[colors.indexed_colors]]
-# index = 17
-# color = '#db4b4b'
-
-# minimal 
-# [colors.primary]
-# background = '#1A1B1F'
-# foreground = '#DFE0EA'
-#
-# [colors.bright]
-# black =   '#272932'
-# red =     '#E85A84'
-# green =   '#94DD8E'
-# yellow =  '#E9D26C'
-# blue =    '#7EB7E6'
-# magenta = '#D895C7'
-# cyan =    '#89BEB7'
-# white =   '#CFD0D7'
-#
-# [colors.normal]
-# black =   '#16181D'
-# red =     '#E85A84'
-# green =   '#94DD8E'
-# yellow =  '#E9D26C'
-# blue =    '#7EB7E6'
-# magenta = '#D895C7'
-# cyan =    '#89BEB7'
-# white =   '#DFE0EA'
+# index = 198
+# color = '#ff007b'

@@ -12,10 +12,8 @@ return {
         }
     }},
 
-    {
-        "0xstepit/flow.nvim",
-        lazy = false,
-        priority = 1000,
-        opts = {},
-    },
+    { 'williamboman/mason.nvim', opts = {} },
+    { 'echasnovski/mini.completion', version = '*' , opts = {} },
+    { 'neovim/nvim-lspconfig' },
+    { "j-hui/fidget.nvim", opts = {} }
 }
