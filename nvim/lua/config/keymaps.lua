@@ -32,3 +32,21 @@ map('n', '<leader>s', ':sp <CR>')
 -- this fixes the issue where the pmenu would stay open when hitting ctrl-c to
 -- exit normal mode in the middle of a word with nvim-cmp
 map("i", "<C-c>", "<Esc>")
+
+map("n", "gD", ":lua vim.lsp.buf.declaration() <CR>")
+map("n", "gd", ":lua vim.lsp.buf.definition() <CR>")
+map("n", "gi", ":lua vim.lsp.buf.implementation() <CR>")
+map("n", "<C-s>", ":lua vim.lsp.buf.signature_help() <CR>")
+map("n", "<space>D", ":lua vim.lsp.buf.type_definition() <CR>")
+map("n", "gr", ":lua vim.lsp.buf.references() <CR>")
+map("n", "<space>e", ":lua vim.diagnostic.open_float() <CR>")
+map("n", "K", ":lua vim.lsp.buf.hover()<CR>")
+map("n", "<space>rn", ":lua vim.lsp.buf.rename()<CR>")
+map("n", "<leader>fo", ":lua vim.lsp.buf.format()<CR>")
+
+-- Open the file navigator
+map('n', '<leader>mf', ':lua MiniFiles.open() <CR>')
+
+-- Telescope
+map('n', '<leader>ff', ':Telescope find_files theme=ivy <CR>')
+map('n', '<leader>fg', ':Telescope live_grep theme=ivy <CR>')

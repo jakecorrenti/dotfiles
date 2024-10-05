@@ -1,19 +1,46 @@
 return {
-    {'tamton-aquib/staline.nvim', opts = {
-        sections = {
-            left = { '  ', 'mode', ' ', 'branch', ' ', 'lsp' },
-            mid = {},
-            right = {'file_name', 'line_column' }
-        },
-        defaults = {
-            true_colors = true,
-            line_column = " [%l/%L] :%c  ",
-            branch_symbol = " "
-        }
-    }},
-
     { 'williamboman/mason.nvim', opts = {} },
-    { 'echasnovski/mini.completion', version = '*' , opts = {} },
     { 'neovim/nvim-lspconfig' },
-    { "j-hui/fidget.nvim", opts = {} }
+    { "j-hui/fidget.nvim",       opts = {} },
+    {
+        'nvim-treesitter/nvim-treesitter',
+        version = false,
+        build = ':TSUpdate',
+        lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the command line
+        highlight = {
+            enable = true,
+        },
+        indent = {
+            enable = true,
+        },
+        ensure_installed = {
+            'c',
+            'diff',
+            'bash',
+            'lua',
+            'json',
+            'toml',
+            'rust',
+            'go',
+            'yaml',
+            'markdown',
+        },
+    },
+    {
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.8',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            "nvim-lua/popup.nvim",
+            {
+                'nvim-telescope/telescope-fzf-native.nvim',
+                run = 'make',
+                cond = vim.fn.executable "make" == 1
+            }
+        },
+        opts = {},
+    },
+    { 'echasnovski/mini.starter',    version = '*', opts = {} },
+    { 'echasnovski/mini.completion', version = '*', opts = {} },
+    { 'echasnovski/mini.files',      version = '*', opts = {} },
 }

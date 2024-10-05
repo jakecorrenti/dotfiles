@@ -25,4 +25,3 @@ vim.o.number = true -- line numbers
 vim.o.relativenumber = true -- relative line numbers
 vim.o.wrap = true -- enable line wrap
 vim.o.signcolumn = "yes"
-vim.o.cursorline = true
