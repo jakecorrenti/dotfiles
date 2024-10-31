@@ -43,4 +43,5 @@ return {
     { 'echasnovski/mini.starter',    version = '*', opts = {} },
     { 'echasnovski/mini.completion', version = '*', opts = {} },
     { 'echasnovski/mini.files',      version = '*', opts = {} },
+    { 'protesilaos/tempus-themes-vim' },
 }
