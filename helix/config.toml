@@ -1,9 +1,9 @@
-theme = "modus_vivendi"
+theme = "solarized_light"
 
 [editor]
 line-number = "relative"
 mouse = false
-auto-pairs = false
+end-of-line-diagnostics = "hint"
 
 [keys.insert]
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode

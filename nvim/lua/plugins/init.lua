@@ -40,8 +40,15 @@ return {
         },
         opts = {},
     },
-    { 'echasnovski/mini.starter',    version = '*', opts = {} },
-    { 'echasnovski/mini.completion', version = '*', opts = {} },
-    { 'echasnovski/mini.files',      version = '*', opts = {} },
+    { 'echasnovski/mini.starter',     version = '*', opts = {} },
+    { 'echasnovski/mini.completion',  version = '*', opts = {} },
+    { 'echasnovski/mini.files',       version = '*', opts = {} },
     { 'protesilaos/tempus-themes-vim' },
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+    { 'ishan9299/nvim-solarized-lua'}
 }
