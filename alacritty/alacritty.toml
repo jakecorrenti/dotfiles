@@ -2,75 +2,202 @@
 size = 8
 
 [font.normal]
-family = "JetBrains Mono"
-# family = "Terminess Nerd Font"
-#
-# # Tokyo Night Theme
-# # Default colors
+family = "Fira Code"
+
+####### Hyper ########
+# Default colors
+ [colors.primary]
+ background = '#000000'
+ foreground = '#ffffff'
+
+ [colors.cursor]
+ text = '#F81CE5'
+ cursor = '#ffffff'
+
+ # Normal colors
+ [colors.normal]
+ black   = '#000000'
+ red     = '#fe0100'
+ green   = '#33ff00'
+ yellow  = '#feff00'
+ blue    = '#0066ff'
+ magenta = '#cc00ff'
+ cyan    = '#00ffff'
+ white   = '#d0d0d0'
+
+ # Bright colors
+ [colors.bright]
+ black   = '#808080'
+ red     = '#fe0100'
+ green   = '#33ff00'
+ yellow  = '#feff00'
+ blue    = '#0066ff'
+ magenta = '#cc00ff'
+ cyan    = '#00ffff'
+ white   = '#FFFFFF'
+
+####### Catppuccin Mocha
 # [colors.primary]
-# background = '#1a1b26'
-# foreground = '#c0caf5'
+# background = "#1e1e2e"
+# foreground = "#cdd6f4"
+# dim_foreground = "#7f849c"
+# bright_foreground = "#cdd6f4"
 #
-# #[colors.cursor]
-# #cursor = '#c0caf5'
-# #text = '#1a1b26'
+# [colors.cursor]
+# text = "#1e1e2e"
+# cursor = "#f5e0dc"
 #
-# # Normal colors
+# [colors.vi_mode_cursor]
+# text = "#1e1e2e"
+# cursor = "#b4befe"
+#
+# [colors.search.matches]
+# foreground = "#1e1e2e"
+# background = "#a6adc8"
+#
+# [colors.search.focused_match]
+# foreground = "#1e1e2e"
+# background = "#a6e3a1"
+#
+# [colors.footer_bar]
+# foreground = "#1e1e2e"
+# background = "#a6adc8"
+#
+# [colors.hints.start]
+# foreground = "#1e1e2e"
+# background = "#f9e2af"
+#
+# [colors.hints.end]
+# foreground = "#1e1e2e"
+# background = "#a6adc8"
+#
+# [colors.selection]
+# text = "#1e1e2e"
+# background = "#f5e0dc"
+#
 # [colors.normal]
-# black = '#15161e'
-# red = '#f7768e'
-# green = '#9ece6a'
-# yellow = '#e0af68'
-# blue = '#7aa2f7'
-# magenta = '#bb9af7'
-# cyan = '#7dcfff'
-# white = '#a9b1d6'
+# black = "#45475a"
+# red = "#f38ba8"
+# green = "#a6e3a1"
+# yellow = "#f9e2af"
+# blue = "#89b4fa"
+# magenta = "#f5c2e7"
+# cyan = "#94e2d5"
+# white = "#bac2de"
 #
-# # Bright colors
 # [colors.bright]
-# black = '#414868'
-# red = '#ff899d'
-# green = '#9fe044'
-# yellow = '#faba4a'
-# blue = '#8db0ff'
-# magenta = '#c7a9ff'
-# cyan = '#a4daff'
-# white = '#c0caf5'
+# black = "#585b70"
+# red = "#f38ba8"
+# green = "#a6e3a1"
+# yellow = "#f9e2af"
+# blue = "#89b4fa"
+# magenta = "#f5c2e7"
+# cyan = "#94e2d5"
+# white = "#a6adc8"
 #
-# # Indexed Colors
 # [[colors.indexed_colors]]
 # index = 16
-# color = '#ff9e64'
+# color = "#fab387"
 #
 # [[colors.indexed_colors]]
 # index = 17
-# color = '#db4b4b'
+# color = "#f5e0dc"
 
-# Colors (Solarized Light)
+###### kanagawa
+ # [colors.primary]
+ # background = '#1f1f28'
+ # foreground = '#dcd7ba'
 
+ # [colors.normal]
+ # black   = '#090618'
+ # red     = '#c34043'
+ # green   = '#76946a'
+ # yellow  = '#c0a36e'
+ # blue    = '#7e9cd8'
+ # magenta = '#957fb8'
+ # cyan    = '#6a9589'
+ # white   = '#c8c093'
+
+ # [colors.bright]
+ # black   = '#727169'
+ # red     = '#e82424'
+ # green   = '#98bb6c'
+ # yellow  = '#e6c384'
+ # blue    = '#7fb4ca'
+ # magenta = '#938aa9'
+ # cyan    = '#7aa89f'
+ # white   = '#dcd7ba'
+
+ # [colors.selection]
+ # background = '#2d4f67'
+ # foreground = '#c8c093'
+
+ # [[colors.indexed_colors]]
+ # index = 16
+ # color = '#ffa066'
+
+ # [[colors.indexed_colors]]
+ # index = 17
+ # color = '#ff5d62'
+
+####### Gruvbox Dark
 # Default colors
-[colors.primary]
-background = '#fdf6e3'
-foreground = '#586e75'
+# [colors.primary]
+# # hard contrast background = = '#1d2021'
+# # medium constrast background = '#282828'
+# # soft contrast background = = '#32302f'
+# background = '#1d2021'
+# foreground = '#ebdbb2'
+#
+# # Normal colors
+# [colors.normal]
+# black   = '#282828'
+# red     = '#cc241d'
+# green   = '#98971a'
+# yellow  = '#d79921'
+# blue    = '#458588'
+# magenta = '#b16286'
+# cyan    = '#689d6a'
+# white   = '#a89984'
+#
+# # Bright colors
+# [colors.bright]
+# black   = '#928374'
+# red     = '#fb4934'
+# green   = '#b8bb26'
+# yellow  = '#fabd2f'
+# blue    = '#83a598'
+# magenta = '#d3869b'
+# cyan    = '#8ec07c'
+# white   = '#ebdbb2'
 
-# Normal colors
-[colors.normal]
-black   = '#073642'
-red     = '#dc322f'
-green   = '#859900'
-yellow  = '#b58900'
-blue    = '#268bd2'
-magenta = '#d33682'
-cyan    = '#2aa198'
-white   = '#eee8d5'
-
-# Bright colors
-[colors.bright]
-black   = '#002b36'
-red     = '#cb4b16'
-green   = '#586e75'
-yellow  = '#657b83'
-blue    = '#839496'
-magenta = '#6c71c4'
-cyan    = '#93a1a1'
-white   = '#fdf6e3'
+###### Gruvbox light
+# # Default colors
+# [colors.primary]
+# # hard contrast background = = '#f9f5d7'
+# # medium contrast background = '#fbf1c7'
+# # soft contrast background = = '#f2e5bc'
+# background = '#f2e5bc'
+# foreground = '#3c3836'
+#
+# # Normal colors
+# [colors.normal]
+# black   = '#fbf1c7'
+# red     = '#cc241d'
+# green   = '#98971a'
+# yellow  = '#d79921'
+# blue    = '#458588'
+# magenta = '#b16286'
+# cyan    = '#689d6a'
+# white   = '#7c6f64'
+#
+# # Bright colors
+# [colors.bright]
+# black   = '#928374'
+# red     = '#9d0006'
+# green   = '#79740e'
+# yellow  = '#b57614'
+# blue    = '#076678'
+# magenta = '#8f3f71'
+# cyan    = '#427b58'
+# white   = '#3c3836'

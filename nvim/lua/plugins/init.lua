@@ -6,25 +6,6 @@ return {
         'nvim-treesitter/nvim-treesitter',
         version = false,
         build = ':TSUpdate',
-        lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the command line
-        highlight = {
-            enable = true,
-        },
-        indent = {
-            enable = true,
-        },
-        ensure_installed = {
-            'c',
-            'diff',
-            'bash',
-            'lua',
-            'json',
-            'toml',
-            'rust',
-            'go',
-            'yaml',
-            'markdown',
-        },
     },
     {
         'nvim-telescope/telescope.nvim',
@@ -40,7 +21,7 @@ return {
         },
         opts = {},
     },
-    { 'echasnovski/mini.starter',     version = '*', opts = {} },
+    { 'echasnovski/mini.nvim',        version = false },
     { 'echasnovski/mini.completion',  version = '*', opts = {} },
     { 'echasnovski/mini.files',       version = '*', opts = {} },
     { 'protesilaos/tempus-themes-vim' },
@@ -50,5 +31,5 @@ return {
         priority = 1000,
         opts = {},
     },
-    { 'ishan9299/nvim-solarized-lua'}
+    { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = ...},
 }

@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-vim.g.laststatus = 3 -- global statusline
 
 vim.o.shortmess = vim.o.shortmess .. "c"
 vim.o.laststatus = 3 -- global statusline
@@ -25,4 +24,4 @@ vim.o.number = true -- line numbers
 vim.o.relativenumber = true -- relative line numbers
 vim.o.wrap = true -- enable line wrap
 vim.o.signcolumn = "yes"
-vim.o.background = "light"
+vim.o.background = "dark"
