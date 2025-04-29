@@ -91,13 +91,33 @@ fi
 alias cat="bat"
 # log into the linux server for school
 alias ssh='TERM=xterm-256color ssh'
-alias uml="ssh -l jcorrent cs.uml.edu"
 alias ls="exa --git --group-directories-first"
-alias rpi="ssh pi@raspberrypi.local"
-alias mars='java -jar Applications/Mars4_5.jar'
-alias tpersonal="tmux new-session -s personal"
-alias tschool="tmux new-session -s school"
-alias tresearch="tmux new-session -s research"
+alias ll="ls -l"
+
+# Git aliases
+alias gst="git status"
+alias gcs="git commit -s"
+alias gcsm="git commit -sm"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gap="git add --patch"
+alias gri="git rebase -i"
+alias gp="git push"
+alias gpf="git push -f"
+alias gpu="git pull"
+
+## Git log format
+HASH="%C(always,yellow)%h%C(always,reset)"
+RELATIVE_TIME="%C(always,green)%ar%C(always,reset)"
+AUTHOR="%C(always,bold blue)%an%C(always,reset)"
+REFS="%C(always,red)%d%C(always,reset)"
+SUBJECT="%s"
+
+FORMAT="$HASH $RELATIVE_TIME{$AUTHOR{$REFS $SUBJECT"
+pretty_git_log() {
+    git log --graph --pretty="tformat:$FORMAT" $* | column -t -s '{' | less -XRS --quit-if-one-screen
+}
+alias glr=pretty_git_log
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
