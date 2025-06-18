@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.transparent_enabled = true
 
 vim.o.shortmess = vim.o.shortmess .. "c"
 vim.o.laststatus = 3 -- global statusline

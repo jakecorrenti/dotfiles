@@ -2,39 +2,41 @@
 size = 8
 
 [font.normal]
+# family = "JetBrains Mono"
 family = "Fira Code"
+# family = "Terminess Nerd Font"
 
 ####### Hyper ########
-# Default colors
- [colors.primary]
- background = '#000000'
- foreground = '#ffffff'
-
- [colors.cursor]
- text = '#F81CE5'
- cursor = '#ffffff'
-
- # Normal colors
- [colors.normal]
- black   = '#000000'
- red     = '#fe0100'
- green   = '#33ff00'
- yellow  = '#feff00'
- blue    = '#0066ff'
- magenta = '#cc00ff'
- cyan    = '#00ffff'
- white   = '#d0d0d0'
-
- # Bright colors
- [colors.bright]
- black   = '#808080'
- red     = '#fe0100'
- green   = '#33ff00'
- yellow  = '#feff00'
- blue    = '#0066ff'
- magenta = '#cc00ff'
- cyan    = '#00ffff'
- white   = '#FFFFFF'
+ # #Default colors
+ # [colors.primary]
+ # background = '#000000'
+ # foreground = '#ffffff'
+ #
+ # [colors.cursor]
+ # text = '#F81CE5'
+ # cursor = '#ffffff'
+ #
+ # # Normal colors
+ # [colors.normal]
+ # black   = '#000000'
+ # red     = '#fe0100'
+ # green   = '#33ff00'
+ # yellow  = '#feff00'
+ # blue    = '#0066ff'
+ # magenta = '#cc00ff'
+ # cyan    = '#00ffff'
+ # white   = '#d0d0d0'
+ #
+ # # Bright colors
+ # [colors.bright]
+ # black   = '#808080'
+ # red     = '#fe0100'
+ # green   = '#33ff00'
+ # yellow  = '#feff00'
+ # blue    = '#0066ff'
+ # magenta = '#cc00ff'
+ # cyan    = '#00ffff'
+ # white   = '#FFFFFF'
 
 ####### Catppuccin Mocha
 # [colors.primary]
@@ -142,37 +144,37 @@ family = "Fira Code"
 
 ####### Gruvbox Dark
 # Default colors
-# [colors.primary]
-# # hard contrast background = = '#1d2021'
-# # medium constrast background = '#282828'
-# # soft contrast background = = '#32302f'
-# background = '#1d2021'
-# foreground = '#ebdbb2'
-#
-# # Normal colors
-# [colors.normal]
-# black   = '#282828'
-# red     = '#cc241d'
-# green   = '#98971a'
-# yellow  = '#d79921'
-# blue    = '#458588'
-# magenta = '#b16286'
-# cyan    = '#689d6a'
-# white   = '#a89984'
-#
-# # Bright colors
-# [colors.bright]
-# black   = '#928374'
-# red     = '#fb4934'
-# green   = '#b8bb26'
-# yellow  = '#fabd2f'
-# blue    = '#83a598'
-# magenta = '#d3869b'
-# cyan    = '#8ec07c'
-# white   = '#ebdbb2'
+[colors.primary]
+# hard contrast background = = '#1d2021'
+# medium constrast background = '#282828'
+# soft contrast background = = '#32302f'
+background = '#1d2021'
+foreground = '#ebdbb2'
+
+# Normal colors
+[colors.normal]
+black   = '#282828'
+red     = '#cc241d'
+green   = '#98971a'
+yellow  = '#d79921'
+blue    = '#458588'
+magenta = '#b16286'
+cyan    = '#689d6a'
+white   = '#a89984'
+
+# Bright colors
+[colors.bright]
+black   = '#928374'
+red     = '#fb4934'
+green   = '#b8bb26'
+yellow  = '#fabd2f'
+blue    = '#83a598'
+magenta = '#d3869b'
+cyan    = '#8ec07c'
+white   = '#ebdbb2'
 
 ###### Gruvbox light
-# # Default colors
+# Default colors
 # [colors.primary]
 # # hard contrast background = = '#f9f5d7'
 # # medium contrast background = '#fbf1c7'
