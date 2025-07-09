@@ -1,13 +1,44 @@
 [font]
-size = 8
+size = 9
 
 [font.normal]
-# family = "JetBrains Mono"
-family = "Fira Code"
+family = "JetBrains Mono"
+# family = "Fira Code"
 # family = "Terminess Nerd Font"
 
+###### Challenger Deep ########
+# [colors.primary]
+# background = '#1e1c31'
+# foreground = '#cbe1e7'
+
+# [colors.cursor]
+# text = '#ff271d'
+# cursor = '#fbfcfc'
+#
+# # Normal colors
+# [colors.normal]
+# black   = '#141228'
+# red     = '#ff5458'
+# green   = '#62d196'
+# yellow  = '#ffb378'
+# blue    = '#65b2ff'
+# magenta = '#906cff'
+# cyan    = '#63f2f1'
+# white   = '#a6b3cc'
+#
+# # Bright colors
+# [colors.bright]
+# black   = '#565575'
+# red     = '#ff8080'
+# green   = '#95ffa4'
+# yellow  = '#ffe9aa'
+# blue    = '#91ddff'
+# magenta = '#c991e1'
+# cyan    = '#aaffe4'
+# white   = '#cbe3e7'
+
 ####### Hyper ########
- # #Default colors
+ #Default colors
  # [colors.primary]
  # background = '#000000'
  # foreground = '#ffffff'
@@ -144,34 +175,34 @@ family = "Fira Code"
 
 ####### Gruvbox Dark
 # Default colors
-[colors.primary]
-# hard contrast background = = '#1d2021'
-# medium constrast background = '#282828'
-# soft contrast background = = '#32302f'
-background = '#1d2021'
-foreground = '#ebdbb2'
-
-# Normal colors
-[colors.normal]
-black   = '#282828'
-red     = '#cc241d'
-green   = '#98971a'
-yellow  = '#d79921'
-blue    = '#458588'
-magenta = '#b16286'
-cyan    = '#689d6a'
-white   = '#a89984'
-
-# Bright colors
-[colors.bright]
-black   = '#928374'
-red     = '#fb4934'
-green   = '#b8bb26'
-yellow  = '#fabd2f'
-blue    = '#83a598'
-magenta = '#d3869b'
-cyan    = '#8ec07c'
-white   = '#ebdbb2'
+# [colors.primary]
+# # hard contrast background = = '#1d2021'
+# # medium constrast background = '#282828'
+# # soft contrast background = = '#32302f'
+# background = '#1d2021'
+# foreground = '#ebdbb2'
+#
+# # Normal colors
+# [colors.normal]
+# black   = '#282828'
+# red     = '#cc241d'
+# green   = '#98971a'
+# yellow  = '#d79921'
+# blue    = '#458588'
+# magenta = '#b16286'
+# cyan    = '#689d6a'
+# white   = '#a89984'
+#
+# # Bright colors
+# [colors.bright]
+# black   = '#928374'
+# red     = '#fb4934'
+# green   = '#b8bb26'
+# yellow  = '#fabd2f'
+# blue    = '#83a598'
+# magenta = '#d3869b'
+# cyan    = '#8ec07c'
+# white   = '#ebdbb2'
 
 ###### Gruvbox light
 # Default colors
@@ -203,3 +234,55 @@ white   = '#ebdbb2'
 # magenta = '#8f3f71'
 # cyan    = '#427b58'
 # white   = '#3c3836'
+
+############## Zenbones Light
+[colors.bright]
+black = "#CFC1BA"
+red = "#94253E"
+green = "#3F5A22"
+yellow = "#803D1C"
+blue = "#1D5573"
+magenta = "#7B3B70"
+cyan = "#2B747C"
+white = "#4F5E68"
+[colors.cursor]
+cursor = "#2C363C"
+text = "#F0EDEC"
+[colors.normal]
+black = "#F0EDEC"
+blue = "#286486"
+cyan = "#3B8992"
+green = "#4F6C31"
+magenta = "#88507D"
+red = "#A8334C"
+white = "#2C363C"
+yellow = "#944927"
+[colors.primary]
+background = "#F0EDEC"
+foreground = "#2C363C"
+
+############## Zenbones Dark
+# [colors.bright]
+# black = "#403833"
+# red = "#E8838F"
+# green = "#8BAE68"
+# yellow = "#D68C67"
+# blue = "#61ABDA"
+# magenta = "#CF86C1"
+# cyan = "#65B8C1"
+# white = "#888F94"
+# [colors.cursor]
+# cursor = "#C4CACF"
+# text = "#1C1917"
+# [colors.normal]
+# black = "#1C1917"
+# blue = "#6099C0"
+# cyan = "#66A5AD"
+# green = "#819B69"
+# magenta = "#B279A7"
+# red = "#DE6E7C"
+# white = "#B4BDC3"
+# yellow = "#B77E64"
+# [colors.primary]
+# background = "#1C1917"
+# foreground = "#B4BDC3"

@@ -7,7 +7,15 @@ require('mini.starter').setup()
 require('mini.icons').setup()
 require('mini.statusline').setup()
 
-require 'lspconfig'.rust_analyzer.setup {}
+require 'lspconfig'.rust_analyzer.setup {
+    settings = {
+        ['rust-analyzer'] = {
+            ['cargo'] = {
+                features = "all"
+            }
+        }
+    }
+}
 require 'lspconfig'.clangd.setup {}
 require 'lspconfig'.lua_ls.setup {}
 require 'lspconfig'.gopls.setup {}
@@ -61,4 +69,10 @@ require("gruvbox").setup({
   transparent_mode = false,
 })
 
-vim.cmd.colorscheme 'challenger_deep'
+require("gitsigns").setup {}
+
+vim.diagnostic.config({
+    virtual_text = true,
+})
+
+vim.cmd.colorscheme 'zenbones'
