@@ -7,7 +7,7 @@ require('mini.starter').setup()
 require('mini.icons').setup()
 require('mini.statusline').setup()
 
-require 'lspconfig'.rust_analyzer.setup {
+vim.lsp.config('rust_analyzer', {
     settings = {
         ['rust-analyzer'] = {
             ['cargo'] = {
@@ -15,10 +15,17 @@ require 'lspconfig'.rust_analyzer.setup {
             }
         }
     }
-}
-require 'lspconfig'.clangd.setup {}
-require 'lspconfig'.lua_ls.setup {}
-require 'lspconfig'.gopls.setup {}
+})
+vim.lsp.config('clangd', {})
+vim.lsp.config('lua_ls', {})
+vim.lsp.config('gopls', {})
+vim.lsp.config('asm_lsp', {})
+
+vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('clangd')
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('gopls')
+vim.lsp.enable('asm_lsp')
 
 require 'nvim-treesitter.configs'.setup {
     ensure_installed = {
@@ -75,4 +82,4 @@ vim.diagnostic.config({
     virtual_text = true,
 })
 
-vim.cmd.colorscheme 'zenbones'
+vim.cmd.colorscheme 'dayfox'

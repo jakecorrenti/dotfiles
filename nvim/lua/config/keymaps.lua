@@ -48,5 +48,11 @@ map("n", "<leader>fo", ":lua vim.lsp.buf.format()<CR>")
 map('n', '<leader>mf', ':lua MiniFiles.open() <CR>')
 
 -- Telescope
-map('n', '<leader>ff', ':Telescope find_files theme=ivy <CR>')
-map('n', '<leader>fg', ':Telescope live_grep theme=ivy <CR>')
+map('n', '<leader>ff', ':Telescope find_files <CR>')
+map('n', '<leader>fg', ':Telescope live_grep <CR>')
+map('n', '<leader>fs', ':Telescope git_status <CR>')
+map('n', '<leader>fc', ':Telescope git_commits <CR>')
+map('n', '<leader>fb', ':Telescope git_branches <CR>')
+map('n', '<leader>fm', ':Telescope man_pages <CR>')
+map('n', '<leader>fk', ':Telescope keymaps <CR>')
+map('n', '<leader>ft', ':Telescope colorscheme <CR>')
