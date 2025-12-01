@@ -25,24 +25,23 @@ return {
     { 'echasnovski/mini.completion', version = '*',   opts = {} },
     { 'echasnovski/mini.files',      version = '*',   opts = {} },
     { "ellisonleao/gruvbox.nvim",    priority = 1000, config = true, opts = ... },
-    { "challenger-deep-theme/vim" },
+        { "lewis6991/gitsigns.nvim" },
     {
-        "ptdewey/monalisa-nvim",
-        priority = 1000,
+        "folke/twilight.nvim",
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        }
     },
-    { "lewis6991/gitsigns.nvim" },
     {
-        "zenbones-theme/zenbones.nvim",
-        -- Optionally install Lush. Allows for more configuration or extending the colorscheme
-        -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
-        -- In Vim, compat mode is turned on as Lush only works in Neovim.
-        dependencies = "rktjmp/lush.nvim",
-        lazy = false,
-        priority = 1000,
-        -- you can set set configuration options here
-        -- config = function()
-        --     vim.g.zenbones_darken_comments = 45
-        --     vim.cmd.colorscheme('zenbones')
-        -- end
-    }
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        }
+    },
+    { "EdenEast/nightfox.nvim" },
 }
