@@ -25,7 +25,7 @@ vim.o.number = true -- line numbers
 vim.o.relativenumber = true -- relative line numbers
 vim.o.wrap = true -- enable line wrap
 vim.o.signcolumn = "yes"
-vim.o.background = "light"
+vim.o.background = "dark"
 
 vim.g.zenbones_darkness = 'warm'
 -- vim.g.zenbones_lightness = 'dim'
